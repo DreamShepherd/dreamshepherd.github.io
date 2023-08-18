@@ -3,7 +3,10 @@ jobs:
     desc: CS 2110 - Data Structures and Algorithms
     date: Fall 2023 - Present
     notes:
-      [Teacher's assistant for CS 2110, Hosted office hours for 20+ students.]
+      [
+        Teacher's assistant for 600+ students in CS 2110,
+        Proctored exams and hosted office hours for 20+ students.,
+      ]
   - title: SWE Intern - Stealth Startup
     desc: Stealth startup working on document parsing APIs.
     date: Summer 2023

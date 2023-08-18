@@ -10,7 +10,7 @@ export default function About() {
         <span className="gem">is a </span> software engineer
         <span className="gem">,</span>
         <br />
-        designer<span className="gem">, and</span>
+        physicist<span className="gem">, and</span>
         <br />
         researcher<span className="gem">.</span>
       </p>

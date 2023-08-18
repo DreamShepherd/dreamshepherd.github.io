@@ -19,8 +19,15 @@ export default function Resume() {
             <div className="text-neutral-500 font-normal">2021 — 2025</div>
           </div>
           <p className="font-serif italic">
-            B.S. in Computer Science, Engineering Physics, English
+            B.S. Computer Sciences
           </p>
+          <p className="font-serif italic">
+            B.S. Engineering Physics
+          </p>
+          <p className="font-serif italic">
+            B.S. Electrical and Computer Engineering
+          </p>
+
         </div>
         <p className="font-small mb-4">
           Binu Thomas Scholar, 
@@ -89,7 +96,11 @@ export default function Resume() {
         <h1 className="heading">
           <span className="text-teal-600">#</span> Professional Experience
         </h1>
-        <NoLinkList data={data.jobs}></NoLinkList>
+        <h2 className="italic bg-center font-semibold"> <span className=" font-semibold"> Redacted </span> </h2>
+
+        <h2 className=" px-5 text-sm"> Anonymized and redacted due to recent events. But feel free to email me for the most recent iteration of my CV.</h2>
+
+        {/* <NoLinkList data={data.jobs}></NoLinkList> */}
       </section>
 
       <section className="section pb-12">
@@ -97,18 +108,18 @@ export default function Resume() {
           <span className="text-teal-600">#</span> Fun Facts{" "}
         </h1>
         <ul className="text-sm grid gap-1  grid-cols-2 text-neutral-700">
-          <li>- Was an EMT during COVID (646230)</li>
+          <li>- Was an EMT during COVID (#646230)</li>
           <li>- Enjoys tennis, rock climbing, and pool</li>
-          <li>- Rated 1900 in blitz chess; 2300 in puzzles</li>
-          <li>- 16.1s PB solving the Rubiks Cube.</li>
-          <li>- Used to solve cubes blindfolded.</li>
-          <li>- Can recite 8 poems</li>
-          <li>- 1590/1600 SAT while sick</li>
+          <li>- Rated 1800 in blitz chess; 2300 puzzles</li>
+          <li>- 16.1s PB solving the Rubiks Cube</li>
+          <li>- Used to solve cubes blindfolded</li>
+          <li>- Can recite six poems</li>
+          <li>- 1590/1600 SAT first try while sick</li>
           <li>- Hit masters in Starcraft II</li>
           <li>- Hit legend in Hearthstone</li>
           <li>- Memorized 400 digits of pi once</li>
-          <li>- 1:38 PB in <a className = 'link' href= 'setwithfriends.com'>SET</a></li>
-          <li>- Despises OCaml and Verilog...</li>
+          <li>- 1:34 PB in <a className = 'link' href= 'setwithfriends.com'>SET</a></li>
+          <li>- Verilog sucks...</li>
         </ul>
       </section>
 

@@ -48,7 +48,7 @@ export default function Arts() {
             <div>
               <h2 className="text-red-50 pb-2">Poetry </h2>
               <ul className="pl-2 list-style: none">
-                {data.scores.map((item, index) => (
+                {data.poems.map((item, index) => (
                   <li key={index}>
                     {" "}
                     <a
