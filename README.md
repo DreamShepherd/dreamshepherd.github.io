@@ -1,11 +1,6 @@
 # bryanthar.com
 
-Source code for my [personal website](https://www.bryanthar.com/), hosted on GitHub Pages.
+I can make websites I promise [personal website](https://bryanthar.github.io/)
 
-Powered by [NextJS](https://nextjs.org/) and
-[Tailwind CSS](https://tailwindcss.com/). To begin developer mode, run:
+In the future, I want to decouple this from nextjs and other frameworks. My opinions have changed, and I prefer simple solutions for simple problems (like this).
 
-```sh-session
-$ npm install
-$ npm run dev
-```

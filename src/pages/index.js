@@ -20,12 +20,11 @@ export default function About() {
         <section className="space-y-4 text-md">
           <p>
             Hello! I currently study{" "}
-            <span className="text-blue-500">physics</span> and{" "}
+            <span className="text-blue-500">engineering physics</span> and{" "}
             <span className="text-blue-500">computer science</span> and{" "}
-            <span className="text-blue-500">English</span> at{" "}
+            <span className="text-blue-500">electrical engineering</span> at{" "}
             <b>Cornell University</b>. My academic interests involve
-            reinforcement learning and robotics, though I try to be a
-            generalist.
+            reinforcement learning and robotics. I am currently working at Snowflake for the spring in software engineering.
           </p>
           <p>
             My professional experience involves machine learning and statistical
@@ -33,6 +32,27 @@ export default function About() {
             memorizing poetry, and listening to music.
           </p>
         </section>
+        <section>
+        <h1 className="heading ">
+          <span className="text-teal-600">#</span> Some (Possibly?) Fun Facts {" "}
+        </h1>
+        <ul className="text-sm grid gap-1  grid-cols-2 text-neutral-700">
+          <li>- Memorized 400 digits of pi once</li>
+          <li>- Was an EMT during COVID{" "}
+             <a className = 'link' href= "/remarks#emt">#646230</a></li>
+            
+          <li>- 1590/1600 SAT first try while sick</li>
+          <li>- Rated 1800 in blitz chess; 2500 puzzles</li>
+          <li>- 16.1s PB solving the Rubiks Cube</li>
+          <li>- Used to solve cubes blindfolded</li>
+          <li>- Can recite six poems</li>
+          <li>- Hit masters in Starcraft II</li>
+          <li>- Hit legend in Hearthstone</li>
+          <li>- 1:34 PB in <a className = 'link' href= 'https://www.setwithfriends.com'>SET</a></li>
+          <li>- Enjoys tennis, rock climbing, and pool</li>
+          <li>- Verilog sucks...</li>
+        </ul>
+      </section>
         <section className="text-sm space-y-4">
           <h1 className="heading">
             <span className="text-teal-600">#</span> Programming
@@ -63,14 +83,15 @@ export default function About() {
             </a>
           </p>
         </section>
-        <section className=" text-sm space-y-4">
+        <section className="text-sm space-y-4">
           <h1 className="heading">
             {" "}
             <span className="text-teal-600">#</span> Research
           </h1>
           <p>
             My current research focus is applying machine learning to the
-            sciences. I'm part of an ongoing research project applying machine
+            sciences. I'm currently in between labs. 
+            {/* part of an ongoing research project applying machine
             learning to optimize{" "}
             <a
               className="link text-blue-400"
@@ -87,10 +108,10 @@ export default function About() {
             </a>
             , studying how we can apply computer vision techniques to map lunar
             materials and regolith from stereo images. Before that, I worked on
-            quantifying the effects of decoherence in the variational quantum
-            eigensolver.
+            researching quantum algorithms. Specifically, our research involved quantifying the effects of decoherence in the variational quantum
+            eigensolver.  */}
           </p>
-        </section>
+        </section >
       </div>
     </div>
   );

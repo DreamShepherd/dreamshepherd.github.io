@@ -108,17 +108,19 @@ export default function Resume() {
           <span className="text-teal-600">#</span> Fun Facts{" "}
         </h1>
         <ul className="text-sm grid gap-1  grid-cols-2 text-neutral-700">
-          <li>- Was an EMT during COVID (#646230)</li>
-          <li>- Enjoys tennis, rock climbing, and pool</li>
-          <li>- Rated 1800 in blitz chess; 2300 puzzles</li>
+        <li>- Memorized 400 digits of pi once</li>
+          <li>- Was an EMT during COVID{" "}
+             <a className = 'link' href= "/remarks#emt">#646230</a></li>
+            
+          <li>- 1590/1600 SAT first try while sick</li>
+          <li>- Rated 1800 in blitz chess; 2500 puzzles</li>
           <li>- 16.1s PB solving the Rubiks Cube</li>
           <li>- Used to solve cubes blindfolded</li>
           <li>- Can recite six poems</li>
-          <li>- 1590/1600 SAT first try while sick</li>
           <li>- Hit masters in Starcraft II</li>
           <li>- Hit legend in Hearthstone</li>
-          <li>- Memorized 400 digits of pi once</li>
-          <li>- 1:34 PB in <a className = 'link' href= 'setwithfriends.com'>SET</a></li>
+          <li>- 1:34 PB in <a className = 'link' href= 'https://www.setwithfriends.com'>SET</a></li>
+          <li>- Enjoys tennis, rock climbing, and pool</li>
           <li>- Verilog sucks...</li>
         </ul>
       </section>

@@ -36,7 +36,7 @@ const layout = (page, key) => (
             Linkedin:{" "}
             <a
               className="link"
-              href="https://www.linkedin.com/in/bryant-har-a260ab186/"
+              href="https://www.linkedin.com/in/bryant-har/"
             >
               @bryant-har
             </a>
@@ -50,7 +50,7 @@ const layout = (page, key) => (
     </div>
     <div className="text-xs opacity-50 pb-2 font-sans">
       <p className="flex place-content-center space-x-0.5">
-        <a className="link no-underline" href="https://github.com/dreamShepherd/MatXi">
+        <a className="link no-underline" href="https://github.com/dreamShepherd/bryanthar.com">
           Source Code
         </a>{" "}&nbsp;| Powered by NextJS
       </p>
