@@ -29,7 +29,8 @@ export default function Resume() {
           <h1 className="font-medium mt-4">Teaching</h1>
           <ul className="space-y-1">
             <li>
-              - TA for CS 2110 (Data Structures and Algorithms), Fall 2023
+              - TA for CS 2110 (Data Structures and Algorithms)
+              - TA for CS 4/5756 (Data Structures and Algorithms)
             </li>
             <li>
               - Advised for{" "}

@@ -70,6 +70,7 @@ export default function Creative() {
       </section>
       <section id="poems" className="layout">
         <h1 className="heading">Poetry</h1>
+        <p>Keeping track of poems I've memorized or like a lot</p>
         <LinkList data={data.poems}></LinkList>
       </section>
     </div>
