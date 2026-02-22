@@ -3,9 +3,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const links = [
-  // { name: "projects", href: "/projects" },
-  // { name: "resume", href: "/resume" },
-  // { name: "arts", href: "/arts" },
+  { name: "projects", href: "/projects" },
+  { name: "resume", href: "/resume" },
+  { name: "creative", href: "/creative" },
 ];
 
 export default function Header() {
