@@ -74,3 +74,37 @@ export default function About() {
 </div>
   );
 }
+
+/*
+ * RETIRED SECTION. Kinda fake.
+ * <section className="text-sm space-y-4">
+  <h1 className="heading">
+    {" "}
+    <span className="text-teal-600">#</span> Research
+  </h1>
+  <p>
+    My current research focus is applying machine learning to the
+    sciences. I'm currently in between labs. 
+    part of an ongoing research project applying machine
+    learning to optimize{" "}
+    <a
+      className="link text-blue-400"
+      href="https://en.wikipedia.org/wiki/Stellarator"
+    >
+      stellarator
+    </a>{" "}
+    plasma devices.
+  </p>
+  <p>
+    Previously, I've worked at the{" "}
+    <a href="https://www.spacecraftresearch.com/" className="link">
+      <em>Space Systems Design Studio</em>
+    </a>
+    , studying how we can apply computer vision techniques to map lunar
+    materials and regolith from stereo images. Before that, I worked on
+    researching quantum algorithms. Specifically, our research involved quantifying the effects of decoherence in the variational quantum
+    eigensolver.  
+  </p>
+</section >
+*/
+
