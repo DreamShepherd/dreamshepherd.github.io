@@ -27,22 +27,5 @@
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
-  },
-  "postcss": {
-    "plugins": {
-      "tailwindcss": {},
-      "autoprefixer": {}
-    }
-  },
-  "tailwind": {
-    "content": [
-      "./src/**/*.{js,ts,jsx,tsx}",
-      "./pages/**/*.{js,ts,jsx,tsx}",
-      "./components/**/*.{js,ts,jsx,tsx}"
-    ],
-    "theme": {
-      "extend": {}
-    },
-    "plugins": []
   }
 }
