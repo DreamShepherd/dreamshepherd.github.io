@@ -6,74 +6,103 @@ Projects.getLayout = layout;
 export default function Projects() {
   const projs = data.projects;
   return (
-    <div className="pt-12">
-      <section className="pb-12 layout text-lg">
-        <h1 className="heading">Projects</h1>
-        <p className="pb-4 pt-2">
-          A quick overview of my github. Much of it is technical projects, but I
-          also enjoy the design-side of user experience. Reach out {" "}
-          <a className="link" href="mailto:bhar@bryanthar.com">
-            here
-          </a>{" "}
-          if you'd like to design something together!
-        </p>
-      </section>
+<div className="pt-12">
+<section className="pb-12 layout text-lg">
+  <h1 className="heading">Projects</h1>
+  <p className="pb-4 pt-2">
+    A quick overview of my github. Much of it is technical projects, but I
+    also enjoy the design-side of user experience. Reach out {" "}
+    <a className="link" href="mailto:bhar@bryanthar.com">
+      here
+    </a>{" "}
+    if you'd like to design something together!
+  </p>
+</section>
 
-      <div className="bg-gray-900 py-12 text-neutral-200 dark">
-        <section className="layout">
-          <h1 className="heading text-white">Table of Contents</h1>
-          <div className="grid grid-cols-2 gap-1 pl-4">
-            {projs.map((item, index) => (
-              <a
-                className="link text-neutral-300 hover:text-white hover:underline"
-                key={index}
-                href={`#${item.title}`}
-              >
-                {item.title}&nbsp;<b className="text-sm">↓</b>
-              </a>
-            ))}
-          </div>
-        </section>
-      </div>
-      <section className="layout pt-12">
-        <div>
-          <img
-            loading="eager"
-            className="mx-auto"
-            width="400"
-            height="auto"
-            src="./static/arm.jpg"
-          />
-          <p className="text-center font-serif mx-auto text-black font-bold pt-2 pb-6">
-            Franka Emika Panda robotic arm in the lab
-          </p>
-        </div>
-        <div className="grid gap-y-4">
-          {projs.map((item, index) => (
-            <a
-              key={index}
-              id={item.title}
-              href={item.link}
-              className="block -mx-3 px-3 py-2 hover:bg-neutral-100 transition-colors"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-end mb-1.5">
-                <div className="text-lg text-black font-normal">
-                  {item.title}&nbsp;
-                  <ArrowUpRight size={18} className="inline text-neutral-400" />
-                </div>
-                <div className="sm:ml-auto mb-0.5 text-neutral-500">
-                  {item.date}
-                </div>
-              </div>
-              <div className="text-lg leading-snug font-light italic">
-                {item.summary}
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
+<div className="bg-gray-900 py-12 text-neutral-200 dark">
+  <section className="layout">
+    <h1 className="heading text-white">Table of Contents</h1>
+    <div className="grid grid-cols-2 gap-1 pl-4">
+      {projs.map((item, index) => (
+        <a
+          className="link text-neutral-300 hover:text-white hover:underline"
+          key={index}
+          href={`#${item.title}`}
+        >
+          {item.title}&nbsp;<b className="text-sm">↓</b>
+        </a>
+      ))}
     </div>
+  </section>
+</div>
+<section className="layout pt-12">
+  <div>
+    <img
+      loading="eager"
+      className="mx-auto"
+      width="400"
+      height="auto"
+      src="./static/arm.jpg"
+    />
+    <p className="text-center font-serif mx-auto text-black font-bold pt-2 pb-6">
+      Franka Emika Panda robotic arm in the lab
+    </p>
+  </div>
+  <div className="grid gap-y-4">
+    {projs.map((item, index) => (
+      <a
+        key={index}
+        id={item.title}
+        href={item.link}
+        className="block -mx-3 px-3 py-2 hover:bg-neutral-100 transition-colors"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div className="flex flex-col sm:flex-row sm:items-end mb-1.5">
+          <div className="text-lg text-black font-normal">
+            {item.title}&nbsp;
+            <ArrowUpRight size={18} className="inline text-neutral-400" />
+          </div>
+          <div className="sm:ml-auto mb-0.5 text-neutral-500">
+            {item.date}
+          </div>
+        </div>
+        <div className="text-lg leading-snug font-light italic">
+          {item.summary}
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+<section className="text-sm space-y-4">
+  <h1 className="heading">
+    {" "}
+    <span className="text-teal-600">#</span> Research
+  </h1>
+  <p>
+    My current research focus is applying machine learning to the
+    sciences. I'm currently in between labs. 
+    part of an ongoing research project applying machine
+    learning to optimize{" "}
+    <a
+      className="link text-blue-400"
+      href="https://en.wikipedia.org/wiki/Stellarator"
+    >
+      stellarator
+    </a>{" "}
+    plasma devices.
+  </p>
+  <p>
+    Previously, I've worked at the{" "}
+    <a href="https://www.spacecraftresearch.com/" className="link">
+      <em>Space Systems Design Studio</em>
+    </a>
+    , studying how we can apply computer vision techniques to map lunar
+    materials and regolith from stereo images. Before that, I worked on
+    researching quantum algorithms. Specifically, our research involved quantifying the effects of decoherence in the variational quantum
+    eigensolver.  
+  </p>
+</section >
+</div>
   );
 }

@@ -18,20 +18,10 @@ export default function Resume() {
             </h2>
             <div className="text-neutral-500 font-normal">2021 — 2025</div>
           </div>
-          <p className="font-serif italic">
-            B.S. Computer Sciences
-          </p>
-          <p className="font-serif italic">
-            B.S. Engineering Physics
-          </p>
-          <p className="font-serif italic">
-            B.S. Electrical and Computer Engineering
-          </p>
-
+          <p className="font-serif italic">B.S. Computer Science</p>
         </div>
         <p className="font-small mb-4">
-          Binu Thomas Scholar, 
-          Award for Excellence in Physics, 
+          Binu Thomas Scholar, Summa Cum Laude (top 1% of college), Award for Excellence in Physics, 
           with highest honors in field
         </p>
 
@@ -90,17 +80,6 @@ export default function Resume() {
             Vowpal Wabbit
           </a>
         </p>
-      </section>
-
-      <section className="section">
-        <h1 className="heading">
-          <span className="text-teal-600">#</span> Professional Experience
-        </h1>
-        <h2 className="italic bg-center font-semibold"> <span className=" font-semibold"> Redacted </span> </h2>
-
-        <h2 className=" px-5 text-sm"> Anonymized and redacted due to recent events. But feel free to email me for the most recent iteration of my CV.</h2>
-
-        {/* <NoLinkList data={data.jobs}></NoLinkList> */}
       </section>
 
       <section className="section pb-12">
