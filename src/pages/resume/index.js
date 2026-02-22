@@ -16,7 +16,7 @@ export default function Resume() {
             <h2 className="text-black text-lg font-normal">
               Cornell University
             </h2>
-            <div className="text-neutral-500 font-normal">2021 — 2025</div>
+            <div className="text-neutral-500 font-normal">2021 — 2024</div>
           </div>
           <p className="font-serif italic">B.S. Computer Science</p>
         </div>
