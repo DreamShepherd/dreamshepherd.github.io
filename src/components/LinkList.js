@@ -1,19 +1,12 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
-type ListItem = {
-  title: string;
-  summary: string;
-  date: string;
-  link: string;
-};
-
-export default function LinkList({ data }: { data: ListItem[] }) {
+export default function LinkList({ data }) {
   return (
     <div className="grid gap-y-4">
       {data.map((item, index) => (
         <a
-          id = {item.title}
+          id={item.title}
           key={index}
           href={item.link}
           className="block -mx-3 px-3 py-2 hover:bg-neutral-100 transition-colors"

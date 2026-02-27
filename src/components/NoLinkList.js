@@ -1,13 +1,6 @@
 import React from "react";
 
-type ListItem = {
-  title: string;
-  desc: string;
-  date: string;
-  notes: string[];
-};
-
-export default function NoLinkList({ data }: { data: ListItem[] }) {
+export default function NoLinkList({ data }) {
   return (
     <div className="grid gap-y-4">
       {data.map((item, index) => (
@@ -26,7 +19,7 @@ export default function NoLinkList({ data }: { data: ListItem[] }) {
           </div>
           <ul className="pl-8 space-y-0.5 text-black font-light">
             {item.notes ? (
-              item.notes.map((line, index) => <li key={index}>- {line}</li>)
+              item.notes.map((line, i) => <li key={i}>- {line}</li>)
             ) : (
               <div />
             )}

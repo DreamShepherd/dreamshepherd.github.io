@@ -50,7 +50,8 @@ export default function DreamEntry({ entry }) {
 
     const render = () => {
       const autoRender = window.renderMathInElement;
-      if (!autoRender) {
+      const katex = window.katex;
+      if (!autoRender || !katex) {
         tries += 1;
         if (tries < maxTries) {
           window.setTimeout(render, 100);
