@@ -5,8 +5,10 @@ Secret.getLayout = layout;
 
 const majorLinks = [
   { name: "home", href: "/" },
-  { name: "projects", href: "/projects" },
   { name: "dreaming", href: "/dreaming" },
+  { name: "resume", href: "/resume" },
+  { name: "projects (actual page)", href: "/projects" },
+  { name: "projects (tab route)", href: "/doge_intentional_404_for_the_nosy" },
   { name: "stuff", href: "/random" },
 ];
 
