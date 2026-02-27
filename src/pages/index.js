@@ -10,18 +10,18 @@ export default function About() {
   <p className="text-black text-xl leading-tight font-light mb-8">
     is thinking hard <br />
     and dreaming of <br />
-    butterflies 🐪 <br />
+    butterflies<br />
   </p>
   <QuickLinks />
 
   <div className="space-y-8">
     <section className="space-y-4 text-md">
       <p>
-        I try to maximize my profoundness/wordcount ratio <a className="link" href="/dreaming">here</a>.
+        Hello hello! I try to sound like a clever little fox <a className="link" href="/dreaming">here</a>. 🐪
       </p>
       <p>
-        Hello! This website was spawned from boredom to be maintained in boredom.
-        
+        This website was spawned from boredom and will be maintained in boredom.
+        Currently, I develop stuff at <span className="text-blue-500">Hudson River Trading</span>. 
         I have a B.S. {" "} <span className="text-blue-500">engineering physics</span> and 
         <span className="text-blue-500"> computer science</span> from
         <b> Cornell University</b>. 

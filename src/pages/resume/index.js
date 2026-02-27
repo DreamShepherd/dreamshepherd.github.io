@@ -18,10 +18,10 @@ export default function Resume() {
             </h2>
             <div className="text-neutral-500 font-normal">2021 — 2024</div>
           </div>
-          <p className="font-serif italic">B.S. Computer Science</p>
+          <p className="font-serif italic">B.S. Computer Science, EP</p>
         </div>
         <p className="font-small mb-4">
-          Binu Thomas Scholar, Summa Cum Laude (top 1% of college), Award for Excellence in Physics, 
+          Binu Thomas Scholar, Summa Cum Laude (top 1% of college of engineering), Award for Excellence in Physics, 
           with highest honors in field
         </p>
 
@@ -29,8 +29,10 @@ export default function Resume() {
           <h1 className="font-medium mt-4">Teaching</h1>
           <ul className="space-y-1">
             <li>
+              - TA for CS 5756 (Reinforcement Learning in Robotics)
+            </li>
+            <li>
               - TA for CS 2110 (Data Structures and Algorithms)
-              - TA for CS 4/5756 (Data Structures and Algorithms)
             </li>
             <li>
               - Advised for{" "}
@@ -39,8 +41,7 @@ export default function Resume() {
                 href="https://en.wikipedia.org/wiki/Governor%27s_School_of_New_Jersey"
               >
                 Governor's School in the Sciences (NJGSS)
-              </a>
-              , Summer 2022
+              </a> as a former alum, Summer 2022
             </li>
           </ul>
         </div>
@@ -76,13 +77,10 @@ export default function Resume() {
           Tailwind · Yaml · ROS · Tensorflow/Keras · PyTorch
           <br />
           <span className="font-semibold">Tools/Services:</span> VSCode ·
-          MongoDB · Heroku · Git/Github ·{" "}
-          <a href="https://vowpalwabbit.org/" className="link">
-            Vowpal Wabbit
-          </a>
+          MongoDB · Heroku · Git/Github · Vowpal Wabbit
         </p>
       </section>
-
+      <br/>
       <a id="coursework">
         <div className="bg-gray-900 py-12 text-neutral-200 dark">
           <section className="layout">

@@ -57,7 +57,7 @@ export default function Dreaming({ entries = [] }) {
             {butterfly}
           </pre>
         </div>
-        <p>A depot of my musings, and yet it's mostly bleh blah bluh... o7 <br/>I try my best to maximize the <i>|profoundness : word count|</i> ratio here.</p>
+        <p>A depot of my musings, and yet it's mostly bleh blah bluh... o7 <br/>Still, I try my best to maximize my <i>|profoundness : word count|</i> ratio.</p>
 
         <div className="pt-4">
           {entries.length === 0 ? (
