@@ -59,13 +59,17 @@ export default function DreamEntry({ entry }) {
         return;
       }
 
-      autoRender(target, {
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "$", right: "$", display: false },
-        ],
-        throwOnError: false,
-      });
+      try {
+        autoRender(target, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      } catch {
+        // Do not crash the page if KaTeX auto-render is unavailable.
+      }
     };
 
     render();

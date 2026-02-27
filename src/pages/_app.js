@@ -31,11 +31,11 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Script
         src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
       />
       <Script
         src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
       />
       {getLayout(<Component {...pageProps} />, router.asPath)}
     </>
