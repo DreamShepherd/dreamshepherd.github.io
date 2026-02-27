@@ -20,7 +20,7 @@ export default function App({ Component, Props }) {
   return (
     <>
       <Head>
-        <title>Bryant Har</title>
+        <title>plot armor</title>
         <meta name="description" content="Software engineer, researcher, physicist, and designer. Meaningful systems and user interfaces"></meta>
         <meta name = "description" content = "software projects, operating systems, web development, numerical analysis, music, programming languages, machine learning, and more"></meta>
       </Head>
