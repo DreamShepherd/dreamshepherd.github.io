@@ -1,5 +1,5 @@
 import { layout } from "../../components/Layout";
-import data from "./creative.yaml";
+import data from "../creative/creative.yaml";
 import LinkList from "../../components/LinkList";
 Creative.getLayout = layout;
 
