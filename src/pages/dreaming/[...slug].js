@@ -1,9 +1,42 @@
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { layout } from "../../components/Layout.js";
 
 DreamEntry.getLayout = layout;
 
 export default function DreamEntry({ entry }) {
+  const articleRef = useRef(null);
+
+  useEffect(() => {
+    if (!entry || entry.kind !== "markdown") return;
+    const target = articleRef.current;
+    if (!target) return;
+
+    let tries = 0;
+    const maxTries = 20;
+
+    const render = () => {
+      const autoRender = window.renderMathInElement;
+      if (!autoRender) {
+        tries += 1;
+        if (tries < maxTries) {
+          window.setTimeout(render, 100);
+        }
+        return;
+      }
+
+      autoRender(target, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+        ],
+        throwOnError: false,
+      });
+    };
+
+    render();
+  }, [entry]);
+
   if (!entry) return null;
 
   return (
@@ -25,6 +58,7 @@ export default function DreamEntry({ entry }) {
           </div>
         ) : (
           <article
+            ref={articleRef}
             className="markdown-body space-y-2"
             dangerouslySetInnerHTML={{ __html: entry.html }}
           />
