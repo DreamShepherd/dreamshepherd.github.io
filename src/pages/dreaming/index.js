@@ -31,7 +31,7 @@ export default function Dreaming({ entries = [] }) {
       folder,
       notes,
     }))
-    .sort((a, b) => a.folder.localeCompare(b.folder));
+    .sort((a, b) => b.folder.localeCompare(a.folder));
   const isBlogFolder = (folder) => /^\d{4}-\d{2}$/.test(folder);
   const blogGroups = groups.filter((group) => isBlogFolder(group.folder));
   const otherTopLevelGroups = entries
@@ -57,7 +57,11 @@ export default function Dreaming({ entries = [] }) {
             {butterfly}
           </pre>
         </div>
-        <p>A depot of my musings, and yet it's mostly bleh blah bluh... o7 <br/>Still, I try my best to maximize my <i>|profoundness : word count|</i> ratio.</p>
+        <p>The musings of a clever fox, and yet it's mostly bleh blah bluh...  
+        <br/>Still, I try my best to maximize the ratio of <b><i>|profoundness : word count|</i></b><br/></p>
+        <it className="hover:blur-none blur-[2px] text-gray-400 text-xs transition-all">
+        <Link className="link" href={`https://biowpn.github.io/bioweapon/`}>psst, if you like cpp, check meowt!</Link>
+        </it>
 
         <div className="pt-4">
           {entries.length === 0 ? (
