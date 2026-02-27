@@ -1,0 +1,13 @@
+surface	field=-500kV/cm	
+AlGaAs	t=100	x=0.3
+AlGaAs	t=600	x=0.3	Nd=1e18
+GaAs	t=100	
+AlGaAs	t=40	x=0.3
+substrate 
+  
+fullyionized 
+#schrodingerstart=10 
+#schrodingerstop=1500 
+temp=300K 
+dy=10
+

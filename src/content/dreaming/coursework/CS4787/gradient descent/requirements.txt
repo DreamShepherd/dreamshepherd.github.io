@@ -1,0 +1,5 @@
+numpy
+scipy
+matplotlib
+python-mnist
+tqdm

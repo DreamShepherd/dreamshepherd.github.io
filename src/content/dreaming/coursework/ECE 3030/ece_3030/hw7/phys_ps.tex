@@ -1,0 +1,315 @@
+\documentclass[12pt]{article}
+\usepackage{tabularx}
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{cite}
+\usepackage[final]{hyperref}
+\hypersetup{
+	colorlinks=true,      
+	linkcolor=blue,       
+	citecolor=blue,       
+	filecolor=magenta,    
+	urlcolor=blue         
+}
+\usepackage{blindtext}
+\usepackage{amssymb}
+\usepackage{esint}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{gensymb}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+\newcommand{\Prho}{.8}%
+\newcommand{\Ptheta}{55}%
+\newcommand{\Pphi}{60}%
+\usepackage{tikz-3dplot}
+\newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}}
+%++++++++++++++++++++++++++++++++++++++++
+\usepackage{empheq}
+
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+
+\begin{document}
+
+\usetikzlibrary{scopes}
+\def\iangle{35} % Angle of the inclined plane
+
+\def\down{-90}
+\def\arcr{0.5cm} % Radius of the arc used to indicate angles
+
+\title{ECE 3030 - HW 7}
+\author{Joshua Tensuan - jvt24}
+\date{October 28, 2022}
+\maketitle
+
+
+\begin{enumerate}
+	\item [7.1]
+	\begin{enumerate}
+		\item [a.]
+		We know that for $z<0$,
+		\[E(z)=E_ie^{-jk_zz}+E_re^{jk_zz}\]
+		\[E(z)=E_ie^{-jk_zz}+\Gamma E_ie^{jk_zz}\]
+		\[E(z)=E_ie^{-jk_zz}\left(1+\Gamma e^{j2k_zz}\right)\]
+		Then,
+		\[|E(z)|=E_i\sqrt{\left(1+\Gamma e^{j2k_zz}\right)\left(1-\Gamma^* e^{-j2k_zz}\right)}\]
+		Letting $\phi$ be the phase of the complex $\Gamma$,
+		\[|E(z)|=E_i\sqrt{1+|\Gamma^2|+2|\Gamma|\cos(2k_iz+\phi)}\]
+		We know that $|E(z)|$ has a spatial period of $\lambda = 4\:\mathrm{mm}=4\cdot 1-^{-3}\:\mathrm{m}$.
+		Then, this tells us that,
+		\[2k_i\lambda = 2\pi \to k_i\lambda = \pi\]
+		Since we are in free space, we know that,
+		\[\frac{\omega}{k_i}=c \to \frac{2\pi f}{\pi/\lambda}=c\to 2\lambda f = c\]
+		\[f=\frac{3\cdot 10^8 \: \mathrm{m/s}}{8\cdot 10^{-3}\:\mathrm{m}}=3.75 \cdot 10^{10} \: \mathrm{Hz}\]
+		\[\boxed{f=3.75\cdot 10^{10} \: \mathrm{Hz}}\]
+
+		\item [b.]
+		We can find the SWR to be,
+		\[SWR=\frac{|\vec E(z)|_{\mathrm{max}}}{|\vec E(z)|_{\mathrm{min}}}=\frac{6}{2}=3\]
+		We know that by definition,
+		\[SWR = \frac{1+|\Gamma|}{1-|\Gamma|}=3\]
+		\[\to 1+|\Gamma| = 3-3|\Gamma|\to 4|\Gamma|=2\]
+		\[\to |\Gamma| = \frac{1}{2}\]
+		\[\boxed{|\Gamma| = 1/2}\]
+
+		\item [c.]
+		We know that for $z<0$,
+		\[E(\vec r)=E_ie^{-jk_zz}+E_re^{jk_zz}\]
+		\[E(z)=E_ie^{-jk_zz}+\Gamma E_ie^{jk_zz}\]
+		\[E(z)=E_ie^{-jk_zz}+\frac{1}{2}e^{j\phi}E_ie^{jk_zz}\]
+		\[E(z)=E_ie^{-jk_zz}\left(1+\frac{1}{2}e^{j\phi}e^{j2k_zz}\right)\]
+		\[E(z=0)=E_i\left(1+\frac{1}{2}e^{j\phi}\right)\]
+		At $z=0$,
+		\[|E(z=0)|=E_i\sqrt{\left(1+\frac{1}{2}e^{j\phi}\right)\left(1+\frac{1}{2}e^{-j\phi}\right)}=E_i\sqrt{1+\frac{1}{2}e^{-j\phi}+\frac{1}{2}e^{j\phi}+\frac{1}{4}}\]
+		\[|E(z=0)|=E_i\sqrt{\frac{5}{4}+\cos(\phi)}\]
+
+		\[E_i+E_r=E(z=0)=4.5 \: \mathrm{V/m}\]
+		As $\phi$ ranges from $0\to \pi$, $|E(z=0)|$ ranges from $3E_i/2$ to $E_i/2$.
+		Thus, we know that $E_i=4\:\mathrm{V/m}$ as it matches the range of the $E$-field sinusoid magnitude.
+		Then,
+		Using the fact that the graph tells us that $|E(z=0)|=4.5 \: \mathrm{V/m}$,
+		\[\frac{4.5}{4}=\sqrt{\frac{5}{4}+\cos(\phi)}\to\phi =89.1\degree \]
+		\[\boxed{89.1\degree}\]
+
+		\item [d.]
+		As derived in the previous part, we found that $E_i=4\:\mathrm{V/m}$.
+		\[\boxed{|E_i|=4\:\mathrm{V/m}}\]
+		
+		\item [e.]
+		Using the fact that $\Gamma=\frac{\eta_t-\eta_i}{\eta_i+\eta_t}$
+		\[\Gamma(\eta_i+\eta_t)=\eta_t-\eta_i\]
+		\[\eta_i + \Gamma \eta_i=\eta_t-\Gamma \eta_t\]
+		\[\eta_t = \frac{\eta_i + \Gamma \eta_i}{1-\Gamma}\]
+		\[\frac{\eta_i}{\eta_t}=\frac{1-\Gamma}{1+\Gamma}\]
+		Using the definition $\eta_t = \sqrt{\mu_0/\epsilon}$,
+		\[\frac{\eta_i}{\eta_t}=\frac{\sqrt{\mu_0/\epsilon_0}}{\sqrt{\mu_0/\epsilon}}=\sqrt{\frac{\epsilon}{\epsilon_0}}\]
+		Then,
+		\[\sqrt{\epsilon}=\sqrt{\epsilon_0}\frac{1-\Gamma}{1+\Gamma}\]
+		\[\to \epsilon=-2.41584\cdot 10^{-12}-j8.28651\cdot 10^{-12}\]
+		\[\boxed{\epsilon=-2.41584\cdot 10^{-12}-j8.28651\cdot 10^{-12}, \; |\epsilon| = 8.63\cdot 10^{-12}}\]
+
+	\end{enumerate}
+
+	\item [7.2]
+	\begin{enumerate}
+		\item[(a)]
+		The material is a good conductor if $\omega\tau_d\ll 1 \to \omega \epsilon/\sigma \ll 1$.
+		Computing the characteristic number,
+		\[\frac{\omega \epsilon_0}{\sigma}=\frac{2\pi\cdot 10^9\cdot (8.85\cdot 10^{-12})}{5}=0.0111\]
+		Thus, the material is a good conductor.
+		\[\boxed{\text{Good conductor}}\]
+
+		\item [(b)]
+		We know that the reflection coefficient is related to the impedances of the medium by,
+		\[\Gamma =\frac{E_r}{E_i}=\frac{\eta_t-\eta_i}{\eta_t+\eta_i}=\frac{n_i-n_t}{n_i+n_t}\]
+		We know that $n_i=1$ and $n_t$ is given by,
+		\[n_t=\sqrt{1-j\frac{\sigma}{\omega \epsilon_0}}\]
+		% Using the good conductor approximation where $\omega \epsilon_0/\sigma \ll 1$,
+		% \[n_t \approx\sqrt{-j\frac{\sigma}{\omega \epsilon_0}}=\sqrt{\frac{\sigma}{2\omega\epsilon_0}}(1-j)\]
+		% \[\Gamma =\frac{1-\sqrt{\sigma/2\omega\epsilon_0}(1-j)}{1+\sqrt{\sigma/2\omega \epsilon_0}(1-j)}\]
+		% Multiplying by the complex conjugate,
+		Substituting this in,
+		\[\Gamma = \frac{1-\sqrt{-j\sigma/\omega\epsilon_0}}{1+\sqrt{-j\sigma/\omega\epsilon_0}}\]
+		Substituting in values appropriately via Mathematica,
+		\[\Gamma = -0.852+j0.129\]
+		\[|\Gamma| = 0.862\]
+		\[\boxed{|\Gamma| = 0.862}\]
+		% Using the good conductor approximation where $\omega \epsilon_0/\sigma \ll 1$,
+		% \[n_t \approx\sqrt{-j\frac{\sigma}{\omega \epsilon_0}}=\sqrt{\frac{\sigma}{2\omega\epsilon_0}}(1-j)\]
+		% \[\Gamma =\frac{1-\sqrt{\sigma/2\omega\epsilon_0}(1-j)}{1+\sqrt{\sigma/2\omega \epsilon_0}(1-j)}\]
+		% Multiplying by the complex conjugate,
+
+		\item [(c)]
+		Calculating the transmission coefficient,
+		\[T=\frac{2n_i}{n_i+n_t}=\frac{2}{1+\sqrt{-j\sigma/\omega\epsilon_0}}\]
+		Substituting in values appropriately via Mathematica,
+		\[T=0.148+j0.129\]
+		Finding $E_t$ using $T$,
+		\[T=\frac{E_t}{E_i}\to E_t=TE_i\]
+		Thus,
+		\[\vec E_t(\vec r)=TE_0e^{-jk_tz}\]
+		Substituting in $E_i$ and $T$,
+		\[\vec E_t=(0.148+j0.129)\hat xE_0e^{-jk_tz}\]
+		We know that $k_t$ is given by,
+		\[k_t = \omega\sqrt{\mu_0\epsilon_0}\sqrt{1-j\frac{\sigma}{\omega \epsilon_0}}\]
+		Using the good conductor approximation where $\omega \epsilon_0/\sigma \ll 1$,
+		\[\sqrt{1-j\frac{\sigma}{\omega\epsilon_0}} \approx\sqrt{-j\frac{\sigma}{\omega \epsilon_0}}=\sqrt{\frac{\sigma}{2\omega\epsilon_0}}(1-j)\]
+		Then,
+		\[k_t=\omega\sqrt{\mu_0\epsilon_0}\sqrt{\frac{\sigma}{2\omega \epsilon_0}}(1-j)\]
+		Let $\xi=\omega\sqrt{\mu_0}\sqrt{\sigma/2\omega}$.
+		Then,
+		\[\vec E_t=(0.148+j0.129)\hat x E_0e^{-j\xi(1-j)z}=(0.148+j0.129)\hat x E_0e^{-j\xi z}e^{-\xi z}\]
+		\[\vec E_t^* = (0.148-j0.129)\hat x E_0e^{j\xi z}e^{-\xi z}\]
+		% Multiplying by the complex conjugate,
+		\[\vec J = \sigma \vec E_t =\sigma(0.148+j0.129)\hat xE_0e^{-j\xi z}e^{-\xi z}\]
+		\[\vec J \cdot \vec E_t^* = \sigma(0.148+j0.129)E_0e^{-j\xi z}e^{-\xi z}(0.148-j0.129)E_0e^{j\xi z}e^{-\xi z}\]
+		\[\vec J \cdot \vec E_t^*=\sigma E_0^2 (0.148^2+0.129^2)e^{-2\xi z}\]
+		Finding the average power dissipated per unit area, $\bar P$
+		\[\bar P= \frac{1}{2}\int_0^{\infty}\sigma E_0^2(0.148^2 + 0.129^2)e^{-2\xi z}\: dz\]
+		\[=\frac{1}{2}(\sigma E_0^2)(0.148^2+0.129^2)\int_0^{\infty}e^{-2\xi z}\: dz\]
+		\[=\frac{1}{2}(\sigma E_0^2)(0.148^2+0.129^2)\left[\frac{e^{-2\xi z}}{-2\xi}\right]_0^{\infty}\]
+		\[=\frac{1}{2}(\sigma E_0^2)(0.148^2+0.129^2)\frac{1}{2\xi}\]
+		In lecture, we derived the time-averaged power per unit area for a wave in free-space to be,
+		\[P=\frac{E_0^2}{2\eta_0}=\frac{E_0^2}{2}\sqrt{\frac{\epsilon_0}{\mu_0}}\to \frac{E_0^2}{2}=P\sqrt{\mu_0/\epsilon_0}\]
+		Substituting $P=1$, we find that,
+		\[\bar P = \left(\sigma \sqrt{\mu_0/\epsilon_0}\right)(0.148^2+0.129^2)\frac{1}{2\xi}\]
+		Substituting in numbers via Mathematica,
+		\[\bar P = 0.257 \: \mathrm{W/m^2}\]
+		\[\boxed{0.257}\]
+
+	\end{enumerate}
+
+	\item [7.3]
+	\begin{enumerate}
+		\item [(a)]
+		We know that for mediums with the same permeability $\mu_0$, the reflection coefficient is given by,
+		\[\Gamma = \frac{E_r}{E_i}=\frac{n_i-n_t}{n_i+n_t}\]
+		Substituting in $n_i=1$ and $n_t=\sqrt{\epsilon_{\mathrm{eff}}/\epsilon_0}$,
+		\[\Gamma = \frac{1-\sqrt{1-\frac{\omega_p^2}{\omega^2}}}{1+\sqrt{1-\frac{\omega_p^2}{\omega^2}}}\]
+		If $\omega<\omega_p$, the term inside the square root is negative and thus,
+		\[\Gamma = \frac{1-j\sqrt{\frac{\omega_p^2}{\omega^2}-1}}{1+j\sqrt{\frac{\omega_p^2}{\omega^2}-1}}\]
+		Multiplying by the complex conjugate,
+		\[\Gamma = \frac{\left(1-j\sqrt{\frac{\omega_p^2}{\omega^2}-1}\right)^2}{\left(1+j\sqrt{\frac{\omega_p^2}{\omega^2}-1}\right)\left(1-j\sqrt{\frac{\omega_p^2}{\omega^2}-1}\right)}\]
+		\[\Gamma = \frac{1-2j\sqrt{\frac{\omega_p^2}{\omega^2}-1}-\left(\frac{\omega_p^2}{\omega^2}-1\right)}{\omega_p^2/\omega^2}\]
+		\[\Gamma = \frac{2-\frac{\omega_p^2}{\omega^2}-2j\sqrt{\frac{\omega_p^2}{\omega^2}-1}}{\omega_p^2/\omega^2}\]
+		\[\Gamma = \left[\frac{2\omega^2}{\omega_p^2}-1\right]-j\left[2\frac{\omega^2}{\omega_p^2}\sqrt{\frac{\omega_p^2}{\omega^2}-1}\right]\]
+		\[\Gamma = \left[\frac{2\omega^2}{\omega_p^2}-1\right]-j\left[2\sqrt{\frac{\omega^2}{\omega_p^2}-\frac{\omega^4}{\omega_p^4}}\right]\]
+		Then finding the magnitude,
+		\[|\Gamma|=\left(\frac{2\omega^2}{\omega_p^2}-1\right)^2 + \left(2\sqrt{\frac{\omega^2}{\omega_p^2}-\frac{\omega^4}{\omega_p^4}}\right)^2\]
+		\[|\Gamma| = \frac{4\omega^4}{\omega_p^4}-\frac{4\omega^2}{\omega_p^2}+1 + 4\left(\frac{\omega^2}{\omega_p^2}-\frac{\omega^4}{\omega_p^4}\right)=1\]
+		Therefore, when $\omega<\omega_p$,
+		\[|\Gamma|=1\]
+		\[\boxed{\text{Q.E.D}}\]
+
+		\item [(b)]
+		% For a non-normal incident TE wave, we derived the reflection coefficient $\Gamma^{\mathrm{TE}}$ to be,
+		% \[\Gamma^{\mathrm{TE}}= \frac{\frac{n_i/\cos(\theta_t)}{n_t/\cos(\theta_i)}-1}{\frac{n_i/\cos(\theta_t)}{n_t/\cos(\theta_i)}+1}=\frac{\frac{n_i\cos(\theta_i)}{n_t\cos(\theta_t)}-1}{\frac{n_i\cos(\theta_i)}{n_t\cos(\theta_t)}+1}=\frac{n_i\cos(\theta_i)-n_t\cos(\theta_t)}{n_i\cos(\theta_i)+n_t\cos(\theta_t)}\]
+		% From the phase matching condition, we know that, $k_i\sin(\theta_i)=k_t\sin(\theta_t)\to n_i\sin(\theta_i)=n_t\sin(\theta_t)$.
+		% There
+		% Let us define $R = \cos(\theta_t)/\cos(\theta_i)$.
+		% Then,
+		% \[\Gamma^{\mathrm{TE}}=\frac{n_i-n_tR}{n_i+n_tR}\]
+		% Recall from the previous part, we found that in the denominator, the $1$-terms 'cancel' out as so,
+		% \[\left(1+j\sqrt{\frac{\omega_p^2}{\omega^2}-1}\right)\left(1-j\sqrt{\frac{\omega_p^2}{\omega^2}-1}\right)=1+\left(\frac{\omega_p^2}{\omega^2}-1\right)=\omega_p^2/\omega^2\]
+		% Thus, we want a similar condition to occur for $\Gamma^{\mathrm{TE}}$.
+		% This results in,
+		% \[\cos^2(\theta_i)=\cos^2(\theta_t)\]
+		We found that the magnitude of the reflection coefficient would be unity when the $k$-vector of the transmitted wave in the $\hat z$-direction is imaginary. 
+		This is because the reflection coefficient $\Gamma$ is given by, $\Gamma = (k_{iz}-k_{tz})/(k_{iz}+k_{tz})$, which can trivially be reduced to $\Gamma = e^{j\phi}$ when $k_{tz}$ is purely imaginary.
+		Hence, we would find that $|\Gamma|=1$ in this case.
+		We know that $k_{tz}^2+k_{tx}^2=k_t^2$.
+		Thus, $k_{tz}^2=k_t^2-k_{tx}^2$ which yields,
+		\[k_{tz}^2=\frac{\omega^2}{c^2}n_t^2-k_{tx}^2\]
+
+		By the phase matching condition, we know that $k_{tx}=k_{ix}=k_i\sin(\theta_i)=\frac{\omega}{c}n_i\sin(\theta_i)$.
+		Substituting this in,
+
+		\[k_{tz}^2 = \frac{\omega^2}{c^2}n_t^2-\frac{\omega^2}{c^2}n_i^2\sin^2(\theta_i)\]
+		\[k_{tz}=\frac{\omega}{c}\sqrt{n_t^2-n_i^2\sin^2(\theta_i)}\]
+		If the term within the square-root is negative, then $k_{tz}$ will be purely imaginary.
+		We know that $n_t$ is given by,
+		\[n_t^2=\frac{\epsilon_{\mathrm{eff}}}{\epsilon_0}=\left(1-\frac{\omega_p^2}{\omega^2}\right)\]
+		Then,
+		\[n_t^2-n_i^2\sin^2(\theta_i)=1-\frac{\omega_p^2}{\omega^2}-\sin^2(\theta_i)\]
+		We can find the cutoff frequency, $\omega_c$ by setting the above expression to $0$ and solving for $\omega$.
+		If $\omega$ is less than $\omega_c$, then we get a purely imaginary number for $k_{tx}$ and the entire wave is reflected (magnitude of reflection coefficient is unity).
+		Conversely, if $\omega$ is larger than $\omega_c$, then the entire wave won't be reflected.
+		Finding This $\omega_c$ value,
+		\[1-\frac{\omega_p^2}{\omega_c^2}-\sin^2(\theta_i)=0\]
+		\[\omega_c^2(1-\sin^2(\theta_i))=\omega_p^2\]
+		\[\omega_c=\omega_p\sqrt{\frac{1}{1-\sin^2(\theta_i)}}\]
+		\[\boxed{\omega_c=\omega_p\sqrt{\frac{1}{1-\sin^2(\theta_i)}}}\]
+		Since $\sin^2(\theta_i):[0,1]$, $\omega_c$ must be greater than or equal to $\omega_p$. 
+		It is only equal to when $\theta_i=0$ which gives us the trivial normal incident case.
+		\[\boxed{\omega_c\geq \omega_p}\]
+
+		\item [(c)]
+		We know that for TM waves, the reflection coefficient (assuming equal magnetic permeabilities) is given by,
+		\[\Gamma^{\mathrm{TM}}=\frac{\frac{\epsilon_tk_{iz}}{\epsilon_ik_{tz}}-1}{\frac{\epsilon_tk_{iz}}{\epsilon_ik_{tz}}+1}=\frac{\epsilon_tk_{iz}-\epsilon_ik_{tz}}{\epsilon_tk_{iz}+\epsilon_i k_{tz}}=\frac{k_{iz}-\epsilon_i\frac{k_{tz}}{\epsilon_t}}{k_{iz}+\epsilon_i\frac{k_{tz}}{\epsilon_t}}\]
+		We know that this can reduce to the form $e^{j\phi}$ trivially when the $\epsilon_0k_{tz}/\epsilon_t$ term is purely imaginary.
+		In this case, we would then find that $|\Gamma^{\mathrm{TM}}|=1$ which would result in total reflection.
+		\[\epsilon_i\frac{k_{tz}}{\epsilon_t}=\frac{k_{tz}}{1-\omega_p^2/\omega^2}\]
+		Thus, we find that when $k_{tz}$ is imaginary, $|\Gamma^{\mathrm{TM}}|=1$.
+		This exactly mirrors the result from the previous part.
+		Thus, we once again get,
+		\[\boxed{\omega_c=\omega_p\sqrt{\frac{1}{1-\sin^2(\theta_i)}}}\]
+		Since $\sin^2(\theta_i):[0,1]$, $\omega_c$ must be greater than or equal to $\omega_p$. 
+		It is only equal to when $\theta_i=0$ which gives us the trivial normal incident case.
+		\[\boxed{\omega_c\geq \omega_p}\]
+
+		\item [(d)]
+		From homework 6, we calculated the ionosphere plasma angular frequency to be $\omega_p=5.638 \cdot 10^7 \: \mathrm{s}^{-1}$.
+		We notice that this is greater than the angular frequency of the incident EM wave.
+		Thus, the magnitude of the reflection coefficient for the atmosphere, $\|\Gamma_a\|=1$.
+		Thereby, we will only experience losses to the ground.
+		The reflection coefficient between the ground and the air, $\Gamma_g$ is then,
+		\[\Gamma_g = \frac{E_r}{E_i}=\frac{n_i-n_t}{n_i+n_t}\]
+		We know that $n_i=1$ and from homework 5, that $n_t$ (index of refraction of ground) is given by,
+		\[n_t = \sqrt{\frac{\epsilon}{\epsilon_0}}\sqrt{1-j\frac{\sigma}{\omega \epsilon}}\]
+		Substituting in $\epsilon=10\epsilon_0$,
+		\[n_t=\sqrt{10}\sqrt{1-j\frac{\sigma}{10\omega \epsilon_0}}\]
+		Via Mathematica, substituting in values,
+		\[n_t= 7.088-j6.343\]
+		Then,
+		Substituting this into our formula for $\Gamma_g$,
+		\[\Gamma_g = \frac{n_i-n_t}{n_i+n_t}=\frac{-6.088+j6.343}{8.088-j6.343}=0.847+j0.120\]
+		Finding the magnitude of $\Gamma_g$,
+		\[|\Gamma_g|=0.855\]
+		Thus, every round trip, the incident light perfectly reflects off the ionosphere and partially reflects off the ground such that its electric field amplitude drops to $0.855$ of its original value.
+		Finding how many round trips $n$ it takes the electric field amplitude to drop to $0.01$ of its original value,
+		\[|\Gamma_g|^{n-1} = 0.01 \to n = 30.477\]
+		We have the $n-1$ because for $n$ round trips, the incident light hits the ground $n-1$ times.
+		Since round trips must be an integer value, we round down $n$ to $30$.
+		\[\boxed{30 \text{ round trips.}}\]
+		For each round trip, light travels $100\times 2\:\mathrm{km}$.
+		Since light travels at $3\cdot 10^8\:\mathrm{m/s}$, we can find that each round trip takes $1/1500\:\mathrm{s}$.
+		Multiplying this by 30 round trips, we find that it takes $0.02\:\mathrm{s}$ for the wave to dissipate to $1\%$ of its original value.
+		Again, we assume no dissipative losses to the atmosphere.
+		\[\boxed{0.02 \: \mathrm{s}}\]
+
+		\item [(e)]
+		From homework 6, we calculated the ionosphere plasma angular frequency to be $\omega_p=5.638 \cdot 10^7 \: \mathrm{s}^{-1}$.
+		We notice that this is greater than the angular frequency of the incident EM wave.
+		Thus, for the atmosphere-ionosphere interaction, the $n_t$ will no longer be purely imaginary and the magnitude of the reflection coefficient for the atmosphere will no longer be unity.
+		Finding $n_t$ for the atmosphere,
+		\[n_t = \sqrt{\frac{\epsilon_{\mathrm{eff}}}{\epsilon_0}}=\sqrt{1-\frac{\omega_p^2}{\omega^2}}\]
+		Substituting in the appropriate values via Mathematica,
+		\[n_t\approx 1\]
+		We notice that this is the case because $\omega \approx 100\omega_p$, and thus $n_t\approx 1$.
+		Substituting this into $\Gamma_a$ for the atmosphere-ionosphere interaction,
+		\[\Gamma_a = \frac{n_i-n_t}{n_i+n_t}\approx\frac{1-1}{1+1}=0\]
+		Thus, effectively all the light is transmitted through into the ionosphere, and none are reflected.
+		Thus, it takes $0$ round trips to lose all the signal.
+		\[\boxed{0\text{ round trips.}}\]
+		\[\boxed{0\text{ seconds (N/A)}}\]
+
+
+
+	\end{enumerate}
+		
+\end{enumerate}
+
+		
+
+\end{document}

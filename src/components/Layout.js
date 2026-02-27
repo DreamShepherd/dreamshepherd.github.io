@@ -1,12 +1,32 @@
 import Header from "./Header";
 import React from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpToLine, Copyright } from "lucide-react";
 
 const layout = (page, key) => (
   <>
-    <div className="margin" id = 'top'>
-      <Header />
+    <div
+      className={key.startsWith("/dreaming") ? "pt-6 pb-12 sm:pb-24 md:pb-32" : "margin"}
+      id="top"
+    >
+      {key.startsWith("/dreaming") ? (
+        <div className="layout sticky top-0 z-20 bg-white/90 backdrop-blur-sm pb-4">
+          <h1 className="text-black text-2xl md:text-3xl font-semibold my-1 pt-2">
+            <Link scroll={false} href="/dreaming">
+              Dreaming ↔ Butterflies
+            </Link>
+          </h1>
+          <p
+            className="whitespace-nowrap overflow-hidden text-xl leading-none opacity-40 select-none pt-2"
+            aria-hidden="true"
+          >
+            oh, 🐫, oh 🐫, oh, 🐫, oh 🐫, oh, 🐫, oh 🐫, oh, 🐫, oh 🐫, oh, 🐫, oh 🐫
+          </p>
+        </div>
+      ) : (
+        <Header />
+      )}
       <AnimatePresence mode="wait">
         <motion.div
           initial={{ x: -10, opacity: 0 }}

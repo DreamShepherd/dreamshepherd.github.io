@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin21-g++-14   -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -o CMakeFiles/bignum.dir/main.cpp.o -c \"/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4/main.cpp\"",
+  "file": "/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4/main.cpp",
+  "output": "CMakeFiles/bignum.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin21-g++-14   -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -o CMakeFiles/bignum.dir/threadpool.cpp.o -c \"/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4/threadpool.cpp\"",
+  "file": "/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4/threadpool.cpp",
+  "output": "CMakeFiles/bignum.dir/threadpool.cpp.o"
+},
+{
+  "directory": "/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin21-g++-14   -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -o CMakeFiles/bignum.dir/bignum.cpp.o -c \"/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4/bignum.cpp\"",
+  "file": "/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4/bignum.cpp",
+  "output": "CMakeFiles/bignum.dir/bignum.cpp.o"
+}
+]

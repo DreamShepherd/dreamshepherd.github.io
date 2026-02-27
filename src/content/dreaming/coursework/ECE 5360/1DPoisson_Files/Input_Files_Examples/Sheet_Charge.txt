@@ -1,0 +1,1 @@
+# This file demonstrates the new sheet charge feature.surface	schottky=.6	v1GaAs	t=50	AlGaAs	t=200	x=.3sheetcharge=2e12AlGaAs	t=200	x=.3GaAs	t=500nmm	substratefullyionizedv1 0.0#no holesschrodingerstart=20schrodingerstop=4umignore dangertemp=300Kdy=10

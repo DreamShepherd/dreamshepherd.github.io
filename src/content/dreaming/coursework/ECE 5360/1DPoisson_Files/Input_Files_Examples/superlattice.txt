@@ -1,0 +1,1 @@
+surface	schottky=.6	v1GaAs	t=50	2{        AlGaAs	t=100	x=.3        3{                AlGaAs	t=50 Nd=2e18	x=.2                GaAs	t=100        }        AlGaAs	t=150	x=.3}AlGaAs	t=125	x=.3AlGaAs	t=50	x=.3substratefullyionized#v1 0.0 -1.0 -0.5v1 0.0#schrodingerstart=20#schrodingerstop=3920temp=77Kignore danger will robinsondy=10

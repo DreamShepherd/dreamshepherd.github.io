@@ -1,0 +1,15 @@
+# test comment
+surface	ohmic	v1
+GaN	t=200	Nd=1e18
+InGaN	t=400	Nd=1e18 x=0.4
+GaN	t=200	Na=5e18
+substrate
+
+
+
+fullyionized
+v1 0.0
+#schrodingerstart=0
+#schrodingerstop=7000
+temp=300K
+dy=10

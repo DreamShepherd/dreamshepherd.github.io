@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>files</key>
+	<dict>
+		<key>Resources/1D Poisson-Info.plist</key>
+		<data>
+		XEBydthOmoauNjgC5T2A6Nfides=
+		</data>
+		<key>Resources/BndStDialogController.nib</key>
+		<data>
+		zIMqFFw28R0D81CqXmaHk861Y8A=
+		</data>
+		<key>Resources/CPTPlot.nib</key>
+		<data>
+		px96w8hEVwIfO4c7ylWWEFeH+fw=
+		</data>
+		<key>Resources/Document.momd/Document.mom</key>
+		<data>
+		dAh1FYeEP2dwnYGJnCbiJHTSrwM=
+		</data>
+		<key>Resources/Document.momd/Document.omo</key>
+		<data>
+		ICGLCrYW7m8YBSpY9UsX+DgWfKw=
+		</data>
+		<key>Resources/Document.momd/VersionInfo.plist</key>
+		<data>
+		ZE5VWx6AHej+tKlWlIJ8cW9IHqs=
+		</data>
+		<key>Resources/Poisson.icns</key>
+		<data>
+		Yk1q7IZzTs+xJjw47NYkoBCQMEk=
+		</data>
+		<key>Resources/Source Files/1DPoi_errors.h</key>
+		<data>
+		KMKTHIKsorPIWDN1bI+GazbzXlk=
+		</data>
+		<key>Resources/Source Files/1DPoisson_Prefix.pch</key>
+		<data>
+		hQtjWCNG0HQp75MHdH5OqMY/IjA=
+		</data>
+		<key>Resources/Source Files/1Dbd.c</key>
+		<data>
+		Qt3HgaUj/QPF2pdMwMH1X9ETaeM=
+		</data>
+		<key>Resources/Source Files/1Dpoi_def.h</key>
+		<data>
+		LnmYtnwcodpWS6ffy6aEfcdQrs4=
+		</data>
+		<key>Resources/Source Files/1Dpoi_type.h</key>
+		<data>
+		5+ZFqAVmnppF9TDmQB959PX2kCA=
+		</data>
+		<key>Resources/Source Files/1Dpoi_type_new.h</key>
+		<data>
+		BYbFeRpUaHCVlPRxqJkDICGTHZE=
+		</data>
+		<key>Resources/Source Files/1dpoi_keywords.h</key>
+		<data>
+		HH54WX87EKE8n/eQLSxI/Gwq+Ws=
+		</data>
+		<key>Resources/Source Files/Choosefile.c</key>
+		<data>
+		jJpj+jA3JKEDY2U7VwFgnOIrb18=
+		</data>
+		<key>Resources/Source Files/Documentation/Flowchart.pdf</key>
+		<data>
+		j8X3svDHYCsbd53U6uUqh2ups8A=
+		</data>
+		<key>Resources/Source Files/Documentation/JApplPhys_68_2849.pdf</key>
+		<data>
+		Sb4sA4pizvFs0qiV7A5lDvlseMs=
+		</data>
+		<key>Resources/Source Files/Documentation/JApplPhys_68_4071.pdf</key>
+		<data>
+		3mozyG28//LPV6oT4KSM1j4NY+k=
+		</data>
+		<key>Resources/Source Files/IO.c</key>
+		<data>
+		46AoJb1Vj7yb4oI9FYDYHOGy/aw=
+		</data>
+		<key>Resources/Source Files/Mac Files/1D Poisson-Info.plist</key>
+		<data>
+		XEBydthOmoauNjgC5T2A6Nfides=
+		</data>
+		<key>Resources/Source Files/Mac Files/1D Poisson-Prefix.pch</key>
+		<data>
+		q9rGE4kENHppoCAKtRbjtXeksAI=
+		</data>
+		<key>Resources/Source Files/Mac Files/AppController.h</key>
+		<data>
+		ebt5H9IHP1k+3yy15F6MOZ1cPDc=
+		</data>
+		<key>Resources/Source Files/Mac Files/AppController.m</key>
+		<data>
+		O20UnzGzxbhcu7PbUlWbSUoJxbo=
+		</data>
+		<key>Resources/Source Files/Mac Files/BndStDialogController.h</key>
+		<data>
+		ViyiektmjzlXrj/izwVIDGGpDyM=
+		</data>
+		<key>Resources/Source Files/Mac Files/BndStDialogController.m</key>
+		<data>
+		42aN9hZsyeqFDyfJjociJ5Lh4v8=
+		</data>
+		<key>Resources/Source Files/Mac Files/BndStDialogController.xib</key>
+		<data>
+		GXm87aIdK8YBtDpLCSai24S9UQ4=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTController.h</key>
+		<data>
+		E9LQVd7mvyvNszhAqiy+WH8pIa8=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTController.m</key>
+		<data>
+		nwkqgLO/IO3NwnbnMauva/EMVoo=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTController_old.m</key>
+		<data>
+		aWfxKvGrBgVsOzjBUCFY/aS6tcU=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTController_old1.m</key>
+		<data>
+		hR9SqjPTzpWX0CHsEP201K9nZew=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTPlot.xib</key>
+		<data>
+		92rqHEJApA9TU8LZSUsRdHgRVM0=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/BD1.icns</key>
+		<data>
+		YgRV0G7/cbYl+AnMsRzSQexRyG8=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/BD1.jpg</key>
+		<data>
+		6AN4CX4Mp5t2LZo0vsYs+DJ01JY=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Plot 1.icns</key>
+		<data>
+		GB8YNX0ki/i91tyyWvGTBCeickg=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Plot 1.jpg</key>
+		<data>
+		q5qIcDw3U3SyGNl2bMeGueephwg=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.icns</key>
+		<data>
+		Yk1q7IZzTs+xJjw47NYkoBCQMEk=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_128x128.png</key>
+		<data>
+		7HG9VpDWCJ4qC60V0CLWS063TM0=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_128x128@2x.png</key>
+		<data>
+		JxtLQr8IY0T5drYze6eLYYkAjv0=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_16x16.png</key>
+		<data>
+		aQL0U4LuWbJzav5rkvOyrwHCZ2A=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_16x16@2x.png</key>
+		<data>
+		5vxRtlZOG4U13Olekvds+Hy/QXA=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_256x256.png</key>
+		<data>
+		JxtLQr8IY0T5drYze6eLYYkAjv0=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_256x256@2x.png</key>
+		<data>
+		Exl2wpr7/eBzQpHlUvr37zYKmWo=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_32x32.png</key>
+		<data>
+		5vxRtlZOG4U13Olekvds+Hy/QXA=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_32x32@2x.png</key>
+		<data>
+		tOPTxMir3UfPNi2PURWq6Gh/M2A=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_512x512.png</key>
+		<data>
+		Exl2wpr7/eBzQpHlUvr37zYKmWo=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_512x512@2x.png</key>
+		<data>
+		/tQSe5aNVmRQPEGuWmIPrIzFvM4=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/AppIcon.appiconset/Contents.json</key>
+		<data>
+		Rwo+pdL+jmWdrPYCr+P7VD6qr38=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/Contents.json</key>
+		<data>
+		Yk4quB7W9gNQWeYqHrf1Zhl1JW4=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_128x128.imageset/Contents.json</key>
+		<data>
+		7OmgEa5772eMBngA6L6EiGjOQw0=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_128x128.imageset/icon_128x128.png</key>
+		<data>
+		7HG9VpDWCJ4qC60V0CLWS063TM0=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_128x128.imageset/icon_128x128@2x.png</key>
+		<data>
+		JxtLQr8IY0T5drYze6eLYYkAjv0=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_16x16.imageset/Contents.json</key>
+		<data>
+		ImJ2BN9C1q4jAteqt8FR4wJcgKQ=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_16x16.imageset/icon_16x16.png</key>
+		<data>
+		aQL0U4LuWbJzav5rkvOyrwHCZ2A=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_16x16.imageset/icon_16x16@2x.png</key>
+		<data>
+		5vxRtlZOG4U13Olekvds+Hy/QXA=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_256x256.imageset/Contents.json</key>
+		<data>
+		Ov4HXupdHI8v/2WRFIk/2b7s2yo=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_256x256.imageset/icon_256x256.png</key>
+		<data>
+		JxtLQr8IY0T5drYze6eLYYkAjv0=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_256x256.imageset/icon_256x256@2x.png</key>
+		<data>
+		Exl2wpr7/eBzQpHlUvr37zYKmWo=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_32x32.imageset/Contents.json</key>
+		<data>
+		8pRm8uL7W+/mBlIwd2Dg+1JAqF4=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_32x32.imageset/icon_32x32.png</key>
+		<data>
+		5vxRtlZOG4U13Olekvds+Hy/QXA=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_32x32.imageset/icon_32x32@2x.png</key>
+		<data>
+		tOPTxMir3UfPNi2PURWq6Gh/M2A=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_512x512.imageset/Contents.json</key>
+		<data>
+		Tdi65MJkz6CLsobQfePQXOHXGug=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_512x512.imageset/icon_512x512.png</key>
+		<data>
+		Exl2wpr7/eBzQpHlUvr37zYKmWo=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_512x512.imageset/icon_512x512@2x.png</key>
+		<data>
+		/tQSe5aNVmRQPEGuWmIPrIzFvM4=
+		</data>
+		<key>Resources/Source Files/Mac Files/PC.m</key>
+		<data>
+		tvRlyzyzudqsaBFeoObIQjq6XNU=
+		</data>
+		<key>Resources/Source Files/Mac Files/PoissonController.h</key>
+		<data>
+		kkqjTHKCxu3DqVhNl2dI2KI8FTk=
+		</data>
+		<key>Resources/Source Files/Mac Files/PoissonController.m</key>
+		<data>
+		OOIgmStT967Vhn6Nw1wiVaz3yDY=
+		</data>
+		<key>Resources/Source Files/Mac Files/en.lproj/Credits.rtf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YKJIFIsxneJuNkJNJQIcJIjiPOg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/Source Files/Mac Files/en.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			j6qg+qbNaStgLrdDQMdUxznV6qM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/Source Files/Mac Files/en.lproj/MainMenu.xib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			POWqzM7e8zCE2qDcZnxcNhID26o=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/Source Files/Mac Files/en.lproj/oneDPDocument.xib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Qn572MYJ8ZdBFFem+kI+7YieeCQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/Source Files/Mac Files/main.m</key>
+		<data>
+		OtiMVj53i4OUzJI03A2x7lO0Rds=
+		</data>
+		<key>Resources/Source Files/Mac Files/oneDPDocument.h</key>
+		<data>
+		NmjXCQY29GgUbxukKyopEPLc+6g=
+		</data>
+		<key>Resources/Source Files/Mac Files/oneDPDocument.m</key>
+		<data>
+		YYqUPt1O/6+syXfg3bYdCqI8U4U=
+		</data>
+		<key>Resources/Source Files/Menu.c</key>
+		<data>
+		0tNvp8oNls9hFfC9c1XfdvfbQMA=
+		</data>
+		<key>Resources/Source Files/PC Release B9.cpp</key>
+		<data>
+		0uxwpaYSWeHarDpwyF4uLmBjWuA=
+		</data>
+		<key>Resources/Source Files/PC Source files/PCspec.cpp</key>
+		<data>
+		L1Fs7g2Jevejsa3qw8lmgAzoAzI=
+		</data>
+		<key>Resources/Source Files/PC Source files/WXPC_PoiController.c</key>
+		<data>
+		1/iDYl2LUUMkiHGuEibVDup+xDA=
+		</data>
+		<key>Resources/Source Files/PC Source files/WXPC_PoiController.cpp</key>
+		<data>
+		2OgxS0t+zlbTX+oNzmZ2Sv+kqfk=
+		</data>
+		<key>Resources/Source Files/PC.c</key>
+		<data>
+		NjbY6+nqPsdgHnhfzS9YQYkkn5M=
+		</data>
+		<key>Resources/Source Files/PC_PoiController.c</key>
+		<data>
+		0wkQCy648d49nahqu5DkUWZGA4Q=
+		</data>
+		<key>Resources/Source Files/adjust.c</key>
+		<data>
+		A40jgdL5bmVP7SyTUxXaMT9snmc=
+		</data>
+		<key>Resources/Source Files/boundstates.c</key>
+		<data>
+		TLEbY17Q9CeilmePVr5yfAZ2EK0=
+		</data>
+		<key>Resources/Source Files/cLapack/blaswrap.h</key>
+		<data>
+		TYgRVFwhi4h2rGoS+y7Xzeq2058=
+		</data>
+		<key>Resources/Source Files/cLapack/dasum.c</key>
+		<data>
+		Mxng0MbmO9QQYjkZoP7QqPt2eB8=
+		</data>
+		<key>Resources/Source Files/cLapack/daxpy.c</key>
+		<data>
+		D+St7cSmr0IzJd0VsEQTiL3Xy+E=
+		</data>
+		<key>Resources/Source Files/cLapack/dcopy.c</key>
+		<data>
+		vA8dqN3mknDVBCUlxs9UE9u2Za8=
+		</data>
+		<key>Resources/Source Files/cLapack/ddot.c</key>
+		<data>
+		HxdbGDSA5ZR7itBonE6A6jV0Q/A=
+		</data>
+		<key>Resources/Source Files/cLapack/dlaebz.c</key>
+		<data>
+		VVd9fhN1wHBduZzYbCek1q+/my8=
+		</data>
+		<key>Resources/Source Files/cLapack/dlagtf.c</key>
+		<data>
+		Cd62TmOMb5EMXffxyjH1Vx/siMM=
+		</data>
+		<key>Resources/Source Files/cLapack/dlagts.c</key>
+		<data>
+		xt041t6PRdzy6KdIsLhhNbP9vrk=
+		</data>
+		<key>Resources/Source Files/cLapack/dlamch.c</key>
+		<data>
+		a4T5r5V+1QhTO+N07BmcWk4r62g=
+		</data>
+		<key>Resources/Source Files/cLapack/dlarnv.c</key>
+		<data>
+		heg3D5+N6+FcLyJWwTYOOzTR3pI=
+		</data>
+		<key>Resources/Source Files/cLapack/dlaruv.c</key>
+		<data>
+		OwINHCoHJPmoizG1Yk6KKtG4OAo=
+		</data>
+		<key>Resources/Source Files/cLapack/dnrm2.c</key>
+		<data>
+		UE9iWPSydFjHyj1SR8CqpytUPEg=
+		</data>
+		<key>Resources/Source Files/cLapack/dscal.c</key>
+		<data>
+		g7rQsLuzaf1GlCq7k4tVroLQsOQ=
+		</data>
+		<key>Resources/Source Files/cLapack/dstebz.c</key>
+		<data>
+		XG1acH21FFCfbOv6LP+3efn2+Cs=
+		</data>
+		<key>Resources/Source Files/cLapack/dstein.c</key>
+		<data>
+		r+r9N72b66jzgtlmmZnM9SC0h/w=
+		</data>
+		<key>Resources/Source Files/cLapack/f2c.h</key>
+		<data>
+		0oupK6A4tjT2QE9LsfjO370+Au4=
+		</data>
+		<key>Resources/Source Files/cLapack/idamax.c</key>
+		<data>
+		ZIIODL6/mIfaWL1v0UCeXfXmi/k=
+		</data>
+		<key>Resources/Source Files/cLapack/ieeeck.c</key>
+		<data>
+		lnmElxsTTakPeEgSdPX3meD1vDM=
+		</data>
+		<key>Resources/Source Files/cLapack/ilaenv.c</key>
+		<data>
+		zIk9SAgwtM1G+n1+NhmTi4Z27tw=
+		</data>
+		<key>Resources/Source Files/cLapack/lsame.c</key>
+		<data>
+		jgvNLrSGxbIOI5Y4IEtVvfzaa9A=
+		</data>
+		<key>Resources/Source Files/cLapack/xerbla.c</key>
+		<data>
+		tbzPjRpLnUrb5QojUkPtNxJGek8=
+		</data>
+		<key>Resources/Source Files/cLapackMod/blaswrap.h</key>
+		<data>
+		TYgRVFwhi4h2rGoS+y7Xzeq2058=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dasum.c</key>
+		<data>
+		Mxng0MbmO9QQYjkZoP7QqPt2eB8=
+		</data>
+		<key>Resources/Source Files/cLapackMod/daxpy.c</key>
+		<data>
+		D+St7cSmr0IzJd0VsEQTiL3Xy+E=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dcopy.c</key>
+		<data>
+		vA8dqN3mknDVBCUlxs9UE9u2Za8=
+		</data>
+		<key>Resources/Source Files/cLapackMod/ddot.c</key>
+		<data>
+		HxdbGDSA5ZR7itBonE6A6jV0Q/A=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlaebz.c</key>
+		<data>
+		VVd9fhN1wHBduZzYbCek1q+/my8=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlagtf.c</key>
+		<data>
+		Cd62TmOMb5EMXffxyjH1Vx/siMM=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlagts.c</key>
+		<data>
+		xt041t6PRdzy6KdIsLhhNbP9vrk=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlamch.c</key>
+		<data>
+		iOLn4gpa6/YAQZoYn7u+fJ05akg=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlarnv.c</key>
+		<data>
+		heg3D5+N6+FcLyJWwTYOOzTR3pI=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlaruv.c</key>
+		<data>
+		OwINHCoHJPmoizG1Yk6KKtG4OAo=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dnrm2.c</key>
+		<data>
+		UE9iWPSydFjHyj1SR8CqpytUPEg=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dscal.c</key>
+		<data>
+		g7rQsLuzaf1GlCq7k4tVroLQsOQ=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dstebz.c</key>
+		<data>
+		XG1acH21FFCfbOv6LP+3efn2+Cs=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dstein.c</key>
+		<data>
+		r+r9N72b66jzgtlmmZnM9SC0h/w=
+		</data>
+		<key>Resources/Source Files/cLapackMod/f2c.h</key>
+		<data>
+		0oupK6A4tjT2QE9LsfjO370+Au4=
+		</data>
+		<key>Resources/Source Files/cLapackMod/idamax.c</key>
+		<data>
+		ZIIODL6/mIfaWL1v0UCeXfXmi/k=
+		</data>
+		<key>Resources/Source Files/cLapackMod/ieeeck.c</key>
+		<data>
+		lnmElxsTTakPeEgSdPX3meD1vDM=
+		</data>
+		<key>Resources/Source Files/cLapackMod/ilaenv.c</key>
+		<data>
+		N//lSFP/N987LpZb+c6DtQaX+1g=
+		</data>
+		<key>Resources/Source Files/cLapackMod/lsame.c</key>
+		<data>
+		jgvNLrSGxbIOI5Y4IEtVvfzaa9A=
+		</data>
+		<key>Resources/Source Files/cLapackMod/xerbla.c</key>
+		<data>
+		tbzPjRpLnUrb5QojUkPtNxJGek8=
+		</data>
+		<key>Resources/Source Files/charge.c</key>
+		<data>
+		AkjyooaJzVo1O/H6gu6cfS+cIyE=
+		</data>
+		<key>Resources/Source Files/config.h</key>
+		<data>
+		OhKYa+6v6jEZIlEuDFGZxZhHEQo=
+		</data>
+		<key>Resources/Source Files/fieldtrim.c</key>
+		<data>
+		14d9wnMJTppwHzJzF42vwlEwBf8=
+		</data>
+		<key>Resources/Source Files/initialize.c</key>
+		<data>
+		Xgv2spwYpEmM1CYZpnxzd6KHmkU=
+		</data>
+		<key>Resources/Source Files/materials.c</key>
+		<data>
+		OA3/MpBKRE+JK5+Dln1TxsmRdIo=
+		</data>
+		<key>Resources/Source Files/nrutil.c</key>
+		<data>
+		xR+wKEz1TJZ7d6flC66GWLpsy/Y=
+		</data>
+		<key>Resources/Source Files/nrutil.h</key>
+		<data>
+		h88Ve0jqm2+NxHHdCN6ohGkMSPI=
+		</data>
+		<key>Resources/Source Files/readlayers.c</key>
+		<data>
+		D56CyCcm5OmY86aWPVqqN3MKsFk=
+		</data>
+		<key>Resources/Source Files/schrod.c</key>
+		<data>
+		nhHKPvutSqaz4El/rg8taWXqAjo=
+		</data>
+		<key>Resources/Source Files/stdafx.cpp</key>
+		<data>
+		tKRfkzIO1FgCJl9+N8owoRmjaHw=
+		</data>
+		<key>Resources/Source Files/stdafx.h</key>
+		<data>
+		Lss5AFOOUamWUyfjG8FaefuJ34c=
+		</data>
+		<key>Resources/en.lproj/Credits.rtf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YKJIFIsxneJuNkJNJQIcJIjiPOg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MiLKDDnrUKr4EmuvhS5VQwxHGK8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/MainMenu.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9qX8a5qTUUd2rOLa4Hc8jMUnHVM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/oneDPDocument.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QlpwIJI9iIXJZ1fV2gkoefCwwJA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>files2</key>
+	<dict>
+		<key>Frameworks/CorePlot.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			QjzKRoHoEIE1n6daUM4CpeIkIGQ=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"423cca4681e81081359fa75a50ce02a5e2242064"</string>
+		</dict>
+		<key>Resources/1D Poisson-Info.plist</key>
+		<data>
+		XEBydthOmoauNjgC5T2A6Nfides=
+		</data>
+		<key>Resources/BndStDialogController.nib</key>
+		<data>
+		zIMqFFw28R0D81CqXmaHk861Y8A=
+		</data>
+		<key>Resources/CPTPlot.nib</key>
+		<data>
+		px96w8hEVwIfO4c7ylWWEFeH+fw=
+		</data>
+		<key>Resources/Document.momd/Document.mom</key>
+		<data>
+		dAh1FYeEP2dwnYGJnCbiJHTSrwM=
+		</data>
+		<key>Resources/Document.momd/Document.omo</key>
+		<data>
+		ICGLCrYW7m8YBSpY9UsX+DgWfKw=
+		</data>
+		<key>Resources/Document.momd/VersionInfo.plist</key>
+		<data>
+		ZE5VWx6AHej+tKlWlIJ8cW9IHqs=
+		</data>
+		<key>Resources/Poisson.icns</key>
+		<data>
+		Yk1q7IZzTs+xJjw47NYkoBCQMEk=
+		</data>
+		<key>Resources/Source Files/1DPoi_errors.h</key>
+		<data>
+		KMKTHIKsorPIWDN1bI+GazbzXlk=
+		</data>
+		<key>Resources/Source Files/1DPoisson_Prefix.pch</key>
+		<data>
+		hQtjWCNG0HQp75MHdH5OqMY/IjA=
+		</data>
+		<key>Resources/Source Files/1Dbd.c</key>
+		<data>
+		Qt3HgaUj/QPF2pdMwMH1X9ETaeM=
+		</data>
+		<key>Resources/Source Files/1Dpoi_def.h</key>
+		<data>
+		LnmYtnwcodpWS6ffy6aEfcdQrs4=
+		</data>
+		<key>Resources/Source Files/1Dpoi_type.h</key>
+		<data>
+		5+ZFqAVmnppF9TDmQB959PX2kCA=
+		</data>
+		<key>Resources/Source Files/1Dpoi_type_new.h</key>
+		<data>
+		BYbFeRpUaHCVlPRxqJkDICGTHZE=
+		</data>
+		<key>Resources/Source Files/1dpoi_keywords.h</key>
+		<data>
+		HH54WX87EKE8n/eQLSxI/Gwq+Ws=
+		</data>
+		<key>Resources/Source Files/Choosefile.c</key>
+		<data>
+		jJpj+jA3JKEDY2U7VwFgnOIrb18=
+		</data>
+		<key>Resources/Source Files/Documentation/Flowchart.pdf</key>
+		<data>
+		j8X3svDHYCsbd53U6uUqh2ups8A=
+		</data>
+		<key>Resources/Source Files/Documentation/JApplPhys_68_2849.pdf</key>
+		<data>
+		Sb4sA4pizvFs0qiV7A5lDvlseMs=
+		</data>
+		<key>Resources/Source Files/Documentation/JApplPhys_68_4071.pdf</key>
+		<data>
+		3mozyG28//LPV6oT4KSM1j4NY+k=
+		</data>
+		<key>Resources/Source Files/IO.c</key>
+		<data>
+		46AoJb1Vj7yb4oI9FYDYHOGy/aw=
+		</data>
+		<key>Resources/Source Files/Mac Files/1D Poisson-Info.plist</key>
+		<data>
+		XEBydthOmoauNjgC5T2A6Nfides=
+		</data>
+		<key>Resources/Source Files/Mac Files/1D Poisson-Prefix.pch</key>
+		<data>
+		q9rGE4kENHppoCAKtRbjtXeksAI=
+		</data>
+		<key>Resources/Source Files/Mac Files/AppController.h</key>
+		<data>
+		ebt5H9IHP1k+3yy15F6MOZ1cPDc=
+		</data>
+		<key>Resources/Source Files/Mac Files/AppController.m</key>
+		<data>
+		O20UnzGzxbhcu7PbUlWbSUoJxbo=
+		</data>
+		<key>Resources/Source Files/Mac Files/BndStDialogController.h</key>
+		<data>
+		ViyiektmjzlXrj/izwVIDGGpDyM=
+		</data>
+		<key>Resources/Source Files/Mac Files/BndStDialogController.m</key>
+		<data>
+		42aN9hZsyeqFDyfJjociJ5Lh4v8=
+		</data>
+		<key>Resources/Source Files/Mac Files/BndStDialogController.xib</key>
+		<data>
+		GXm87aIdK8YBtDpLCSai24S9UQ4=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTController.h</key>
+		<data>
+		E9LQVd7mvyvNszhAqiy+WH8pIa8=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTController.m</key>
+		<data>
+		nwkqgLO/IO3NwnbnMauva/EMVoo=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTController_old.m</key>
+		<data>
+		aWfxKvGrBgVsOzjBUCFY/aS6tcU=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTController_old1.m</key>
+		<data>
+		hR9SqjPTzpWX0CHsEP201K9nZew=
+		</data>
+		<key>Resources/Source Files/Mac Files/CPTPlot.xib</key>
+		<data>
+		92rqHEJApA9TU8LZSUsRdHgRVM0=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/BD1.icns</key>
+		<data>
+		YgRV0G7/cbYl+AnMsRzSQexRyG8=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/BD1.jpg</key>
+		<data>
+		6AN4CX4Mp5t2LZo0vsYs+DJ01JY=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Plot 1.icns</key>
+		<data>
+		GB8YNX0ki/i91tyyWvGTBCeickg=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Plot 1.jpg</key>
+		<data>
+		q5qIcDw3U3SyGNl2bMeGueephwg=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.icns</key>
+		<data>
+		Yk1q7IZzTs+xJjw47NYkoBCQMEk=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_128x128.png</key>
+		<data>
+		7HG9VpDWCJ4qC60V0CLWS063TM0=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_128x128@2x.png</key>
+		<data>
+		JxtLQr8IY0T5drYze6eLYYkAjv0=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_16x16.png</key>
+		<data>
+		aQL0U4LuWbJzav5rkvOyrwHCZ2A=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_16x16@2x.png</key>
+		<data>
+		5vxRtlZOG4U13Olekvds+Hy/QXA=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_256x256.png</key>
+		<data>
+		JxtLQr8IY0T5drYze6eLYYkAjv0=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_256x256@2x.png</key>
+		<data>
+		Exl2wpr7/eBzQpHlUvr37zYKmWo=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_32x32.png</key>
+		<data>
+		5vxRtlZOG4U13Olekvds+Hy/QXA=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_32x32@2x.png</key>
+		<data>
+		tOPTxMir3UfPNi2PURWq6Gh/M2A=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_512x512.png</key>
+		<data>
+		Exl2wpr7/eBzQpHlUvr37zYKmWo=
+		</data>
+		<key>Resources/Source Files/Mac Files/Icon/Poisson.iconset/icon_512x512@2x.png</key>
+		<data>
+		/tQSe5aNVmRQPEGuWmIPrIzFvM4=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/AppIcon.appiconset/Contents.json</key>
+		<data>
+		Rwo+pdL+jmWdrPYCr+P7VD6qr38=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/Contents.json</key>
+		<data>
+		Yk4quB7W9gNQWeYqHrf1Zhl1JW4=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_128x128.imageset/Contents.json</key>
+		<data>
+		7OmgEa5772eMBngA6L6EiGjOQw0=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_128x128.imageset/icon_128x128.png</key>
+		<data>
+		7HG9VpDWCJ4qC60V0CLWS063TM0=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_128x128.imageset/icon_128x128@2x.png</key>
+		<data>
+		JxtLQr8IY0T5drYze6eLYYkAjv0=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_16x16.imageset/Contents.json</key>
+		<data>
+		ImJ2BN9C1q4jAteqt8FR4wJcgKQ=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_16x16.imageset/icon_16x16.png</key>
+		<data>
+		aQL0U4LuWbJzav5rkvOyrwHCZ2A=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_16x16.imageset/icon_16x16@2x.png</key>
+		<data>
+		5vxRtlZOG4U13Olekvds+Hy/QXA=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_256x256.imageset/Contents.json</key>
+		<data>
+		Ov4HXupdHI8v/2WRFIk/2b7s2yo=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_256x256.imageset/icon_256x256.png</key>
+		<data>
+		JxtLQr8IY0T5drYze6eLYYkAjv0=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_256x256.imageset/icon_256x256@2x.png</key>
+		<data>
+		Exl2wpr7/eBzQpHlUvr37zYKmWo=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_32x32.imageset/Contents.json</key>
+		<data>
+		8pRm8uL7W+/mBlIwd2Dg+1JAqF4=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_32x32.imageset/icon_32x32.png</key>
+		<data>
+		5vxRtlZOG4U13Olekvds+Hy/QXA=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_32x32.imageset/icon_32x32@2x.png</key>
+		<data>
+		tOPTxMir3UfPNi2PURWq6Gh/M2A=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_512x512.imageset/Contents.json</key>
+		<data>
+		Tdi65MJkz6CLsobQfePQXOHXGug=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_512x512.imageset/icon_512x512.png</key>
+		<data>
+		Exl2wpr7/eBzQpHlUvr37zYKmWo=
+		</data>
+		<key>Resources/Source Files/Mac Files/IconResources.xcassets/icon_512x512.imageset/icon_512x512@2x.png</key>
+		<data>
+		/tQSe5aNVmRQPEGuWmIPrIzFvM4=
+		</data>
+		<key>Resources/Source Files/Mac Files/PC.m</key>
+		<data>
+		tvRlyzyzudqsaBFeoObIQjq6XNU=
+		</data>
+		<key>Resources/Source Files/Mac Files/PoissonController.h</key>
+		<data>
+		kkqjTHKCxu3DqVhNl2dI2KI8FTk=
+		</data>
+		<key>Resources/Source Files/Mac Files/PoissonController.m</key>
+		<data>
+		OOIgmStT967Vhn6Nw1wiVaz3yDY=
+		</data>
+		<key>Resources/Source Files/Mac Files/en.lproj/Credits.rtf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YKJIFIsxneJuNkJNJQIcJIjiPOg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/Source Files/Mac Files/en.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			j6qg+qbNaStgLrdDQMdUxznV6qM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/Source Files/Mac Files/en.lproj/MainMenu.xib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			POWqzM7e8zCE2qDcZnxcNhID26o=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/Source Files/Mac Files/en.lproj/oneDPDocument.xib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Qn572MYJ8ZdBFFem+kI+7YieeCQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/Source Files/Mac Files/main.m</key>
+		<data>
+		OtiMVj53i4OUzJI03A2x7lO0Rds=
+		</data>
+		<key>Resources/Source Files/Mac Files/oneDPDocument.h</key>
+		<data>
+		NmjXCQY29GgUbxukKyopEPLc+6g=
+		</data>
+		<key>Resources/Source Files/Mac Files/oneDPDocument.m</key>
+		<data>
+		YYqUPt1O/6+syXfg3bYdCqI8U4U=
+		</data>
+		<key>Resources/Source Files/Menu.c</key>
+		<data>
+		0tNvp8oNls9hFfC9c1XfdvfbQMA=
+		</data>
+		<key>Resources/Source Files/PC Release B9.cpp</key>
+		<data>
+		0uxwpaYSWeHarDpwyF4uLmBjWuA=
+		</data>
+		<key>Resources/Source Files/PC Source files/PCspec.cpp</key>
+		<data>
+		L1Fs7g2Jevejsa3qw8lmgAzoAzI=
+		</data>
+		<key>Resources/Source Files/PC Source files/WXPC_PoiController.c</key>
+		<data>
+		1/iDYl2LUUMkiHGuEibVDup+xDA=
+		</data>
+		<key>Resources/Source Files/PC Source files/WXPC_PoiController.cpp</key>
+		<data>
+		2OgxS0t+zlbTX+oNzmZ2Sv+kqfk=
+		</data>
+		<key>Resources/Source Files/PC.c</key>
+		<data>
+		NjbY6+nqPsdgHnhfzS9YQYkkn5M=
+		</data>
+		<key>Resources/Source Files/PC_PoiController.c</key>
+		<data>
+		0wkQCy648d49nahqu5DkUWZGA4Q=
+		</data>
+		<key>Resources/Source Files/adjust.c</key>
+		<data>
+		A40jgdL5bmVP7SyTUxXaMT9snmc=
+		</data>
+		<key>Resources/Source Files/boundstates.c</key>
+		<data>
+		TLEbY17Q9CeilmePVr5yfAZ2EK0=
+		</data>
+		<key>Resources/Source Files/cLapack/blaswrap.h</key>
+		<data>
+		TYgRVFwhi4h2rGoS+y7Xzeq2058=
+		</data>
+		<key>Resources/Source Files/cLapack/dasum.c</key>
+		<data>
+		Mxng0MbmO9QQYjkZoP7QqPt2eB8=
+		</data>
+		<key>Resources/Source Files/cLapack/daxpy.c</key>
+		<data>
+		D+St7cSmr0IzJd0VsEQTiL3Xy+E=
+		</data>
+		<key>Resources/Source Files/cLapack/dcopy.c</key>
+		<data>
+		vA8dqN3mknDVBCUlxs9UE9u2Za8=
+		</data>
+		<key>Resources/Source Files/cLapack/ddot.c</key>
+		<data>
+		HxdbGDSA5ZR7itBonE6A6jV0Q/A=
+		</data>
+		<key>Resources/Source Files/cLapack/dlaebz.c</key>
+		<data>
+		VVd9fhN1wHBduZzYbCek1q+/my8=
+		</data>
+		<key>Resources/Source Files/cLapack/dlagtf.c</key>
+		<data>
+		Cd62TmOMb5EMXffxyjH1Vx/siMM=
+		</data>
+		<key>Resources/Source Files/cLapack/dlagts.c</key>
+		<data>
+		xt041t6PRdzy6KdIsLhhNbP9vrk=
+		</data>
+		<key>Resources/Source Files/cLapack/dlamch.c</key>
+		<data>
+		a4T5r5V+1QhTO+N07BmcWk4r62g=
+		</data>
+		<key>Resources/Source Files/cLapack/dlarnv.c</key>
+		<data>
+		heg3D5+N6+FcLyJWwTYOOzTR3pI=
+		</data>
+		<key>Resources/Source Files/cLapack/dlaruv.c</key>
+		<data>
+		OwINHCoHJPmoizG1Yk6KKtG4OAo=
+		</data>
+		<key>Resources/Source Files/cLapack/dnrm2.c</key>
+		<data>
+		UE9iWPSydFjHyj1SR8CqpytUPEg=
+		</data>
+		<key>Resources/Source Files/cLapack/dscal.c</key>
+		<data>
+		g7rQsLuzaf1GlCq7k4tVroLQsOQ=
+		</data>
+		<key>Resources/Source Files/cLapack/dstebz.c</key>
+		<data>
+		XG1acH21FFCfbOv6LP+3efn2+Cs=
+		</data>
+		<key>Resources/Source Files/cLapack/dstein.c</key>
+		<data>
+		r+r9N72b66jzgtlmmZnM9SC0h/w=
+		</data>
+		<key>Resources/Source Files/cLapack/f2c.h</key>
+		<data>
+		0oupK6A4tjT2QE9LsfjO370+Au4=
+		</data>
+		<key>Resources/Source Files/cLapack/idamax.c</key>
+		<data>
+		ZIIODL6/mIfaWL1v0UCeXfXmi/k=
+		</data>
+		<key>Resources/Source Files/cLapack/ieeeck.c</key>
+		<data>
+		lnmElxsTTakPeEgSdPX3meD1vDM=
+		</data>
+		<key>Resources/Source Files/cLapack/ilaenv.c</key>
+		<data>
+		zIk9SAgwtM1G+n1+NhmTi4Z27tw=
+		</data>
+		<key>Resources/Source Files/cLapack/lsame.c</key>
+		<data>
+		jgvNLrSGxbIOI5Y4IEtVvfzaa9A=
+		</data>
+		<key>Resources/Source Files/cLapack/xerbla.c</key>
+		<data>
+		tbzPjRpLnUrb5QojUkPtNxJGek8=
+		</data>
+		<key>Resources/Source Files/cLapackMod/blaswrap.h</key>
+		<data>
+		TYgRVFwhi4h2rGoS+y7Xzeq2058=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dasum.c</key>
+		<data>
+		Mxng0MbmO9QQYjkZoP7QqPt2eB8=
+		</data>
+		<key>Resources/Source Files/cLapackMod/daxpy.c</key>
+		<data>
+		D+St7cSmr0IzJd0VsEQTiL3Xy+E=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dcopy.c</key>
+		<data>
+		vA8dqN3mknDVBCUlxs9UE9u2Za8=
+		</data>
+		<key>Resources/Source Files/cLapackMod/ddot.c</key>
+		<data>
+		HxdbGDSA5ZR7itBonE6A6jV0Q/A=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlaebz.c</key>
+		<data>
+		VVd9fhN1wHBduZzYbCek1q+/my8=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlagtf.c</key>
+		<data>
+		Cd62TmOMb5EMXffxyjH1Vx/siMM=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlagts.c</key>
+		<data>
+		xt041t6PRdzy6KdIsLhhNbP9vrk=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlamch.c</key>
+		<data>
+		iOLn4gpa6/YAQZoYn7u+fJ05akg=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlarnv.c</key>
+		<data>
+		heg3D5+N6+FcLyJWwTYOOzTR3pI=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dlaruv.c</key>
+		<data>
+		OwINHCoHJPmoizG1Yk6KKtG4OAo=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dnrm2.c</key>
+		<data>
+		UE9iWPSydFjHyj1SR8CqpytUPEg=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dscal.c</key>
+		<data>
+		g7rQsLuzaf1GlCq7k4tVroLQsOQ=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dstebz.c</key>
+		<data>
+		XG1acH21FFCfbOv6LP+3efn2+Cs=
+		</data>
+		<key>Resources/Source Files/cLapackMod/dstein.c</key>
+		<data>
+		r+r9N72b66jzgtlmmZnM9SC0h/w=
+		</data>
+		<key>Resources/Source Files/cLapackMod/f2c.h</key>
+		<data>
+		0oupK6A4tjT2QE9LsfjO370+Au4=
+		</data>
+		<key>Resources/Source Files/cLapackMod/idamax.c</key>
+		<data>
+		ZIIODL6/mIfaWL1v0UCeXfXmi/k=
+		</data>
+		<key>Resources/Source Files/cLapackMod/ieeeck.c</key>
+		<data>
+		lnmElxsTTakPeEgSdPX3meD1vDM=
+		</data>
+		<key>Resources/Source Files/cLapackMod/ilaenv.c</key>
+		<data>
+		N//lSFP/N987LpZb+c6DtQaX+1g=
+		</data>
+		<key>Resources/Source Files/cLapackMod/lsame.c</key>
+		<data>
+		jgvNLrSGxbIOI5Y4IEtVvfzaa9A=
+		</data>
+		<key>Resources/Source Files/cLapackMod/xerbla.c</key>
+		<data>
+		tbzPjRpLnUrb5QojUkPtNxJGek8=
+		</data>
+		<key>Resources/Source Files/charge.c</key>
+		<data>
+		AkjyooaJzVo1O/H6gu6cfS+cIyE=
+		</data>
+		<key>Resources/Source Files/config.h</key>
+		<data>
+		OhKYa+6v6jEZIlEuDFGZxZhHEQo=
+		</data>
+		<key>Resources/Source Files/fieldtrim.c</key>
+		<data>
+		14d9wnMJTppwHzJzF42vwlEwBf8=
+		</data>
+		<key>Resources/Source Files/initialize.c</key>
+		<data>
+		Xgv2spwYpEmM1CYZpnxzd6KHmkU=
+		</data>
+		<key>Resources/Source Files/materials.c</key>
+		<data>
+		OA3/MpBKRE+JK5+Dln1TxsmRdIo=
+		</data>
+		<key>Resources/Source Files/nrutil.c</key>
+		<data>
+		xR+wKEz1TJZ7d6flC66GWLpsy/Y=
+		</data>
+		<key>Resources/Source Files/nrutil.h</key>
+		<data>
+		h88Ve0jqm2+NxHHdCN6ohGkMSPI=
+		</data>
+		<key>Resources/Source Files/readlayers.c</key>
+		<data>
+		D56CyCcm5OmY86aWPVqqN3MKsFk=
+		</data>
+		<key>Resources/Source Files/schrod.c</key>
+		<data>
+		nhHKPvutSqaz4El/rg8taWXqAjo=
+		</data>
+		<key>Resources/Source Files/stdafx.cpp</key>
+		<data>
+		tKRfkzIO1FgCJl9+N8owoRmjaHw=
+		</data>
+		<key>Resources/Source Files/stdafx.h</key>
+		<data>
+		Lss5AFOOUamWUyfjG8FaefuJ34c=
+		</data>
+		<key>Resources/en.lproj/Credits.rtf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YKJIFIsxneJuNkJNJQIcJIjiPOg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MiLKDDnrUKr4EmuvhS5VQwxHGK8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/MainMenu.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9qX8a5qTUUd2rOLa4Hc8jMUnHVM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/oneDPDocument.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QlpwIJI9iIXJZ1fV2gkoefCwwJA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>rules</key>
+	<dict>
+		<key>^Resources/</key>
+		<true/>
+		<key>^Resources/.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^Resources/.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^version.plist$</key>
+		<true/>
+	</dict>
+	<key>rules2</key>
+	<dict>
+		<key>.*\.dSYM($|/)</key>
+		<dict>
+			<key>weight</key>
+			<real>11</real>
+		</dict>
+		<key>^(.*/)?\.DS_Store$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>2000</real>
+		</dict>
+		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
+		<dict>
+			<key>nested</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
+		</dict>
+		<key>^.*</key>
+		<true/>
+		<key>^Info\.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^PkgInfo$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^Resources/</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^Resources/.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^Resources/.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^[^/]+$</key>
+		<dict>
+			<key>nested</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
+		</dict>
+		<key>^embedded\.provisionprofile$</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^version\.plist$</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,69 @@
+# (c) Silvaco Inc., 2022
+go atlas
+#
+# SECTION 1: Mesh input
+#
+
+mesh
+
+x.mesh loc=0 spac=0.05
+x.mesh loc=0.2 spac=0.05
+x.mesh loc=0.3 spac=0.005
+x.mesh loc=0.4 spac=0.005
+x.mesh loc=0.5 spac=0.005
+x.mesh loc=0.6 spac=0.005
+x.mesh loc=0.7 spac=0.005
+x.mesh loc=0.8 spac=0.005
+x.mesh loc=0.9 spac=0.05
+x.mesh loc=1.05 spac=0.05
+
+y.mesh loc=0.0   spac=0.001
+y.mesh loc=0.1 spac=0.001
+y.mesh loc=0.115 spac=0.001
+y.mesh loc=0.15 spac=0.01
+y.mesh loc=0.2 spac=0.05
+y.mesh loc=0.415 spac=0.1
+
+#
+# SECTION 2: Structure Specification
+#
+region     num=1   material=GaN x.min=0.4 x.max=0.7 y.min=0 y.max=0.1 polarization=True calc.strain=True 
+region     num=2  material=AlGaN x.min=0.2 x.max=0.85 y.min=0.1 y.max=0.115 x.composition=0.2 polarization=True calc.strain=True 
+
+region     num=6  material=GaN x.min=0 x.max=0.2 y.min=0.1 y.max=0.115 
+region     num=7  material=GaN x.min=0.85 x.max=1.05 y.min=0.1 y.max=0.115 
+
+region     num=3   material=GaN y.min=0.115 y.max=0.415 polarization=True calc.strain=True 
+region     num=4   material=air x.min=0 x.max=0.4 y.min=0 y.max=0.1 
+region     num=5   material=air x.min=0.7 x.max=1.05 y.min=0 y.max=0.1 
+
+elec       num=1  name=gate   x.min=0.4 x.max=0.7 y.min=0.0 y.max=0.0
+elec       num=2  name=source   x.min=0.0 x.max=0.2 y.min=0.1 y.max=0.1
+elec       num=3  name=drain   x.min=0.85 x.max=1.05 y.min=0.1 y.max=0.1
+
+doping     uniform x.min=0.4 x.max=0.7 y.min=0 y.max=0.1 p.type conc=1.e19 
+doping     uniform y.min=0.115 y.max=0.415 n.type conc=1.e15 
+
+doping     uniform x.min=0 x.max=0.2 y.min=0 y.max=0.115 n.type conc=1.e20
+doping     uniform x.min=0.2 x.max=0.85 y.min=0 y.max=0.115 n.type conc=1.e15 
+doping     uniform x.min=0.85 x.max=1.05 y.min=0 y.max=0.115 n.type conc=1.e20
+
+
+
+#
+contact name=gate workfun=8
+
+output con.band val.band e.field charge recomb
+model bgn fldmob srh conmob
+
+solve init
+method newton
+
+solve vgate=-0.0 name=gate
+save outf=hemtex2.str
+log outf=hemtex2.log master 
+
+tonyplot  hemtex2.str -set hemtex2.set
+#
+quit
+ 

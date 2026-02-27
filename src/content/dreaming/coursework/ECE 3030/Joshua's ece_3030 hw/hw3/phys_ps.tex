@@ -1,0 +1,442 @@
+\documentclass[12pt]{article}
+\usepackage{tabularx}
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{cite}
+\usepackage[final]{hyperref}
+\hypersetup{
+	colorlinks=true,      
+	linkcolor=blue,       
+	citecolor=blue,       
+	filecolor=magenta,    
+	urlcolor=blue         
+}
+\usepackage{blindtext}
+\usepackage{amssymb}
+\usepackage{esint}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{gensymb}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+\newcommand{\Prho}{.8}%
+\newcommand{\Ptheta}{55}%
+\newcommand{\Pphi}{60}%
+\usepackage{tikz-3dplot}
+\newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}}
+%++++++++++++++++++++++++++++++++++++++++
+\usepackage{empheq}
+
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+
+\begin{document}
+
+\usetikzlibrary{scopes}
+\def\iangle{35} % Angle of the inclined plane
+
+\def\down{-90}
+\def\arcr{0.5cm} % Radius of the arc used to indicate angles
+
+
+\title{ECE 3030 - HW 3}
+\author{Joshua Tensuan - jvt24}
+\date{September 16, 2022}
+\maketitle
+
+
+\begin{enumerate}
+	\item [3.1]
+	\begin{enumerate}
+		\item [a.]
+		We begin by solving for Laplace's Equation in Cartesian coordinates.
+		\[\nabla^2\phi = 0\]
+		Using the fact that the slabs lie in the $xz$-plane, we can utilize the symmetry of the problem to say that there is $0$ component of the potential in the $x$ and $z$ directions.
+		Thus,
+		\[\frac{\partial^2 \phi}{\partial y^2}=0 \to \phi = Ay + B\]
+		Substituting this in,
+		\[\boxed{\begin{cases}
+			\phi_1 = Ay+B, & 0 \leq y \leq t \\ 
+			\phi_2 = Cy +D, & t \leq y \leq d	
+		\end{cases}}\]
+
+		\item [b.]
+		We can enforce the boundary conditions that the voltage on the bottom plate is $0$ and the voltage on the top plate is $V_0$.
+		This yields
+		\[\phi_1(0)=0\]
+		\[\phi_2(d)=V_0\]
+		Additionally, we can use the fact that potential must be continuous.
+		This results in,
+		\[\phi_1(t)=\phi_2(t)\]
+		Finally, we can use the dielectric permittivity electric field boundary condition.
+		From class, we derived that $\nabla \cdot \vec D = \rho_u$.
+		Because there are no unpaired charges in this problem (dielectric material used), we find that $\nabla \cdot \vec D = 0$.
+		From the planar symmetry of the problem, we find that $\vec D$ must then be constant.
+		Thus,
+		\[\vec D_1 = \vec D_2 \to \epsilon\vec E_1 = \epsilon_0\vec E_2\]
+		Since $\phi$ varies in only one direction, and thus the $\vec E$ only points in one direction, we can reduce this to,
+		\[\epsilon E_{1,y}=\epsilon_0 E_{2,y}\]
+		We can find each of these electric fields through $\vec E = -\nabla \phi$.
+		\[E_y = -\frac{d\phi}{dy}\]
+		Thus, the boundary condition becomes,
+		\[\epsilon\frac{d\phi_1}{dy} = \epsilon_0 \frac{d\phi_2}{dy}\]
+		This gives us the four required boundary conditions,
+		\[\boxed{\begin{cases}
+			\phi_1(0) = 0 \\ 
+			\phi_2(d)= V_0 \\ 
+			\phi_1(t)=\phi_2(t) \\ 
+			\epsilon \cdot(d\phi_1/dy)=\epsilon_0\cdot (d\phi_2/dy)	
+		\end{cases}}\]
+
+		\item [c.]
+		Using the first boundary condition,
+		\[\phi_1(0)= 0 \to A\cdot 0 + B = 0 \to B=0\]
+		Using the second boundary condition,
+		\[\phi_2(d)=V_0 \to Cd + D = V_0\]
+		Using the third boundary condition,
+		\[\phi_1(t)=\phi_2(t) \to At=Ct+D\]
+		Using the last boundary condition,
+		\[\epsilon\cdot(d\phi_1/dy)=\epsilon_0\cdot (d\phi_2/dy)\to A\epsilon = C\epsilon_0\]
+		Algebraically solving the system yields,
+		\[\boxed{A=\frac{\epsilon_0 V_0}{\epsilon_0 t + \epsilon(d -t)}, \; B = 0}\]
+		\[\boxed{C = \frac{\epsilon V_0}{\epsilon_0 t + \epsilon(d-t)}, \; D=-\frac{(\epsilon-\epsilon_0)V_0t}{\epsilon_0 t+\epsilon(d-t)}}\]
+		Thus,
+		\[\boxed{\phi_1(y)=\frac{\epsilon_0 V_0}{\epsilon_0 t + \epsilon(d -t)} y, \; 0 \leq y \leq t}\]
+		\[\boxed{\phi_2(y) = \frac{\epsilon V_0}{\epsilon_0 t + \epsilon(d-t)} y -\frac{(\epsilon-\epsilon_0)V_0t}{\epsilon_0 t+\epsilon(d-t)}, \; t\leq y \leq d}\]
+
+		\item [d.]
+		We can use the dielectric permittivity boundary condition again between the dielectric and the bottom metallic plate.
+		We can utilize Gauss' Law with $\vec D$-field given by, $\nabla \cdot \vec D = \rho_u$.
+		By forming a Gaussian rectangular prism through the bottom metallic plate, with one face in the dielectric plate and one face in the bottom metallic plate.
+		This yields,
+		\[\iint \vec D \cdot d\vec  A = \iiint \rho_u \: dV\]
+		Using the symmetries of the problem,
+		\[\to (D_2-D_1)A=\sigma_uA \to D_2-D_1 = \sigma_u\]
+		where $D_2$ is the $y$-component of the $\vec D$-field pointing down in the bottom metallic plate and $D_1$ is the $y$-component of the $\vec D$-field pointing down in the dielectric.
+		We know that $D_2$ is $0$ because the electric field in a conductor is always $0$ (if it wasn't, would allow an infinite current density by Ohm's Law which is unphysical).
+		Thus, (sign conventions accounted for)
+		\[D_1 = \epsilon\frac{d\phi_1}{dy}, \; D_2 = 0\]
+		\[D_1 = \frac{\epsilon\epsilon_0 V_0}{\epsilon_0 t + \epsilon(d -t)}\]
+		Then,
+		\[\sigma_u = -D_1 = -\frac{\epsilon\epsilon_0 V_0}{\epsilon_0 t + \epsilon(d -t)}\]
+		Similarly for the top metallic plate, we will have the same equation,
+		\[D_2-D_1= \sigma_u\]
+		where $D_2$ is the $y$-component of the $\vec D$-field pointing down in the vacuum and $D_1$ is the $y$-component of the $\vec D$-field pointing down in the top metallic plate.
+		We know that $D_1$ is $0$ because the electric field in a conductor is always $0$ (if it wasn't, would allow an infinite current density by Ohm's Law which is unphysical).
+		Thus, (sign conventions accounted for),
+		\[D_1 = 0, \; D_2 = \epsilon_0\frac{d\phi_2}{dy}\]
+		\[D_2 = \frac{\epsilon\epsilon_0 V_0}{\epsilon_0 t + \epsilon(d-t)}\]
+		Then,
+		\[\sigma_u = \frac{\epsilon\epsilon_0 V_0}{\epsilon_0 t + \epsilon(d-t)}\]
+		Let $\sigma_t$ represent the charge area density on the top plate and let $\sigma_b$ represent the charge area density on the bottom plate.
+		Then,
+		\[\boxed{\sigma_t = \frac{\epsilon\epsilon_0 V_0}{\epsilon_0 t + \epsilon(d-t)}}\]
+		\[\boxed{\sigma_b = -\frac{\epsilon\epsilon_0 V_0}{\epsilon_0 t + \epsilon(d-t)}}\]
+
+		\item [e.]
+		\[\frac{C}{A} = \frac{1}{A}\cdot \frac{dQ}{dV} = \frac{d\sigma}{dV}=\frac{\epsilon \epsilon_0}{\epsilon_0 t + \epsilon(d-t)}\]
+		\[\boxed{C=\frac{\epsilon \epsilon_0}{\epsilon_0 t + \epsilon(d-t)}}\]
+
+	\end{enumerate}
+
+	\item [3.2]
+	\begin{enumerate}
+		\item [a.]
+		From our derivations in question 3.1 part d where we used Gauss' Law with $\vec D$-fields, we found that $D_{2,\perp}-D_{1,\perp}=\sigma_u$.
+		We know that our dielectric has 0 unpaired charges, so $\sigma_u=0$.
+		Thereby,
+		\[D_{1,\perp}=D_{2,\perp}\to \epsilon_1 E_{1,\perp}=\epsilon_2  E_{2,\perp}\]
+		Because the lens is aligned with the azimuthal direction, we can say that $E_{1,\perp}=E_{1,r}$ and $E_{2,\perp}=E_{2,r}$.
+		Thus, solving for $E_{2,r}$.
+		\[E_{2,r}=\frac{\epsilon_1}{\epsilon_2}E_{1,r}=\frac{\epsilon_0}{\epsilon_2}E_{1,r}=4\cdot \frac{\epsilon_0}{\epsilon_2}\]
+		Additionally, through Ampere's Law, we can derive that the components of the electric field parallel to the incident surface must stay constant.
+		Thus,
+		\[E_{1,\parallel}=E_{2,\parallel}\]
+		Because the lens is aligned with the azimuthal direction, we can say that $E_{1,\parallel}=E_{1,\phi}$ and $E_{2,\parallel}=E_{2,\phi}$.
+		Thus,
+		\[E_{1,\phi}=E_{2,\phi}=-3\]
+		Thus, we can express $\vec E_2$ as,
+		\[\vec E_2 = E_{2,r}\hat r + E_{2,\phi}\hat \phi = 4\frac{\epsilon_0}{\epsilon_2}\hat r -3 \hat \phi\]
+		Geometrically, we know that the $\hat r$ and $\hat \phi$ unit vectors are given in Cartesian coordinates by,
+		\[\hat r=\langle \cos(\theta),\sin(\theta)\rangle, \; \hat \phi = \langle -\sin(\theta),\cos(\theta)\rangle\]
+		We want $\vec E_3$ to be parallel to the $x$-axis.
+		Thus, $\vec E_3$ cannot have any $y$-component.
+		By the parallel electric field boundary condition, the electric field component parallel to the incident surface is continuous.
+		Thus, if we want the $y$-component of $\vec E_3$ to be $0$, we want the $y$-component of $\vec E_2$ to also be $0$.
+		Thus, calculating the $y$-component of $\vec E_2$,
+		\[E_{2,y}=4\frac{\epsilon_0}{\epsilon_2}\sin(\theta)-3\cos(\theta)=0\]
+		Solving for $\epsilon_2$,
+		\[\epsilon_2 = \epsilon_0\cdot\frac{4}{3}\tan(\theta)\]
+		Substituting in $\theta = \pi/4$,
+		\[\epsilon_2 = \epsilon_0\cdot \frac{4}{3}\tan(\pi/4)=\frac{4}{3}\epsilon_0\]
+		\[\boxed{\epsilon_2 = \frac{4}{3}\epsilon_0=1.181\cdot10^{-11}\:\mathrm{F/m}}\]
+
+		\item [b.]
+		Our final derived answer was derived independent of $\epsilon_1$.
+		Thus, we can simply substitute in $10\epsilon_0$ for $\epsilon_0$ in our final answer.
+		Thus, our final answer will be multiplied by a factor of 10.
+		\[\boxed{\text{Multiplied by a factor of 10}, \to \epsilon_2 = \frac{40}{3}\epsilon_0=1.181\cdot10^{-10}\:\mathrm{F/m}}\]
+	\end{enumerate}
+
+	\item [3.3]
+	\begin{enumerate}
+		\item [a.]
+		We know that conductors are equipotentials, so $\phi_{\mathrm{in}}(\vec r)=0$.
+		For outside of the sphere, we can have our trial solution be the superposition of the solution for the potential for a uniform $z$-directed $E$-field and the potential for a point-charge-dipole-like solution oriented along the $z$-axis.
+		This yields,
+		\[\phi_{\mathrm{out}}(\vec r)=Ar\cos(\theta)+B\frac{\cos(\phi)}{r^2}\]
+
+		\item [b.]
+		We know that the potential must be  continuous.
+		Thus,
+		\[\phi_{\mathrm{in}}(r=a)=\phi_{\mathrm{out}}(r=a)\]
+		Substituting this in,
+		\[0=Aa\cos(\theta)+B\frac{\cos(\theta)}{r^2}\]
+		Additionally, we know that the constant electric field potential term has electric field $E_0$.
+		Thus, using the fact that $-\partial \phi/\partial x=E$, we find another boundary condition of (we know that $\phi$ from this term only varies in one direction),
+		\[A=-E_0\]
+		This leaves us with 2 boundary conditions with two unknowns.
+		\[\boxed{\begin{cases}
+			0 = Aa\cos(\theta)+B\frac{\cos(\theta)}{a^2} \\ 
+			A=-E_0
+		\end{cases}}\]
+		
+		\item [c.]
+		From $R_2$ of part b, we know that $A=-E_0$.
+		Substituting this into $R_1$,
+		\[0=-E_0a\cos(\theta)+B\frac{\cos(\theta)}{a^2}\]
+		Through algebraic manipulation,
+		\[B = E_0a^3\]
+		\[\boxed{A=-E_0, \; B=E_0a^3}\]
+		Substituting this in,
+		\[\boxed{\begin{cases}
+			\phi_{\mathrm{in}} = 0 \\ 
+			\phi_{\mathrm{out}}(r)=-E_0r\cos(\theta)+E_0a^3\frac{\cos(\theta)}{r^2}	
+		\end{cases}}\]
+
+		\item [d.]
+		The dipole part of our solution in part c is given by,
+		\[E_0a^3\frac{\cos(\phi)}{r^2}\]
+		The regular dipole solution from solution in terms of dipole moment $p$ is given by,
+		\[\frac{p}{4\pi\epsilon_0r^2}\cos(\theta)\]
+		Setting these two equal to each other to find the 'equivalent' dipole moment,
+		\[E_0a^3\frac{\cos(\phi)}{r^2} = \frac{p}{4\pi\epsilon_0r^2}\cos(\theta)\to E_0a^3 = \frac{p}{4\pi\epsilon_0}\]
+		\[p=4\pi\epsilon_0E_0a^3\]
+		This gives us the magnitude of the dipole moment.
+		We know that the dipole moment will point in the direction of the positive charge.
+		Intuitively, we know that a positive surface charge will be built up on the top surface of the sphere to cancel out the surrounding electric field.
+		Thus, $p$ will point in the $\hat z$-direction.
+		\[\vec p=4\pi\epsilon_0E_0a^3\hat z\]
+
+		\item [e.]
+		By definition, we know that $\vec P = N\vec p$.
+		Thus,
+		\[\vec P = N\pi\epsilon_0E_0a^3 \hat z\]
+		\[\boxed{\vec P = N\pi\epsilon_0E_0a^3 \hat z}\]
+
+		\item [f.]
+		By definition of $\vec P$, we know that, $\vec P = \epsilon_0\chi_e\vec E$
+		Substituting this in, we find that,
+		\[\chi_e = N\pi a^3\]
+		\[\boxed{\chi_e = N\pi a^3}\]
+
+		\item [g.]
+		By definition of $\epsilon$, we know that, $\epsilon=\epsilon_0(1+\chi_e)$.
+		Thus,
+		\[\epsilon=\epsilon_0(1+N\pi a^3)\]
+		\[\boxed{\epsilon=\epsilon_0(1+N\pi a^3)}\]
+
+
+
+
+	\end{enumerate}
+
+	\item [3.4]
+	\begin{enumerate}
+		\item [a.]
+		We know that conductors are equipotentials, so $\phi_{\mathrm{in}}(\vec r)=0$.
+		We know that outside, the trial solution will be a superposition of the solution for a line dipole charge in cylindrical coordinates and the solution for a uniform electric field.
+		Thus,
+		\[\phi_{\mathrm{out}}(\vec r)=Ar\cos(\phi)+B\frac{\cos(\phi)}{r}\]
+		\[\boxed{\phi_{\mathrm{in}}(\vec r) = 0, \; \phi_{\mathrm{out}}(\vec r)=Ar\cos(\phi)+B\frac{\cos(\phi)}{r}}\]
+
+		\item [b.]
+		We know that the potential must be continuous.
+		Thus, $\phi_{\mathrm{in}}(r=a)=\phi_{\mathrm{out}}(r=a)$.
+		Substituting this in,
+		\[0=Aa\cos(\phi)+B\frac{\cos(\phi)}{a}\]
+		Additionally, we know that the constant electric field potential term has electric field $E_0$.
+		Thus, using the fact that $-\partial \phi / \partial x = E$, we find another boundary condition of (we know that $\phi$ only varies in one direction),
+		\[A=-E_0\]
+		This leaves us with 2 boundary conditions with two unknowns.
+		\[\boxed{\begin{cases}
+			0=Aa\cos(\phi)+B\frac{\cos(\phi)}{a} \\
+			A=-E_0	
+		\end{cases}}\]
+
+		\item [c.]
+		From $R_2$, we know that $A=-E_0$.
+		Now using $R_1$,
+		\[0=-E_0a\cos(\phi)+B\frac{\cos(\phi)}{a}\to B\frac{\cos(\phi)}{a}=E_0a\cos(\phi)\]
+		\[B=E_0a^2\]
+		\[\boxed{A=-E_0, \; B=E_0a^2}\]
+		Substituting this in,
+		\[\boxed{\begin{cases}
+			\phi_{\mathrm{in}} = 0 \\ 
+			\phi_{\mathrm{out}} = -E_0r\cos(\phi)+E_0a^2\frac{\cos(\phi)}{r}
+		\end{cases}}\]
+
+		\item [d.]
+		We can use the perpendicular $E$-field boundary condition from lecture that,
+		\[\epsilon_0(E_2-E_1)=\sigma\]
+		We let $E_1$ be the radial electric field just inside the rod and $E_2$ be the radial electric field just outside the rod.
+		We can find $E_2$ via,
+		\[E_2 = -\nabla \phi_{\mathrm{out}}(r=a)\]
+		The gradient in cylindrical coordinates is given by,
+		\[\nabla\phi_{\mathrm{out}}=\frac{\partial \phi_{\mathrm{out}}}{\partial r}\hat r+\frac{1}{r}\frac{\partial \phi_{\mathrm{out}}}{\partial \phi}\hat \phi+\frac{\partial \phi_{\mathrm{out}}}{\partial z}\hat z\]
+		We only want the electric field perpendicular to the incident surface.
+		Thus, we are only interested in $-\nabla \phi_{\mathrm{out}}\cdot \hat r$ or in other words, the $\hat r$-component of the gradient.
+		Solving for $E_{2,\perp}$,
+		\[E_{2,\perp}=-\nabla \phi_{\mathrm{out}}\cdot \hat r = E_0\cos(\phi)+E_0\frac{a^2}{r^2}\cos(\phi)\]
+		Substituting in $r=a$,
+		\[E_{2,\perp}=-\nabla \phi_{\mathrm{out}}\cdot \hat r = E_0\cos(\phi)+E_0\cos(\phi)=2E_0\cos(\phi)\]
+		Substituting this back into the perpendicular $E$-field boundary condition.
+		\[\epsilon_0(E_{2,\perp})=\sigma \to \sigma = 2\epsilon_0E_0\cos(\phi)\]
+		\[\boxed{\sigma = 2E_0\epsilon_0\cos(\phi)}\]
+
+		\item [e.]
+
+		The image of the electric field is given below.
+
+		\includegraphics[width=5in]{images/IMG_3756.png}
+
+		\item [f.]
+		\begin{enumerate}
+			\item [a.]
+			We can divide the problem into 3 zones.
+			One zone consists of inside of the core, another in the shell, and another outside of the shell.
+			We can denote these 3 zones as $\phi_1$, $\phi_2$, and $\phi_3$.
+			For $\phi_1$, we know that a conductor is an equipotential and can set it to $0$.
+			For $\phi_2$ and $\phi_3$, we can take a superposition of the solution for a linear electric field and cylindrical dipole charge.
+			This yields,
+			\[\boxed{\begin{cases}
+				\phi_1 = 0 \\ 
+				\phi_2 = Ar\cos(\phi)+\frac{B\cos(\phi)}{r} \\ 
+				\phi_3 = Cr\cos(\phi)+\frac{D\cos(\phi)}{r}	
+			\end{cases}}\]
+
+			\item [b.]
+			We can impose the boundary conditions that the potential is continuous everywhere.
+			Thus,
+			\[\phi_1(r=a)=\phi_2(r=a), \; \phi_2(r=b)=\phi_3(r=b)\]
+			We know that the constant electric field potential term in $\phi_3$ has electric field $E_0$.
+			Thus, using the fact that $-\partial \phi/\partial x = E$, we find another boundary condition of (we know that $\phi$ only varies in one direction), 
+			\[C=-E_0\]
+			Finally, we can use the perpendicular $\vec D$-field boundary condition at the interface between the inside of the shell and outside of the shell.
+			From lecture, we know that, at the interface,
+			\[D_{2,\perp}-D_{1,\perp} = \sigma_u\]
+			Because there is no charge on the shell, we know that $\sigma_u=0$.
+			Thus,
+			\[D_{1,\perp}=D_{2,\perp}\]
+			Using the fact that $\vec D = \epsilon \vec E$,
+			\[\to \epsilon \vec E_{2,\perp} = \epsilon_0 \vec E_{3,\perp}\]
+			We can find $\vec E_{\perp}$ via,
+			\[\vec E_{\perp}=-\nabla \phi \cdot \hat r=-\frac{\partial \phi}{\partial r}\]
+			Thus,
+			\[\epsilon \left.\frac{\partial \phi_2}{\partial r}\right|_{r=b}=\epsilon_0 \left.\frac{\partial \phi_3}{\partial r}\right|_{r=b}\]
+			This gives us the 4 necessary boundary conditions needed to solve for the 4 unknowns.
+			\[\boxed{\begin{cases}
+				\phi_1(r=a)=\phi_2(r=a) \\ 
+				\phi_2(r=b)=\phi_3(r=b) \\ 
+				C=-E_0 \\ 
+				\epsilon \left.\frac{\partial \phi_2}{\partial r}\right|_{r=b}=\epsilon_0 \left.\frac{\partial \phi_3}{\partial r}\right|_{r=b}
+			\end{cases}}\]
+
+			\item [c.]
+			Using the first boundary condition,
+			\[0=Aa\cos(\phi)+\frac{B\cos(\phi)}{a}\]
+			Through some algebraic manipulation,
+			\[A=-\frac{B}{a^2}\]
+			Using the second and third boundary condition,
+			\[Ab\cos(\phi)+\frac{B\cos(\phi)}{b}=-E_0b\cos(\phi)+\frac{D\cos(\phi)}{b}\]
+			Factoring out a $\cos(\phi)$ term,
+			\[Ab + \frac{B}{b}=-E_0b + \frac{D}{b}\]
+			Finding the partial derivatives for the fourth boundary condition,
+			\[\left.\frac{\partial \phi_2}{\partial r}\right|_{r=b} = A\cos(\phi)-\frac{B\cos(\phi)}{b^2}\]
+			\[\left.\frac{\partial \phi_3}{\partial r}\right|_{r=b} = -E_0\cos(\phi)-\frac{D\cos(\phi)}{b^2}\]
+			Substituting these into the fourth boundary condition, and factoring out a $\cos(\phi)$ term,
+			\[\epsilon\left(A-\frac{B}{b^2}\right)=\epsilon_0\left(-E_0-\frac{D}{b^2}\right)\]
+			Through trivial algebraic solving, we find that,
+			\[A=-\frac{2\epsilon_0b^2E_0}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}\]
+			\[B=-\frac{2\epsilon_0a^2b^2E_0}{\epsilon_0(a^2-b^2)-\epsilon(a^2+b^2)}\]
+			\[D=\frac{\epsilon a^2b^2E_0+\epsilon b^4 E_0+\epsilon_0 a^2b^2E_0-\epsilon_0 b^4E_0}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}\]
+			\[D=E_0\frac{\epsilon(a^2b^2+b^4)+\epsilon_0(a^2b^2-b^4)}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}\]
+			The unknowns are then (trivial to substitute these back to find potential),
+			\[\boxed{A=-\frac{2\epsilon_0b^2E_0}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}}\]
+			\[\boxed{B=-\frac{2\epsilon_0a^2b^2E_0}{\epsilon_0(a^2-b^2)-\epsilon(a^2+b^2)}}\]
+			\[\boxed{C=-E_0}\]
+			\[\boxed{D=E_0\frac{\epsilon(a^2b^2+b^4)+\epsilon_0(a^2b^2-b^4)}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}}\]
+
+			\item [d.]
+			We can use the perpendicular $D$-field boundary condition from lecture that,
+			\[D_2-D_1 = \sigma_u\]
+			where $D_1$ is the radial electric field from just inside the rod and $D_2$ be the radial electric field from just outside the rod.
+			We know that $D_1=0$ because the $\vec E$-field in a conductor must be 0 to have a physical system.
+			We can find $D_2=\epsilon E_2$ via,
+			\[E_2 = -\nabla\phi_{2}(r=a)\]
+			The gradient in cylindrical coordinates is given by,
+			\[\nabla \phi_{2}=\frac{\partial \phi_2 }{\partial r}\hat r + \frac{1}{r}\frac{\partial \phi_2}{\partial \phi}\hat \phi+\frac{\partial \phi_2}{\partial z}\hat z\]
+			We only want the perpendicular field perpendicular to the incident surface.
+			Thus, we are only interested in $-\nabla \phi_2 \cdot \hat r$ or in other words, the $\hat r$-component of the gradient.
+			Solving for $E_{2,\perp}$,
+			\[E_{2,\perp}=-\nabla \phi_2 \cdot \hat r = -A\cos(\phi)+\frac{B\cos(\phi)}{r^2}\]
+			\[E_{2,\perp}=\frac{2\epsilon_0b^2E_0}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}\cos(\phi)-\frac{1}{r^2}\frac{2\epsilon_0 a^2b^2E_0}{\epsilon_0(a^2-b^2)-\epsilon(a^2+b^2)}\cos(\phi)\]
+			Finding the perpendicular component at $r=a$,
+			\[E_{2,\perp}(r=a)=\frac{2\epsilon_0b^2E_0}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}\cos(\phi)-\frac{2\epsilon_0 b^2E_0}{\epsilon_0(a^2-b^2)-\epsilon(a^2+b^2)}\cos(\phi)\]
+			\[E_{2,\perp}(r=a)=\frac{4\epsilon_0b^2E_0}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}\cos(\phi)\]
+			\[\epsilon E_{2,\perp}(r=a)=\sigma\to \sigma = \frac{4\epsilon\epsilon_0b^2E_0}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}\cos(\phi)\]
+			\[\boxed{\sigma = \frac{4\epsilon\epsilon_0b^2E_0}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}\cos(\phi)}\]
+
+			\item [e.]
+
+			The image of the electric field for the core-shell is given below.
+
+			\includegraphics[width=5in]{images/IMG_3758.png}
+
+
+			
+
+		\end{enumerate}
+
+		\item [g.]
+
+		In order to minimize distortion of the electric field, we would want to minimize the dipole term in the potential $\phi_3$ outside of the core-shell system.
+		To accomplish this, we can minimize $D$ with respects to $\epsilon$.
+		From part f, we know that,
+		\[D=E_0\frac{\epsilon(a^2b^2+b^4)+\epsilon_0(a^2b^2-b^4)}{\epsilon(a^2+b^2)-\epsilon_0(a^2-b^2)}\]
+		Substituting in $b=1.5a$,
+		\[D=E_0\frac{\epsilon(7.3125 a^4)-\epsilon_0(2.8125a^4)}{\epsilon(3.25a^2)+\epsilon_0(1.25a^2)}\]
+		Factoring out $a^2$ term,
+		\[D=E_0\frac{\epsilon(7.3125 a^2)-\epsilon_0(2.8125a^2)}{3.25\epsilon+1.25\epsilon_0}\]
+		Trivially, we see this is minimized when the numerator is equal to 0.
+		Thus,
+		\[\epsilon(7.3125 a^2)-\epsilon_0(2.8125a^2)=0 \to 7.3125 \epsilon = 2.8125 \epsilon_0\]
+		\[\epsilon = \frac{2.8125}{7.3125}\epsilon_0=0.385 \epsilon_0\]
+		\[\boxed{\epsilon = 0.385 \epsilon_0}\]
+
+
+		
+
+		
+
+
+
+	\end{enumerate}
+	
+	
+	
+\end{enumerate}
+
+		
+
+\end{document}

@@ -39,9 +39,9 @@ projects:
       Behavior Cloning, among others.
     date: 6
     link: https://github.com/dreamShepherd/Reinforcement-Learning-MDP-From-Scratch
-  - title: Algorithms
+  - title: Algorithm Implementations
     summary: >
-      Famous algorithms implemented in Java for demonstrative purpose and potential future application.
+      My implementation of famous algorithms, generally collected from coursework or personal use, for demonstrative purpose and potential future application.
       Mostly for educative purposes and curiosity. Includes Deterministic Quickselect (median of medians), Ford Fulkerson,
       Gale Shapley, and Zuker Stiegler (RNA Folding).
     date: 7

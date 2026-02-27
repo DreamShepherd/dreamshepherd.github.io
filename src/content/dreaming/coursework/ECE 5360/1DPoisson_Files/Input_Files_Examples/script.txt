@@ -1,0 +1,8 @@
+#script
+# Scipt files allow you to run multiple input files.  The first line must be "#script".
+# The following lines list the input files to be run, excluding the .txt extension.
+# Lines starting with a # are comments, as always.
+
+modfet
+diode
+

@@ -1,0 +1,24 @@
+# test comment
+surface	schottky=1.2	v1
+AlGaN	t=150	x=0.2	Nd=1e15
+GaN	t=300	Nd=1e15
+substrate
+
+fullyionized
+v1 0
+temp=300K
+dy=1
+
+
+
+#surface	schottky=3.4	v1
+
+#GaN	t=1000	Na=1e19 Ef=-2
+#AlGaN	t=150	x=0.2	Nd=1e15
+#GaN	t=300	Nd=1e15
+#substrate
+
+#fullyionized
+#v1 2
+#temp=300K
+#dy=1

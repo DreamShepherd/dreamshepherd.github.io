@@ -1,0 +1,1 @@
+# A simple silicon diodesurface	ohmic	v1Si	t=5000	Na=1e16Si	t=5000	Nd=1e16substrate ohmic v2fullyionizedv1 0.0v2 -0.0temp=300Kdy=50

@@ -1,0 +1,484 @@
+\documentclass[12pt]{article}
+\usepackage{tabularx}
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{cite}
+\usepackage[final]{hyperref}
+\hypersetup{
+	colorlinks=true,      
+	linkcolor=blue,       
+	citecolor=blue,       
+	filecolor=magenta,    
+	urlcolor=blue         
+}
+\usepackage{blindtext}
+\usepackage{amssymb}
+\usepackage{esint}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{gensymb}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+\newcommand{\Prho}{.8}%
+\newcommand{\Ptheta}{55}%
+\newcommand{\Pphi}{60}%
+\usepackage{tikz-3dplot}
+\newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}}
+%++++++++++++++++++++++++++++++++++++++++
+\usepackage{empheq}
+
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+
+\begin{document}
+
+\usetikzlibrary{scopes}
+\def\iangle{35} % Angle of the inclined plane
+
+\def\down{-90}
+\def\arcr{0.5cm} % Radius of the arc used to indicate angles
+
+
+\title{ECE 3030 - HW 2}
+\author{Joshua Tensuan - jvt24}
+\date{September 9, 2022}
+\maketitle
+
+
+\begin{enumerate}
+	\item [2.1]
+	\begin{enumerate}
+		\item [a.]
+		Gauss' Law in integral form is given by,
+		\[\oiint \epsilon_0 \vec E \cdot d\vec A = Q_{\mathrm{enc}}\]
+		We can utilize cylindrical coordinates along the axis of the coaxial cylindrical surfaces.
+		By the symmetries of the cylinders (reference lecture and previous homework for strict argument), we know that there cannot be any $\varphi, z$-dependence and no components in the $\varphi$ and $z$ direction.
+		We can separate the space into three relevant regions: $r<a$, $a<r<b$, and $r>b$.
+		Analyzing the first region, we know that $Q_{\mathrm{enc}}$ is 0 in this region for any concentric Gaussian cylinder formed with $r<a$.
+		Thus, $\vec E = \vec 0$ in this region.
+		Analyzing the second region, we can simplify the flux integral by the symmetries of the problem to,
+		\[\oiint \epsilon_0\vec E \cdot d\vec A = \epsilon_0E_r\cdot A\]
+		Inputting this into Gauss' Law in Integral Form,
+		\[\epsilon_0E_r\cdot A = \sigma_{s,a}A_a\to \epsilon_0E_r\cdot2\pi rl = \sigma_{s,a}2\pi a l\]
+		\[E_r = \frac{\sigma_{s,a}}{\epsilon_0}\frac{a}{r}\]
+		Thus, in the region, $\vec E$ is given by,
+		\[\vec E = \frac{\sigma_{s,a}}{\epsilon_0}\frac{a}{r}\hat r\]
+		Analyzing the last region, we can again simplify the flux integral by the symmetries of the problem to,
+		\[\oiint \epsilon_0 \vec E \cdot d\vec A = \epsilon_0 E_r\cdot A\]
+		Inputting this into Gauss' Law in Integral Form,
+		\[\epsilon_0E_r\cdot A = \sigma_{s,a}A_a + \sigma_{s,b}A_b\to \epsilon_0E_r\cdot 2\pi rl = \sigma_{s,a}\cdot2\pi al+\sigma_{s,b}\cdot 2 \pi bl\]
+		\[E_r = \frac{\sigma_{s,a}}{\epsilon_0}\frac{a}{r}+\frac{\sigma_{s,b}}{\epsilon_0}\frac{b}{r}\]
+		Thus, in the region, $\vec E$ is given by,
+		\[\vec E = \left(\frac{\sigma_{s,a}}{\epsilon_0}\frac{a}{r}+\frac{\sigma_{s,b}}{\epsilon_0}\frac{b}{r}\right) \hat r=\frac{1}{\epsilon_0}\cdot\frac{1}{r}\left(\sigma_{s,a}a + \sigma_{s,b}b\right)\hat r\]
+		\[\boxed{\vec E = \begin{cases}
+			\vec 0 & r < a \\ 
+			\frac{\sigma_{s,a}}{\epsilon_0}\frac{a}{r}\hat r & a < r < b \\ 
+			\frac{1}{\epsilon_0}\cdot \frac{1}{r}(\sigma_{s,a}a + \sigma_{s,b}b)\hat r & r > b
+		\end{cases}}\]
+
+		\item [b.]
+		If $\vec E$ vanishes when $r>b$, then $\vec E = \vec 0$ in the last region considered in the last part.
+		\[\frac{1}{\epsilon_0}\cdot\frac{1}{r}\left(\sigma_{s,a}a + \sigma_{s,b}b\right)\hat r= \vec 0\]
+		\[\to \sigma_{s,a}a + \sigma_{s,b}b = 0 \to b = \frac{\sigma_{s,a}}{\sigma_{s,b}}a\]
+		Thus, in order for $\vec E$ to vanish when $r>b$, then $a$ and $b$ must be related by,
+		\[\boxed{b = \frac{\sigma_{s,a}}{\sigma_{s,b}}a}\]
+	\end{enumerate}
+
+	\item [2.2]
+	\begin{enumerate}
+		\item [a.]
+		The $z$-component of the electric field as a position $x$ along the $x$-axis (where $z=0$) must be 0.
+		This is due to the symmetries of the problem.
+		We can show this utilizing a proof by contradiction.
+		Without loss of generality (works regardless of sign), assume there is an electric field along the $+z$-direction at any point along the $x$-axis.
+		Then, flip the entire system (included the associated electric fields) about the $x$-axis.
+		Because nothing fundamental was changed about the system, there will now be an electric field along the $-z$-direction where there existed an electric field along the $+z$-direction in the original system.
+		However, we notice that the original system is exactly the same as the flipped system.
+		However, there is supposedly an electric field in both the $-z$ and $+z$-direction, creating a contradiction.
+		Thus, there cannot be an electric field in the $z$-direction at any point along the $x$-axis.
+		\[\boxed{\vec E(x, z=0) = \vec 0}\]
+
+		\item [b.]
+		From Coulomb's Law, we know that for an infinitesimal point charge,
+		\[d\vec E = \frac{1}{4\pi\epsilon_0}\frac{dq}{r^2}\hat r\]
+		where $r$ is the displacement vector between the infinitesimal point charge and the point we evaluate the electric field at.
+		We can express $r$ as, $r^2=x^2+z^2$.
+		Additionally, from part a, we know that the $z$-component of the electric field is 0.
+		Thus, we only have to solve for the $x$-component of the electric field.
+		Taking the projection of the infinitesimal electric field along the $x$-axis.
+		\[dE_x = d\vec E \cdot \hat x = \frac{1}{4\pi\epsilon_0}\frac{dq}{x^2+z^2}\left(\frac {x}{\sqrt{x^2+z^2}}\right)\]
+		From the prompt, we know that $dq = \lambda \: dz$.
+		Substituting this in,
+		\[dE_x=\frac{1}{4\pi\epsilon_0}\frac{\lambda \: dz}{x^2+z^2}\left(\frac{x}{\sqrt{x^2+z^2}}\right)\]
+		Integrating across the line charge,
+		\[E_x = \int_{-L/2}^{L/2}\frac{\lambda}{4\pi\epsilon_0}\frac{x}{(x^2+z^2)^{3/2}}\: dz\]
+		Factoring out constant terms and using the symmetry of the integral, we can simplify the expression to,
+		\[E_x = \frac{\lambda}{2\pi\epsilon_0}\int_0^{L/2}\frac{x}{(x^2+z^2)^{3/2}}\: dz\]
+		Performing the substitution of $z=x\tan(u)$, $dz = x\sec^2(u)\: du$,
+		\[E_x = \frac{\lambda}{2\pi\epsilon_0}\int_0^{\arctan(L/2x)}\frac{x}{(x^2+x^2\tan^2(u))^{3/2}}\cdot x\sec^2(u)\: du\]
+		Through some algebra and use of trigonometric identities,,
+		\[E_x = \frac{\lambda}{2\pi\epsilon_0}\int_0^{\arctan(L/2x)}\frac{ x^2\sec^2(u)}{(x^2\sec^2(u))^{3/2}}\: du\]
+		\[E_x = \frac{\lambda}{2\pi\epsilon_0}\int_0^{\arctan(L/2x)}\frac{\cos(u)}{x}\: du\]
+		\[E_x = \frac{\lambda}{2\pi\epsilon_0}\left[\frac{1}{x}\sin(u)\right]_{u=0}^{u=\arctan(L/2x)}=\frac{\lambda}{2\pi\epsilon_0}\left(\frac{L}{x\sqrt{L^2+4x^2}}\right)\]
+		\[\boxed{E_x=\frac{\lambda}{2\pi\epsilon_0}\left(\frac{L}{x\sqrt{L^2+4x^2}}\right)}\]
+
+		\item [c.]
+		We are interested in taking the limit that $L\ggg x$.
+		In this case, we can approximate $\sqrt{L^2+4x^2}\approx \sqrt{L^2} = L$.
+		Substituting this into $E_x$,
+		\[E_x\approx \frac{\lambda}{2\pi \epsilon_0}\frac{L}{xL}=\frac{\lambda}{2\pi\epsilon_0}\frac{1}{x}\]
+		\[\boxed{E_x \approx \frac{\lambda}{2\pi\epsilon_0}\frac{1}{x}}\]
+
+		\item [d.]
+		Our answer here is equivalent to the answer in problem 1.5(c) if we projected the wire onto a two-dimensional plane.
+		Here, the $z$-axis stays the same, $x$-axis points in radial direction.
+		This is because in the limit $L\ggg x$, the line of charge is approximately the same as the two-dimensional projection of an infinite wire of charge.
+
+		\item [e.]
+		We are now interested in the limit that $x \ggg L$.
+		In this case, we can approximate $\sqrt{L^2+4x^2}\approx \sqrt{4x^2}=2x$.
+		Substituting this into $E_x$,
+		\[E_x \approx \frac{\lambda}{2\pi \epsilon_0}\frac{L}{x\cdot 2x}=\frac{\lambda}{4\pi \epsilon_0}\frac{L}{ x^2}\]
+		\[\boxed{E_x \approx \frac{\lambda}{4\pi \epsilon_0}\frac{L}{ x^2}}\]
+		This expression is reminiscent to that of the electric field of a point charge ($x$ represents projection of radial direction here).
+		This makes intuitive sense as far away from the line of charge, the configuration should 'look' like a point charge.
+		Here, we can make a direct comparison by setting $\lambda L = Q$ of the configuration.
+		\[\boxed{\text{Expression looks like that of a point charge.}}\]
+
+	\end{enumerate}
+
+	\item [2.3]
+	\begin{enumerate}
+		\item [a.]
+		\begin{enumerate}
+			\item [i.]
+			Here, we can form a concentric Gaussian spherical shell with radius $0<r<b$.
+			The resultant electric field from Gauss' Law is then simply just the electric field from a point charge.
+			Thus,
+			\[\boxed{\vec E(\vec r)=\frac{1}{4\pi \epsilon_0}\frac{q}{\|\vec r\|^2}\hat r, \; 0<r<b}\]
+
+			\item [ii.]
+			We know that in any conducting material, the electric field must be 0.
+			Otherwise, there will be an infinite current density by Ohm's Law which is non-physical.
+			Thus,
+			\[\boxed{\vec E(\vec r)=\vec 0, \; b<r<c}\]
+
+			\item [iii.]
+			We can again draw a concentric Gaussian spherical shell with radius $c<r<\infty$.
+			Due to the conservation of charge, we know that the enclosed charge must still be $+q$.
+			The resultant electric field from Gauss' Law is then simply just the electric field from a point charge.
+			Thus,
+			\[\boxed{\vec E(\vec r)=\frac{1}{4\pi \epsilon_0}\frac{q}{\|\vec r\|^2}\hat r, \; c<r<\infty}\]
+
+		\end{enumerate}
+
+		\item [b.]
+		From class, we know that we must follow the boundary condition of,
+		\[\epsilon_0(E_2-E_1)=\sigma\]
+		This is trivially derived from using Gauss' Law on a small area of the surface.
+		First applying this on the inner surface.
+		We can use our previous expression from part a to find that just inside the inner surface, the electric field magnitude is given by,
+		\[E_1 = \frac{1}{4\pi \epsilon_0}\frac{q}{b^2}\]
+		We know that inside the conductor, $E_2=0$.
+		Substituting this in,
+		\[\epsilon_0\left(0-\frac{1}{4\pi \epsilon_0}\frac{q}{b^2}\right)=\sigma_i\]
+		where $\sigma_i$ is the inner surface charge density.
+		Solving for $\sigma_i$,
+		\[\boxed{\sigma_i = -\frac{1}{4\pi}\frac{q}{b^2}}\]
+		Now applying this on the outer surface.
+		We can use our previous expression from part a to find that just outside the inner surface, the electric field magnitude is given by,
+		\[E_2 = \frac{1}{4\pi\epsilon_0}\frac{q}{c^2}\]
+		We know that inside the conductor, $E_1=0$.
+		Substituting this in,
+		\[\epsilon_0\left(\frac{1}{4\pi\epsilon_0}\frac{q}{c^2}-0\right)=\sigma_o\]
+		where $\sigma_o$ is the outer surface charge density.
+		Solving for $\sigma_o$,
+		\[\boxed{\sigma_o = \frac{1}{4\pi}\frac{q}{c^2}}\]
+		The total charge is then given by,
+		\[Q = \sigma_oA_o+\sigma_iA_i\]
+		where $A_o$ and $A_i$ are the outer and inner surface areas of the shell respectively and $Q$ is the total charge.
+		Substituting values in,
+		\[Q=\frac{1}{4\pi}\frac{q}{c^2}\cdot 4\pi c^2 - \frac{1}{4\pi}\frac{q}{b^2}\cdot 4\pi b^2=0\]
+		\[\boxed{Q=0}\]
+
+		\item [c.]
+		\begin{enumerate}
+			\item [i.]
+			We can solve for Laplace's equation in the region around the point charge.
+			Because there are no charges here,
+			\[\nabla^2\phi = 0\]
+			Using the spherical symmetries of the problem (rotationally invariant), we can find that,
+			\[\phi(r) = \frac{A}{r}+ B\]
+
+			\item [ii.]
+			Because there are no charges within the shell, (can ignore surface charges)
+			\[\nabla^2\phi = 0\]
+			Using the spherical symmetries of the problem (rotationally invariant), we can find that,
+			\[\phi(r) = \frac{C}{r}+ D\]
+			Because we know that there is no electric field in the shell, we know that $\phi$ must be constant, i.e $\phi(r)=D$.
+
+			\item [iii.]
+			Because there are no charges outside of the shell, 
+			\[\nabla^2\phi = 0\]
+			Using the spherical symmetries of the problem (rotationally invariant), we can find that,
+			\[\phi(r) = \frac{E}{r}+F\]
+			We know that at $\phi(\infty)=0$.
+			Thus, $F=0$.
+
+		\end{enumerate}
+		We then end up with three equations with four unknowns.
+		Using the fact that the potential must be continuous on the outer surface of the shell,
+		\[D = \phi(c)\to D = \frac{E}{c}\]
+		Using the fact that the potential must be continuous on the inner surface of the shell,
+		\[\frac{A}{b}+B=D=\frac{E}{c}\]
+		Now applying boundary conditions of discontinuities in the electric field.
+		We can first consider the inner shell.
+		We know that $\epsilon_0(E_2-E_1)=\sigma_i$.
+		\[\begin{cases}
+			E_1 = -\partial \phi_1/\partial r|_{r=b} = A/b^2 \\
+			E_2 = -\partial \phi_2/\partial r = 0
+		\end{cases}\]
+		where $\phi_i$ refers to the potential in the $i$-th region.
+		Then,
+		\[\epsilon_0(E_2-E_1)=\sigma_i \to -\epsilon_0\frac{A}{b^2}=-\frac{1}{4\pi}\frac{q}{b^2}\]
+		\[A=\frac{q}{4\pi \epsilon_0}\]
+		Similarly, considering the outer shell, we know that $\epsilon_0(E_2-E_1)=\sigma_o$.
+		\[\begin{cases}
+			E_1 = -\partial \phi_2/\partial r= 0 \\	
+			E_2 = -\partial \phi_3/\partial r|_{r=c} = E/c^2
+		\end{cases}\]
+		Then,
+		\[\epsilon_0(E_2-E_1)=\sigma_o \to \epsilon_0\frac{E}{c^2}=\frac{1}{4\pi}\frac{q}{c^2}\]
+		\[E = \frac{q}{4\pi\epsilon_0}\]
+		Using our continuous potential condition,
+		\[\frac{q}{4\pi\epsilon_0}\cdot \frac{1}{b} + B = \frac{q}{4\pi\epsilon_0}\cdot \frac{1}{c}\]
+		\[B = \frac{q}{4\pi\epsilon_0}\left(\frac{1}{c}-\frac{1}{b}\right)\]
+		Having solved for all the unknowns, we can substitute this back into the equations to yield,
+		\begin{enumerate}
+			\item [i.]
+			\[\boxed{\phi(r)= \frac{q}{4\pi\epsilon_0}\frac{1}{r}+\frac{q}{4\pi\epsilon_0}\left(\frac{1}{c}-\frac{1}{b}\right), \; 0<r\leq b}\]
+
+			\item [ii.]
+			\[\boxed{\phi(r)=\frac{q}{4\pi\epsilon_0}\frac{1}{c}, \; b\leq r\leq c}\]
+
+			\item [iii.]
+			\[\boxed{\phi(r)=\frac{q}{4\pi\epsilon_0}\frac{1}{r}, \; c\leq r \leq \infty}\]
+		\end{enumerate}
+
+		\item [d.]
+		Within the conductor, the electric field must be 0.
+		Otherwise, there will be an infinite current density by Ohm's Law which is non-physical.
+		Inside the conducting shell, we can utilize Gauss' Law, and we would get the same electric field as gotten in part a.
+		Outside the conducting shell, we know that $\phi(c)=\phi(\infty)=0$.
+		In order to satisfy Laplace's Equation, there cannot be local minima or maxima in the potential in the region outside the conducting shell.
+		Thus, $\phi$ must be $0$ at all points outside the conducting shell.
+		By extension, $\vec E$ must be 0 at all points outside the conducting shell.
+		\begin{enumerate}
+			\item [i.]
+			\[\boxed{\vec E(\vec r)=\frac{1}{4\pi\epsilon_0}\frac{q}{\|\vec r\|^2}\hat r, \; 0 < r < b}\]
+
+			\item [ii.]
+			\[\boxed{\vec E(\vec r)=\vec 0, \; b < r < c}\]
+
+			\item [iii.]
+			\[\boxed{\vec E(\vec r)=\vec 0, \; c < r < \infty}\]
+		\end{enumerate}
+
+		\item [e.]
+		From class, we know that the system must follow the boundary condition of, 
+		\[\epsilon_0(E_2-E_1)=\sigma\]
+		This is trivially derived from using Gauss' Law on a small area of the surface.
+		First applying this on the inner surface.
+		We can use our previous expression from part a to find that just inside the inner surface, the electric field magnitude is given by,
+		\[E_1 = \frac{1}{4\pi \epsilon_0}\frac{q}{b^2}\]
+		We also know that $E_2=0$.
+		Substituting this in,
+		\[\epsilon_0\left(0 - \frac{1}{4\pi\epsilon_0}\frac{q}{b^2}\right)=\sigma_i\]
+		where $\sigma_i$ is the inner surface charge density.
+		Solving for $\sigma_i$,
+		\[\boxed{\sigma_i = -\frac{1}{4\pi}\frac{q}{b^2}}\]
+		Now applying this on the outer surface, we know $E_1=E_2=0$.
+		Thus, $\sigma_o=0$.
+		\[\boxed{\sigma_o =0}\]
+		The total charge is then given by,
+		\[Q=\sigma_oA_o+\sigma_iA_i\]
+		where $A_o$ and $A_i$ are the outer and inner surface areas of the shell respectively and $Q$ is the total charge.
+		Substituting values in,
+		\[Q=0-\frac{1}{4\pi}\frac{q}{b^2}\cdot 4\pi b^2=-q\]
+		\[\boxed{Q=-q}\]
+
+		\item [f.]
+		\begin{enumerate}
+			\item [i.]
+			We can solve for Laplace's equation in the region around the point charge.
+			Because there are no charges here,
+			\[\nabla^2\phi = 0\]
+			Using the spherical symmetries of the problem (rotationally invariant), we can find that,
+			\[\phi(r)=\frac{A}{r}+B\]
+
+			\item [ii.]
+			Because there are no charges within the shell, (can ignore surface charges)
+			\[\nabla^2\phi = 0\]
+			Using the spherical symmetries of the problem (rotationally invariant), we can find that,
+			\[\phi(r)=\frac{C}{r}+D\]
+			Because we know that there is no electric field in the shell, we know that $\phi$ must be constant, i.e $\phi(r)=D$.
+			
+			\item [iii.]
+			Because there are no charges outside of the shell,
+			\[\nabla^2 \phi = 0\]
+			Using the spherical symmetries of the problem (rotationally invariant), we can find that,
+			\[\phi(r)=\frac{E}{r}+F\]
+			We know that at $\phi(\infty)=0$. 
+			Thus, $F=0$.
+			Additionally, we know that because there is no electric field outside the shell, we know that $\phi$ must be constant, i.e $\phi(r)=0$.
+
+		\end{enumerate}
+
+		We can use the boundary condition that potential must be continuous.
+		Analyzing continuity of the potential at the outer surface,
+		\[\phi_2(c)=\phi_3(c) \to D=0\]
+		where $\phi_i$ represents the potential in the $i$-th region.
+		Thus, $\phi_2 = \phi_3 = 0$.
+		Analyzing continuity of the potential at the inner surface,
+		\[\phi_1(b)=\phi_2(b)\to \frac{A}{b}+B = 0\]
+		Now applying boundary conditions of the discontinuities in the electric field.
+		We can consider the inner shell.
+		We know that $\epsilon_0(E_2-E_1)=\sigma_i$.
+		\[\begin{cases}
+			E_1 = -\partial \phi_1/\partial _r |_{r=b}=A/b^2 \\ 
+			E_2 = -\partial\phi_2/\partial_r = 0	
+		\end{cases}\]
+		where $\phi_i$ again refers to the potential in the $i$-th region.
+		Then,
+		\[\epsilon_0(E_2-E_1)=\sigma_i \to -\epsilon_0\frac{A}{b^2}=-\frac{1}{4\pi}\frac{q}{b^2}\]
+		\[A =\frac{q}{4\pi\epsilon_0}\]
+		Substituting this into the continuity condition,
+		\[\frac{q}{4\pi\epsilon_0}\frac{1}{b}+B=0\to B = -\frac{q}{4\pi\epsilon_0}\frac{1}{b}\]
+		Substituting this back into the potentials,
+		\begin{enumerate}
+			\item [i.]
+			\[\boxed{\phi(r)=\frac{q}{4\pi\epsilon_0}\left(\frac{1}{r}-\frac{1}{b}\right)}\]
+
+			\item [ii.]
+			\[\boxed{\phi(r)=0}\]
+
+			\item [iii.]
+			\[\boxed{\phi(r)=0}\]
+		\end{enumerate}
+
+		\item [g.]
+		We notice that in both parts, we have the same charge induced on the inner shell.
+		However, in part b, we have the same magnitude but opposite charge induced on outer shell while in part e, we have no charge induced.
+		Grounding the shell allowed an outlet for negative charge to flow in (conversely, positive charge to flow out).
+		Thus, in part b, charge conservation was conserved, while in part e, we notice that there was a non-zero net charge on the conductor.
+		Grounding the shell allowed charge to flow into the system.
+
+		\item [h.]
+		We notice that inside the conductor, the potential is shifted by a constant factor in part f (lower potential).
+		Additionally, in part f, the conducting shell and outside the conducting shell has a potential of 0.
+		In other words, grounding the conducting shell forced the potential of the conducting shell to be the same as the potential at infinity.
+		In other words, grounding the conducting shell allowed potential energy to leave the system.
+		By allowing negative charge to flow into the system, the overall configuration lost electric potential.
+		
+	\end{enumerate}
+
+	\item [4.]
+	\begin{enumerate}
+		\item [a.]
+		For the region $z>0$, we can use the method of images.
+		Because the conductor is at an equipotential, we know that for all points of $z=0$, the potential will be the same.
+		We can let this potential be $0$.
+		This gives us Laplace's Equation with the given boundary condition.
+		If we place an image charge of $-q$ at $z=-d/2$, then Laplace's equation for the region $z>0$ and the given boundary condition $\phi(z=0)=0$ will be satisfied.
+		By the uniqueness theorem, we know that this must be the solution for $z>0$.
+
+		We can now evaluate the potential for the region $z>0$ (equivalent to derivation of potential from dipole done in class).
+		Let $r_+$ be the distance between $+q$ and the point we evaluate the potential at and $r_-$ be the distance between the image charge $-q$ and the point we evaluate the potential at.
+		Then we can take a superposition of the two potentials to yield,
+		\[\phi(\vec r)=\frac{q}{4\pi\epsilon_0 r_+}-\frac{q}{4\pi\epsilon_0 r_-}\]
+		We can use the approximation that $r_+\approx r-(d/2)\cos(\theta)$ and $r_-\approx r+(d/2)\cos(\theta)$.
+		Then,
+		\[\phi(\vec r)\approx\frac{q}{4\pi\epsilon_0\left(r-\frac{d}{2}\cos(\theta)\right)}-\frac{q}{4\pi\epsilon_0\left(r+\frac{d}{2}\cos(\theta)\right)}\]
+		Through some algebraic manipulation,
+		\[\phi(\vec r)\approx \frac{q\left(r+\frac{d}{2}\cos(\theta)\right)-q\left(r-\frac{d}{2}\cos(\theta)\right)}{4\pi\epsilon_0\left(r-\frac{d}{2}\cos(\theta)\right)\left(r+\frac{d}{2}\cos(\theta)\right)}\]
+		\[\phi(\vec r)\approx \frac{qd\cos(\theta)}{4\pi\epsilon_0\left(r^2-\frac{d^2}{4}\cos^2(\theta)\right)}\]
+		Using the approximation that for $r\gg d$, $r^2-\frac{d^2}{4}\cos^2(\theta)\approx r^2$,
+		\[\phi(\vec r)\approx\frac{qd}{4\pi\epsilon_0 r^2}\cos(\theta), \; z>0\]
+
+		Now evaluating Laplace's equation for the region $z<0$.
+		We know that the spherical solution is given by $\phi(r)=\frac{A}{r}+B$.
+		Since the whole perfect conducting slab must be an equipotential, there cannot be any variance in $\phi$ within the slab.
+		Necessarily, this means that $A$ must be 0.
+		Additionally, we can use the boundary condition that $\phi(z=-d/4)=0$ (conductor slab is equipotential) to find that $B$ must also be 0.
+		Because this satisfies Laplace's equation with the given boundary conditions, we know that by the uniqueness theorem, this must be the solution.
+		Thus,
+		\[\phi(\vec r) =0, \; z< 0\]
+		\[\boxed{\phi(\vec r) = \begin{cases}
+			\sim \frac{qd}{4\pi\epsilon_0 r^2}\cos(\theta), & z> 0 \\ 
+			0, & z<0
+		\end{cases}}\]
+
+		\item [b.]
+		We know that $\vec E = -\nabla \phi$.
+		Trivially, we know that for $z<0$, $\vec E=-\nabla(0) = 0$.
+		Solving for $\vec E$ when $z>0$,
+		\[\vec E = -\nabla \phi \approx - \nabla\left(\frac{qd}{4\pi\epsilon_0r^2}\cos(\theta)\right)\]
+		For a function $f(r,\theta)$ with only $r$ and $\theta$ dependence in spherical coordinates,
+		\[\nabla f = \frac{\partial f}{\partial r}\hat r + \frac{1}{r}\frac{\partial f}{\partial \theta}\hat \theta\]
+		Applying this to $\phi$,
+		\[-\nabla \phi = \frac{qd}{2\pi\epsilon_0r^3}\cos(\theta)\hat r + \frac{qd}{4\pi\epsilon_0r^3}\sin(\theta)\hat \theta\]
+		\[\boxed{\vec E = \frac{qd}{2\pi\epsilon_0r^3}\cos(\theta)\hat r + \frac{qd}{4\pi\epsilon_0r^3}\sin(\theta)\hat \theta}\]
+
+		\item [c.]
+		From class, we have the boundary condition that,
+		\[\epsilon_0 ( E_{2,\perp} - E_{1,\perp})=\sigma\]
+		At $z=0$, $\theta=\pi/2$ for $+x$ and $\theta = -\pi/2$ for $-x$.
+		In these conditions (on $xy$-plane), we cannot make the same approximations as done previously.
+		Thus, we must calculate the electric fields from scratch.
+		We can utilize Coulomb's Law to find the electric fields from each of the charges.
+		Through the principle of superposition, we can sum the electric fields to find the total electric field.
+		We know that in the static case, there cannot be any electric fields parallel to the conductor boundary.
+		Thus, the only electric field will be perpendicular to the conductor, and we only have to analyze $E_z$.
+		From the top charge,
+		\[E_{z,1} = -\frac{1}{4\pi\epsilon_0}\frac{q}{(r^2+(d/2)^2}\cdot \frac{d/2}{\sqrt{r^2+(d/2)^2}}=-\frac{qd}{8\pi\epsilon_0\left(r^2+(d/2)^2\right)^{3/2}}\]
+		Similarly for the image charge,
+		\[E_{z,2}=\frac{1}{4\pi\epsilon_0}\frac{-q}{(r^2+(d/2)^2}\cdot \frac{d/2}{\sqrt{r^2+(d/2)^2}}=-\frac{qd}{8\pi\epsilon_0\left(r^2+(d/2)^2\right)^{3/2}}\]
+		Thus, by the principle of superposition,
+		\[E_z = E_{z,1}+E_{z,2}=-\frac{qd}{4\pi\epsilon_0(r^2+(d/2)^2)^{3/2}}\]
+		
+		We know that inside the  conductor $E_{1,\perp}=0$.
+		Substituting this into the perpendicular electric field boundary condition,
+		\[\sigma_u = -\epsilon_0\frac{qd}{4\pi\epsilon_0(r^2+(d/2)^2)^{3/2}}=-\frac{qd}{4\pi(r^2+(d/2)^2)^{3/2}}\]
+		where $\sigma_u$ is the charge density on the upper surface on the metal strip.
+		\[\boxed{\sigma_u = -\frac{qd}{4\pi(r^2+(d/2)^2)^{3/2}}}\]
+		For the bottom surface, we know that $E_{2,\perp}=E_{1,\perp}=0$.
+		Thus, $\sigma_l=0$ where $\sigma_l$ is the surface charge density on the lower surface.
+		\[\boxed{\sigma_l = 0}\]
+
+		\item [d.]
+		To find the total charge on the upper surface of the metal strip, we just have to integrate the surface charge density over the entire area of the strip.
+		\[Q_u= \iint_S \sigma_u \: dA\]
+		where $Q_u$ denotes the total charge on the upper surface of the metal strip.
+		Using spherical coordinates,
+		\[Q_u = \int_0^{2\pi}\int_0^{\infty}-\frac{qd}{4\pi (r^2+(d/2)^2)^{3/2}}r \: dr \: d\theta\]
+		Integrating over $r$,
+		\[Q_u=\int_0^{2\pi}\left[\frac{qd}{4\pi(r^2+(d/2)^2)^{1/2}}\right]_0^{\infty}\: d\theta\]
+		Enforcing the bounds,
+		\[Q_u=\int_0^{2\pi}-\frac{qd}{4\pi(0^2+(d/2)^2)^{1/2}}\:d\theta\]
+		Through algebraic manipulation,
+		\[Q_u=\int_0^{2\pi}-\frac{q}{2\pi}\:d\theta=-q\]
+		\[\boxed{Q_u=-q}\]
+
+
+
+
+
+
+	\end{enumerate}
+	
+	
+\end{enumerate}
+
+		
+
+\end{document}

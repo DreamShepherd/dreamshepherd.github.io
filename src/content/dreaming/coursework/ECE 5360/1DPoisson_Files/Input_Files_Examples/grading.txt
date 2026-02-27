@@ -1,0 +1,11 @@
+# test comment
+surface	schottky=.6	v1
+AlGaAs	t=100	x=0-0.28
+substrate
+
+fullyionized
+#v1 0.0 -1.0 -0.5
+v1 0.0
+no holes
+temp=300K
+dy=10

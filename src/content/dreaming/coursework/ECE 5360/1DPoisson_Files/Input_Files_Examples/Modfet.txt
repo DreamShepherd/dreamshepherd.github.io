@@ -1,0 +1,1 @@
+# A single heterostructure MODFET# There is not sufficient confinement at the edge of the schrodinger mesh# so the dreaded "Danger Will Robinson" message is generated.surface	schottky=.6	v1GaAs	t=50	Nd=1e17AlGaAs	t=300	Nd=1e18	x=.3AlGaAs	t=100	x=.3GaAs	t=5000	substratefullyionizedv1 0.0no holesschrodingerstart=20schrodingerstop=1000temp=300Kdy=10

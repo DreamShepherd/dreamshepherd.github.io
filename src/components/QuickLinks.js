@@ -34,13 +34,13 @@ export default function QuickLinks() {
         <a href="https://lichess.org/@/DreamShepherd">
           <Image width="27" height="auto" src={chess}/>{" "}
         </a>
-        <a href="https://www.linkedin.com/in/bryant-har-a260ab186/">
+        <a href="https://www.linkedin.com/in/bryant-har/">
           <Image width="23" height="auto" src={linkedin}/>
         </a>
-        <a href="https://github.com/dreamShepherd">
+        <a href="https://github.com/DreamShepherd">
           <Image width="24" height="auto" src={git}/>
         </a>
-        <a href="https://discordapp.com/users/bryant3435">
+        <a href="https://discordapp.com/users/_thoge">
           <Image width="25" height="auto" src={disc}/>
         </a>
         <a href="mailto:bhar@bryanthar.com">

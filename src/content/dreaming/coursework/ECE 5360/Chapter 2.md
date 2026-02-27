@@ -1,0 +1,150 @@
+# 2.1 Silicon Planar Process
+- Si-SiO2 is good as base because
+	- SiO2 can build on top of it easily
+	- You can do selective etching with gases
+	- Shield underlying areas from dopant atoms
+- Repeat gaseous etching to dope silicon
+- This is silicon planar process, since it builds on the surface plane of the silicon
+- Silicon crystals called wafers. Deposit dopants onto surface and they diffuse into silicon.
+	- Make oxide layer
+	- selective etching/removal near surface
+	- Doping
+	- diffusion into exposed silicon
+- Moores law says transistors will double every two years.
+- Scaling limited by electrons per transistors and expensive/difficulty process of making smaller.
+- In spite of limitations, planar processing is the foundation for production
+# 2.2 Crystal Growth
+- Si crystals are high quality. Dopant concentrations typically 10e15-10e20 cm-3. Impurities should be two orders of magnitude less, or at most 10e13 cm-3.
+- Obtained usually by melting SiO2 to Si, then turning it to SiHCL3 which can be purified by selective distillation.
+- Deposited onto a pure rod of Si to avoid contamination for storage.
+- Formed into crystal by (Czochralski) CZ technique or Float-Zone (FZ) method.
+- CZ Method:
+	- Used for general IC purposes.
+	- Si heated in Ar gas. Seed crystal lowered into melt while rotated. Crucible is rotated in opposite direction. Melt solidifies on seed as it's pulled out, creating larger crystal.
+	- Pull rate and temp influence resulting diameter
+	- 20cm-30cm crystal diameters
+	- Doped by adding impurities to melt. Dopant in melt must be higher than what you want, since the seed will intrinsically reject impurities in crystal formation. Resulting impurity will be less than what you added.
+	- Oxygen can also mess things up and unintentionally precipitate. It can also help by forming gettering sites for drawing unwanted impurities.
+- FZ method
+	- Used to make high resistivity silicon
+	- No oxygen
+	- Melt zone heated by RF induction and a rod is lowered vertically through a melted zone. Seed crystal on bottom initiates crystallization.
+	- Costly and creates smaller ingots, but uses 1% as much oxygen as CZ method.
+- Once an ingot is grown, sliced by diamond saw into circular thin wafers. Chemically etched to remove sawing damage then polished until mirror-like.
+- Die/Chips are edges of areas on the wafer. Oriented with natural breaking direction, so after planar silicon process, ca be easily broken off into individual parts.
+- Scribing with a stylus to cause natural breaking points. 
+- Flats are perpendicular to direction and mark crystal direction
+- Lasered to add unique wafer id number
+# 2.3 Thermal Oxidation
+- At room temp, 2nm oxide layer forms. We want 8nm-1um to protect silicon during doping as explained in 2.1
+- Done by thermal oxidation or deposition. 
+	- Thermal oxidation means heat it up. reaction at surface. Better quality than deposition
+	- Deposition dumps atoms on surface
+- At lower temps, surface reaction rate limits growth rate. Thickness of oxide layer increases linearly with oxidation time.
+- At higher temps, growth limited by diffusion through oxide. Approximately proportional to sqrt of oxidation time. 
+- For long oxidation times, we can model this as $x_ox=\sqrt{Bt}$, where B is the parabolic rate coeff
+- We can increase pressure to speed up formation
+- High concentration of dopants cause isolated defects. Vacancies (missing si atoms) or silicon interstitials (extra si).
+- Dopant diffusion can be reduced by adding nitrogen by thermal treatment using NH3 ammonia after oxide is grown. Nitrogen-rich layers protect from dopants.
+- High permittivity oxides can increase capacitance. Thin layer of SiO2 often forms between Si and the high-permittivity oxide.
+# 2.4 Lithography and Pattern Transfer
+- Selective remove SiO2 layer using light sensitive resist. Cover resist with mask and shine light. Positive resist areas are broken, negative resist areas stay. 
+ - Usually exposed simultaneously, , but can cause accuracy issues as you get smaller. Optical wafer stepper exposes one die at a time on a wafer.
+ - To get finer resolution, you need smaller wavelength light. But this makes it harder to cover a larger area. High intensity source at a short wavelength is also hard.
+ - Instead of shorter wavelength, you can als modify the mask to get a more enhanced edge.
+ - Benefit of optical lithography is to expose all features in a sizeable area. Alternatives include electron beam lithography and x ray lithography.
+ - After pattern on resist via light, etch using chemicals. Wet etching has high selectivity. HF acid only attacks what we want.
+ - Dry etching is better for smaller dimensions though. Wet etching is isotropic, meaning etched features can be larger than on mask. Dry etching can be anisotropic and use plasma.
+ - Masked wafer is exposed to plasma. Sputtering material from surface as ratio of ions to neutrla species increases at the surface.
+ - Hard process, especially with more layers of materials
+
+# 2.5 Dopant Addition and Diffusion
+ - Dopant atoms added in two steps. Ion implantation on the surface, then drive-in diffusion that rearranges the atoms within the wafer.
+ - Ion implantation involves ionizing dopants, and bombarding surface with ions.
+ - Typically less than 1um of penetration, from 10e11 to 10e16 concentration per cm-2. 
+ - Distribution of implanted ions follows gaussian distribution. Max likelihood at penetration range Rp.
+ - Ion implantation is dominant method. Control over quantity, purity, and position of implanted dopants.
+ - Diffuses with more temperature. D called diffusivity is the ease with which dopants dove into lattice. Function of temp and dopant concentration itself.
+ - Diffusion is also a gaussian distribution. 
+ - Gaseous deposition is an alternative to ion implantation. Placce into "diffusion" furnace and pass gas of the dopant over it.
+ - Low temperatures and short times to limit the number of atosm introduced. Penetration is generally small, and a drive-in diffusion is required to distribute the atoms over the desired depth.
+ - Usually a few or more diffusion steps. 
+ - Alternative to dopant addition is adding a layer of oxide containing the dopant mpurity. Then diffuse into silicon. 
+ - Concentration dependent diffusion multiplies diffusivity by 10. Oxidation-enhanced diffusion does something similar.
+ - Segregation occurs and distributes dopant to silicon and oxide layer. At equilibrium, defined by segregation coefficient m. Also influenced by the ratio of oxidation rate to square root of dopant diffusivity, and ratio of dopant diffusivity in silicon and sio2
+ - Temperature can hurt resulting quality. Most of the above is based on batch processing a large number of wafers. But single wafer processing is trending and can protect wafers. Rapid thermal processing is wher ea wafer is inserted at low temperature and held with low thermal mass, and lamps are used to rapidly change the temperautre. Risk of damaging wafer is temperature is not distributed evenly.
+ - Single wafer processing, the chambers can be clustered and can be used to maintain inert and controlled environments for the wafers.
+
+ # 2.6 Chemical Vapor Deposition (CVD)
+ - Use Chemical vapor deposition to add more layers. Or physical vapor deposition. 
+ - Ion implantation can make a heavily doped layer. We can fabricate a lightly doped layer above a heavily doped layer by process of epitaxy. We control growht oa single crystal on a substrate/wafer and pass a gas over the surface ina  heated chamber. Gas decomposes on surface by heat.
+ - We need many small crystals to make CVD work. These are called poly-crystalline silicon. 
+ - AT lower temperatures, an amorphous silicon film forms instead. Crystallizes to become polycrystalline silicon. 
+- Can also form insulating films by CVD. For example, Si3N4 silicon nitride. Does not oxides as easily as silicon, so grown via local oxidation process.
+- Trench isolatiotn can also be used to make small fine features  and insulators. All you do is etch a trench around the feature. Reactive ion etching forms trench walls.
+- The reaction kinematics of htis process is largely similar to that of ion implantation. We use a carrier gas and the diffusion and oxidation processes depends on the temperature and concentrations involved.
+- Wee can also enhance the CVD using plasma. Usual process as above. Pplasma that contains enough ions to significantly modify the depositing layer is called high density plasma (HDP). 
+# 2.7 Interconnection and Packaging
+ - To Build an IC, you need to connect them by a conducting path. Called interconnection or metallization.
+ - By subtractive process, you  remove SiO2 and depsoit a layer of metal by physical vapor deposition (PVD). We vaporize by electron beam bombardment and depsoit material by ion bombardment (sputtering).
+ - Voids in substrate filled by aluminum or other metal.
+ - As junctions become smaller, resitivity of diffused regions increase. LLower resistance metals can be placced on top of diffused regions. 
+ - Self alligned metal silicide formed on top of silicon. Metal layyer deposited over entire wafer. By using self aligning silicide formation process, no need to align photomasks. Very compact. 
+ - Multilevel interconnections require a large number fo intersecting interconnections. We need more layers of metals. No longer single layer.
+ - First layer covered with inulation, second layer is deposited and patterned, and subsequent layeyrs are added. At least 5 layers are common.
+ - Planarization technique polishes the deposited dielectric layers so that each layer is smooth. Smooth layers allow for easier subsequent layer deposition.
+ - This polishing is a chemical mechanical process.
+ - We form vias between metal lines (called the dual damascene process) 
+ - Overall circuit performance limited by RC time constant. Therefore lower relativie permitivities than silicon are good as materials.
+ - Electromigration is a major problem for reliability. When an interconnection becomes discontinuous after hundreds of hours of successful operation.
+ - Refers to movement of atoms from the conducting material as a reuslt of momentum exchange between mobile carriers and the atomic lattice. Metal piles up near the electrona nd is depleted from other parts of the conductor.
+ - Causes voids in film and a discontinuity
+ - Occurs rapidly at higher current densities and severe temperature gradients.
+ - How do we test and package this. We do preliminary functional testing with electricla tests
+ - Then wafer is diced using a scribe to break it into a individual chips. 
+ - Power dissipation is also important and choosing the proper packaging technique. Usual packaging techniques limit power dissipated, while more elaborate packaging can increase this dissipation.
+ - Contamination is also an issue. AS die size increases, damage caused by stray particles is moroe serious. Clean rooms are used but expensive.
+
+# 2.8 Compound-Semiconductor Processing
+- Si is most common of course, but we have others
+- GaAs is popular. Most widely used compound semiconductor material.
+- Not as attractive as Silicon. Only a few areas where it's better.
+- Crystal growth is similar to that of Silicon. Use a liquid-encapsulated Czochralski technique. 
+- Wider bandgap than silicon, so intrinsic resistivity is higher.
+- Fermi level shoudl be near midgap to reduce free carrier concentrations.
+- Hard to do when making Si, but GaAs this can be done easily.
+- High resistivity is bad in general for GaAs, but can be helpful for lateral isolation between devices. Make device islands and good lateral capacitance.
+- GaAs can also be grown by epitaxial techniques
+- Dopantc an be added by gas phase diffusion techniques. 
+- GaAs interconnections require multiple layers and is very complex. Silicon has much simpler metallization techniques. Though Silicon techniques have also grown quite complex in recen tyears.
+- Low resistivity metals and low permittivity dielectrics must be used because GaAs has differnet properties.
+# 2.9 Numerical Simualtion
+- ICs are expensive and complex. We don't want to test in person
+- We use simulations, but analytical equations associated with device physics is incredibly difficult. We require finer dimensions and such.
+- Small scale experiments are nice but also very expensive
+- Numerical simulation is become increasingly available, though it can be expensive. Some equations can only be solved by numerical methods too, so this must be used.
+- Numerical simulation often operates on calculating properties on grids. We only want to calculate values at a number of points or nodes/regions of interest.
+- Grid generation is extremely difficult. It must be fine to capture details but not take too much compute.
+- Species also move fractions of a micrometer (dopant atoms), making it also expensive and compute expensive.
+- Grid structure should be able to resolve these rapidly changing and moving dopants and structur eprofiles.
+- Process simulators are useful to calculate and model device simulation. Predicts final dopant profiles and simple electrical params of the device.
+- Simulators are increasingly moving from research to engineering and industry.
+- SUPREM is useful for simulation and extremely popular these days to give an example of a process modeling program.
+- Numerical simulations are also useful to calculat ea range of other topics. These are typically less intensive as the above simulations. 
+- These include diffusion, oxidation, ion implantation, deposition and etching, stress, surfaces, postprocessing
+- Device simulation is essential bt again, is pretty expensive. We only really care about 1D cross section most of the time (a wire), so these 1D models are popular 1D Poisson is an exaple. 
+- They can also simulate sophisticated physical effects, though some of these are only in 2D and 3D. They provide information about transient behavior and steady state.
+- They universally solve the Poisson 's equation and continuity equations.
+- As before, this is really expensive, especially as devices become smaller and more complicated.
+# 2.10 Device: Integrated-Circuit Resistor.
+- We can make resistors in ICs using similar fabrication techniques.
+- To form a Ic resistor, we define an opening in the protective SiO2 layer and introduce opposite conductivity dopants.
+- e.g. a ptype resistor made by introducing p type dopant into a n type wafer. 
+- Mobility is a function of dopant concentration
+- Numerical simulation is useful to solve these resistance equations
+- Often we average the mobilities to get an approximate value for the conductance
+- Usually these resistors are fabricated simultaneously
+- Sheet resistance are a series of squares of resistors. Determined by mask beforehand.
+- Diffused resistors are usually fairly hard to compute and so we have ot use a lot of approximation.
+- Usually as a result, we design our circuits around the ratio of two resistors rather than the absolute value of one.
+- If we require large or accurate Resistance values, alternate techniques can be used. We ca resistive film instead. 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { layout } from "../components/Layout.js";
 import QuickLinks from "../components/QuickLinks.js";
 About.getLayout = layout;
@@ -9,23 +10,30 @@ export default function About() {
   <p className="text-black text-xl leading-tight font-light mb-8">
     is thinking hard <br />
     and dreaming of <br />
-    butterflies <br />
+    butterflies 🐪 <br />
   </p>
   <QuickLinks />
 
   <div className="space-y-8">
     <section className="space-y-4 text-md">
       <p>
-        I try to maximize my profoundness/wordcount ratio <a className="link" href="www.google.com">here</a>.
+        I try to maximize my profoundness/wordcount ratio <a className="link" href="/dreaming">here</a>.
       </p>
       <p>
-        Hello! FYI, this website is only serviced when I'm bored. I have a B.S. {" "}
-        <span className="text-blue-500">engineering physics</span> and 
+        Hello! This website was spawned from boredom to be maintained in boredom.
+        
+        I have a B.S. {" "} <span className="text-blue-500">engineering physics</span> and 
         <span className="text-blue-500"> computer science</span> from
-        <b> Cornell University</b>. My academic interests involve
-        topology, reinforcement learning, various physics topics, functional programming, and robotics.
+        <b> Cornell University</b>. 
+                  <it className="hover:blur-none blur-[2px] text-gray-400 text-xs transition-all">
+            {" "}
+                    (Psst, there is a secret on this page :)
+          </it>
+
       </p>
       <p>
+        My academic interests involve
+        topology, reinforcement learning, various physics topics, functional programming, and robotics.
         I'm also a casual enjoyer chess, tennis, working out, running, playing piano,
         Ancient civilizations, poetry, and listening to music.
       </p>
@@ -47,7 +55,6 @@ export default function About() {
         <span className="font-semibold">Tools/Services:</span> VSCode ·
         MongoDB · Heroku · Git/Github · Vowpal Wabbit
       </p>
-    </section>
     <section>
       <h1 className="heading "><span className="text-teal-600">#</span> Fun Facts {" "}</h1>
       <ul className="text-sm grid gap-1  grid-cols-2 text-neutral-700">
@@ -70,41 +77,17 @@ export default function About() {
         <li>- Took Spanish lit in Spanish<a className = 'link' href= 'https://www.setwithfriends.com'>*</a></li>
       </ul>
     </section>
-  </div>
+	    </section>
+	  </div>
+	  <div className="pt-2 pb-0 flex justify-center">
+	    <Link
+	      href="/secret"
+	      className="text-xs opacity-30 hover:opacity-60 transition-opacity"
+	      aria-label="secret"
+	    >
+	      🐫
+	    </Link>
+	  </div>
 </div>
   );
 }
-
-/*
- * RETIRED SECTION. Kinda fake.
- * <section className="text-sm space-y-4">
-  <h1 className="heading">
-    {" "}
-    <span className="text-teal-600">#</span> Research
-  </h1>
-  <p>
-    My current research focus is applying machine learning to the
-    sciences. I'm currently in between labs. 
-    part of an ongoing research project applying machine
-    learning to optimize{" "}
-    <a
-      className="link text-blue-400"
-      href="https://en.wikipedia.org/wiki/Stellarator"
-    >
-      stellarator
-    </a>{" "}
-    plasma devices.
-  </p>
-  <p>
-    Previously, I've worked at the{" "}
-    <a href="https://www.spacecraftresearch.com/" className="link">
-      <em>Space Systems Design Studio</em>
-    </a>
-    , studying how we can apply computer vision techniques to map lunar
-    materials and regolith from stereo images. Before that, I worked on
-    researching quantum algorithms. Specifically, our research involved quantifying the effects of decoherence in the variational quantum
-    eigensolver.  
-  </p>
-</section >
-*/
-

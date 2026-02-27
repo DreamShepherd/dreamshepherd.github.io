@@ -1,25 +1,18 @@
-import React, { useEffect, useState } from "react";
-Error.getLayout = (page) => page;
+import { layout } from "../components/Layout.js";
 
-export default function Error() {
-  const [img, setImg] = useState("https://i.pinimg.com/originals/2c/d5/f9/2cd5f95facd32432677a2a7f75391468.jpg");
-  const fetchImage = async () => {
-    const res = await fetch("https://http.cat/404");
-    const imageBlob = await res.blob();
-    const imageObjectURL = URL.createObjectURL(imageBlob);
-    setImg(imageObjectURL);
-  };
-  useEffect(() => {
-    try {
-      fetchImage();
-    } catch (e) {
-      console.log(e);
-    }
-  }, []);
+ErrorPage.getLayout = layout;
 
+export default function ErrorPage() {
   return (
-    <a className = 'h-screen flex justify-center bg-orange-200' href="/">
-          <img src={img} alt="404 Missing Page" />
-    </a>
+    <div className="layout pt-12">
+      <section className="space-y-4">
+        <img
+          src="/static/doge.gif"
+          alt="doge gif"
+          className="max-w-full h-auto mx-auto"
+        />
+        <p className="text-center">how unexpected...</p>
+      </section>
+    </div>
   );
 }

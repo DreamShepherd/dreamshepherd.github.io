@@ -1,0 +1,20 @@
+# test comment
+surface	schottky=0.6	v1
+#surface slope=0
+AlGaAs	t=200	x=.3
+GaAs	t=30
+AlGaAs	t=250	x=.3
+GaAs	t=150
+AlGaAs	t=500	x=.3
+#slope=0
+substrate schottky=0.6 v2
+
+fullyionized
+v1 0.0
+v2 0.0
+schrodingerstart=20
+schrodingerstop=1120
+#Define the search range for finding bound states.  Any range boundary not specified (here the holes) will be set to the default
+find quantized states eLB=0.4 eUB=0.5
+temp=300K
+dy=1

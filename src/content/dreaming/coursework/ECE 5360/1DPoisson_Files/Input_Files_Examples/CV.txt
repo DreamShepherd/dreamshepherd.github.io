@@ -1,0 +1,1 @@
+# This file demonstrates the capacitance vs voltage featuresurface	schottky=7.5	v1SiO2	t=500	Eg=15	deltaEc=7.5Si	t=5000	Na=1e17substratefullyionizedv1 -4.0 4.0 0.25CV onlytemp=300Kdy=10

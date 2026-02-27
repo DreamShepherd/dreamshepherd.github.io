@@ -1,0 +1,25 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4 v2/bignum.cpp" "CMakeFiles/bignum.dir/bignum.cpp.o" "gcc" "CMakeFiles/bignum.dir/bignum.cpp.o.d"
+  "/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4 v2/main.cpp" "CMakeFiles/bignum.dir/main.cpp.o" "gcc" "CMakeFiles/bignum.dir/main.cpp.o.d"
+  "/Users/bryanthar/Desktop/textbooks-and-notes/homework/CS 4414/hw4 v2/threadpool.cpp" "CMakeFiles/bignum.dir/threadpool.cpp.o" "gcc" "CMakeFiles/bignum.dir/threadpool.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

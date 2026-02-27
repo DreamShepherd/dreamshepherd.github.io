@@ -1,0 +1,280 @@
+\documentclass[12pt]{article}
+\usepackage{tabularx}
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{cite}
+\usepackage[final]{hyperref}
+\hypersetup{
+	colorlinks=true,      
+	linkcolor=blue,       
+	citecolor=blue,       
+	filecolor=magenta,    
+	urlcolor=blue         
+}
+\usepackage{blindtext}
+\usepackage{amssymb}
+\usepackage{esint}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{gensymb}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+\newcommand{\Prho}{.8}%
+\newcommand{\Ptheta}{55}%
+\newcommand{\Pphi}{60}%
+\usepackage{tikz-3dplot}
+\newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}}
+%++++++++++++++++++++++++++++++++++++++++
+\usepackage{empheq}
+
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+
+\begin{document}
+
+\usetikzlibrary{scopes}
+\def\iangle{35} % Angle of the inclined plane
+
+\def\down{-90}
+\def\arcr{0.5cm} % Radius of the arc used to indicate angles
+
+\title{ECE 3030 - HW 6}
+\author{Joshua Tensuan - jvt24}
+\date{October 21, 2022}
+\maketitle
+
+
+\begin{enumerate}
+	\item [6.1]
+	\begin{enumerate}
+		\item [Pt 1.]
+		Suppose the plasma is subjected to a time-dependent $\vec E$-field with phasor $\vec E(\vec r)=\hat x E_0e^{-jkz}$.
+		If we let the displacement of an electron in the ionosphere from its average position $\vec d$, then, through Newton's Second Law, we find that,
+		\[m\frac{\partial^2 \vec d}{\partial t^2}=-e\vec E(\vec r, t)\]
+		We can represent $\vec d$ as its phasor via $\vec d(\vec r, t)=\vec d(\vec r)e^{j\omega t}$.
+		Then,
+		\[m\omega^2\vec d(\vec r)=e\vec E(\vec r)\to \vec d(\vec r)=\frac{e}{m\omega^2}\vec E(\vec r)\]
+		We know that the dipole moment is then given by, $\vec p=-e\vec d$.
+		The material polarization phasor is then given by,
+		\[\vec P=N\vec p = -Ne\vec d = -\frac{Ne^2}{m\omega^2}\vec E(\vec r)\]
+		We know that by definition,
+		\[\vec D= \epsilon_0 \vec E + \vec P \to \epsilon_{\mathrm{eff}}=\epsilon_0\left(1-\frac{Ne^2}{m\omega^2\epsilon_0}\right)\]
+		Finding the wave equation and dispersion relation,
+		\[\nabla\times \vec E= -\frac{\partial \mu_0 \vec H}{\partial t}\]
+		\[\nabla \times \vec H = \frac{\partial \epsilon_{\mathrm{eff}}\vec E}{\partial t}\]
+		Then,
+		\[\nabla \times \nabla\times  \vec E =-\mu_0\epsilon_{\mathrm{eff}}\frac{\partial^2 \vec E}{\partial t^2}\]
+		Using the vector identity that $\nabla \times \nabla \times \vec E = \nabla(\nabla \cdot \vec E)-\nabla^2 \vec E$, and the fact that $\nabla \cdot \vec E=0$,
+		\[\nabla^2\vec E = \mu_0\epsilon_{\mathrm{eff}}\frac{\partial^2 \vec E}{\partial t^2}\]
+		Using the plane wave electric field phasor of $\vec E(\vec r)=\hat x E_0e^{-jkz}$, we find that,
+		\[k^2=\omega^2 \mu_0\epsilon_{\mathrm{eff}}\]
+		\[k = \omega \sqrt{\mu_0\epsilon_{\mathrm{eff}}}=\omega\sqrt{\mu_0\epsilon_0}\sqrt{1-\frac{Ne^2}{m\omega^2\epsilon_0}}\]
+		Let us define the plasma frequency, $\omega_p$, as $\omega_p=\sqrt{Ne^2/m\epsilon_0}$.
+		Then,
+		\[k=\omega\sqrt{\mu_0\epsilon_0}\sqrt{1-\frac{\omega_p^2}{\omega^2}}\]
+		We notice that if $\omega<\omega_p$, then $k$ is purely imaginary, meaning that none of the real part of the $k$-vector will exist in the plasma.
+		Thus, all of the wave will be reflected back.
+		Thereby, we require that $\omega>\omega_p$ to communicate with the deep space probe.
+		Solving for $\omega_p$,
+		\[\omega_p = \sqrt{\frac{Ne^2}{m\epsilon_0}}=\sqrt{\frac{10^{12}\cdot (1.6 \cdot 10^{-19})^2}{9.1\cdot 10^{-31}\cdot 8.85\cdot 10^{-12}}}=5.638\cdot 10^{7}\: \mathrm{Hz}\]
+		Converting this to $f$ by $f=\omega/2\pi$,
+		\[f=8.973 \cdot 10^6 \: \mathrm{Hz}\]
+		\[\boxed{f=8.973 \cdot 10^6 \: \mathrm{Hz}}\]
+
+
+		\item [Pt 2.]
+		\begin{enumerate}
+			\item [a.]
+			We know that if we transmit waves with frequency less than the plasma frequency of the ionosphere, no power will be transmitted through the ionosphere.
+			Thus, all of the power will be reflected back to the Earth's surface.
+			Conversely, if we transmit waves with frequency more than the plasma frequency of the ionosphere, some power will be transmitted through the ionosphere.
+			We know that as we continue to increase $\omega$, $k\to\omega/c$ and the ionosphere acts like free space.
+			In this scenario, all of the wave will be transmitted.
+			Thus, we can think of the measured reflected power as a piecewise function of the wave frequency.
+			If the wave frequency is less than the plasma frequency, any losses in the measured reflected power from the original transmitted power will only be due to signal loss to the atmosphere.
+			If the wave frequency is higher than the plasma frequency, the measured reflected power will decrease as some function of the wave frequency (higher wave frequency will mean less reflected power).
+			For the purposes of this problem, we can say that variations in signal loss to the atmosphere will be much less than the variations in the measured reflected power as the wave frequency increases over the plasma frequency.
+			If we want to find the plasma frequency, we can find at which frequency this regime change occurs.
+			
+			Thus, to determine the plasma frequency, we can start with a sufficiently small wave frequency and measure the reflected power from the ionosphere.
+			Then we continuously scan the measured reflected power as we increase the wave frequency.
+			We continue until we find the measured reflected power to significantly start decreasing.
+			Then, we can find the frequency at which this happens as the plasma frequency $\omega_p$.
+			Then, solving for $N$,
+			\[\omega_p=\sqrt{\frac{Ne^2}{m\epsilon_0}}\to N = \omega_p^2\frac{m\epsilon_0}{e^2}\]
+
+			\item [b.]
+			The primary mechanism for generating ions in the ionosphere is the sun's radiation.
+			In the night, there is no radiation from the sun to ionize ions in the ionosphere.
+			Thus, the ion density $N$ will decrease.
+			Because $\omega_p \propto \sqrt{N}$, $\omega_p$ will decrease.
+			\[\boxed{\text{Plasma frequency will decrease at night.}}\]
+			
+		\end{enumerate}
+
+		\item [BONUS.]
+		The geomagnetic field will cause the light to be polarized.
+		Particularly, it will cause the magnetic field components of the electromagnetic wave to be aligned with the geomagnetic field lines.
+
+
+
+	\end{enumerate}
+
+	\item [6.2]
+	\begin{enumerate}
+		\item [a.]
+		Let the phasors be represented by,
+		\[\begin{cases}
+			\vec d(\vec r, t)=\vec d(\vec r)e^{j\omega t} \\ 
+			\vec E(\vec r, t)=\vec E(\vec r)e^{j\omega t}	
+		\end{cases}\]
+		Then, substituting these into equation 1 and taking the appropriate derivatives,
+		\[-\omega^2\vec d(\vec r)e^{j\omega t}+\frac{1}{\tau_c}\left(j\omega \vec d(\vec r)e^{j\omega t}\right)=-\frac{e}{m}\vec E(\vec r)e^{j\omega t}\]
+		Through some algebra,
+		\[\vec d(\vec r)\left[\omega^2-j\frac{\omega}{\tau_c}\right]=\frac{e}{m}\vec E(\vec r)\]
+		Thus,
+		\[\vec d(\vec r)=\left(1-j\frac{1}{\omega\tau_c}\right)^{-1}\frac{e}{m\omega^2}\vec E(\vec r)\]
+		\[\boxed{\vec d(\vec r)=\left(1-j\frac{1}{\omega\tau_c}\right)^{-1}\frac{e}{m\omega^2}\vec E(\vec r)}\]
+
+		\item [b.]
+		By definition, we know that $\vec p(\vec r)=-e\vec d(\vec r)$.
+		The material polarization phasor is then given by $\vec P(\vec r)=N\vec p(\vec r)=-Ne\vec d(\vec r)$.
+		Substituting this in,
+		\[\vec P(\vec r)=-Ne \left(1-j\frac{1}{\omega\tau_c}\right)^{-1}\frac{e}{m\omega^2}\vec E(\vec r)\]
+		\[\boxed{\vec P(\vec r)=- \left(1-j\frac{1}{\omega\tau_c}\right)^{-1}\frac{Ne^2}{m\omega^2}\vec E(\vec r)}\]
+
+		\item [c.]
+		By definition,
+		\[\vec D = \epsilon_0 \vec E + \vec P \to \vec D =\left[\epsilon_0-\left(1-j\frac{1}{\omega \tau_c}\right)^{-1}\frac{Ne^2}{m\omega^2}\right]\vec E(\vec r)\]
+		Then, through some algebra,
+		\[\epsilon(\omega)=\epsilon_0-\left(1-j\frac{1}{\omega \tau_c}\right)^{-1}\frac{Ne^2}{m\omega^2}\]
+		\[\epsilon(\omega)=\epsilon_0\left[1-\left(1-j\frac{1}{\omega \tau_c}\right)^{-1}\frac{Ne^2}{\epsilon_0m\omega^2}\right]\]
+		\[\epsilon(\omega)=\epsilon_0\left[1-\frac{Ne^2}{\epsilon_0m\omega^2(1-j\frac{1}{\omega \tau_c})}\right]\]
+		\[\epsilon(\omega)=\epsilon_0\left[1-j\frac{Ne^2}{\epsilon_0m\omega^2(j+\frac{1}{\omega \tau_c})}\right]\]
+		\[\epsilon(\omega)=\epsilon_0\left[1-j\frac{Ne^2\tau_c}{m\omega\epsilon_0(1+j\omega \tau_c)}\right]\]
+		This matches the form given in the prompt.
+		\[\boxed{\epsilon(\omega)=\epsilon_0\left[1-j\frac{Ne^2\tau_c}{m\omega\epsilon_0(1+j\omega \tau_c)}\right]}\]
+		Through direct comparison to the form given in the prompt, we have,
+		\[\sigma = \frac{Ne^2\tau_c}{m}\]
+		\[\boxed{\sigma = \frac{Ne^2\tau_c}{m}}\]
+
+		\item [d.]
+		For $\omega\tau_c \ll 1$, then we can use the following approximation, $1+j\omega \tau_c\approx 1$.
+		Thus, using the expression from part c,
+		\[\epsilon(\omega)=\epsilon_0\left(1-j\frac{\sigma}{\omega\epsilon_0(1+j\omega\tau_c)}\right)\approx \epsilon_0\left(1-j\frac{\sigma}{\omega\epsilon_0}\right)\]
+		We notice that this approximate expression is identically equivalent to the $\epsilon(\omega)$ for wave propagation in isotropic conductive mediums.
+
+		\[\boxed{\text{Q.E.D}}\]
+
+		\item [e.]
+		For $\omega\tau_c \gg 1$, then we can use the following approximation, $1+j\omega \tau_c \approx j\omega \tau_c$.
+		Then, using the expression from part c,
+		\[\epsilon(\omega)=\epsilon_0\left(1-j\frac{\sigma}{\omega\epsilon_0(1+j\omega\tau_c)}\right)\approx \epsilon_0\left(1-j\frac{\sigma}{\omega\epsilon_0(j\omega\tau_c)}\right)\]
+		Through some algebraic simplification of the approximate expression,
+		\[\epsilon(\omega)\approx \epsilon_0\left(1-\frac{\sigma}{\omega^2\epsilon_0\tau_c}\right)\]
+		Substituting in $\sigma=Ne^2\tau_c/m$,
+		\[\epsilon(\omega)\approx \epsilon_0\left(1-\frac{Ne^2\tau_c/m}{\omega^2\epsilon_0\tau_c}\right)\]
+		\[\epsilon(\omega)\approx \epsilon_0\left(1-\frac{Ne^2}{m\omega^2\epsilon_0}\right)\]
+		We notice that this approximate expression is identically equivalent to the $\epsilon(\omega)$ for wave propagation in isotropic plasma mediums as derived in question 1.
+		\[\boxed{\text{Q.E.D}}\]
+
+		\item [f.]
+		Substituting in the numbers to our expression for $\sigma$,
+		\[\sigma=\frac{Ne^2\tau_c}{m}\]
+		\[\boxed{\sigma=4.220 \cdot 10^7 \: \mathrm{S/m}}\]
+		
+		\item [g.]
+		We define the skin depth $\delta$ to be,
+		\[\delta = \sqrt{\frac{2}{\sigma \omega \mu_0}}=\sqrt{\frac{1}{\omega}}\sqrt{\frac{2}{\sigma \mu_0}}\]
+		\[\delta = \sqrt{\frac{1}{\omega}}\cdot 0.194\]
+		Substituting in the appropriate values of $\omega$, we find the skin depths at different $\omega$ to be,
+		\[\boxed{\delta=\begin{cases}
+			0.0775 \: \mathrm{m} & 1 \: \mathrm{Hz} \\ 
+			0.00245 \: \mathrm{m} & 1\: \mathrm{KHz} \\ 
+			77.5 \: \mathrm{\mu m} & 1\:\mathrm{MHz} \\ 
+			2.45 \: \mathrm{\mu m} & 1\:\mathrm{GHz} \\ 
+			77.5 \: \mathrm{nm} & 1\: \mathrm{THz}
+		\end{cases}}\]
+
+		\item [h.]
+		As derived in question 1, we define the plasma frequency $\omega_p$ to be,
+		\[\omega_p=\sqrt{\frac{Ne^2}{m\epsilon_0}}\]
+		Substituting in values, we find,
+		\[\boxed{\omega_p=6.905 \cdot 10^{15} \: \mathrm{s}^{-1}}\]
+		The regular plasma frequency (non-angular) is then given by,
+		\[\boxed{f_p=1.099\cdot 10^{15} \: \mathrm{Hz}}\]
+
+
+		\item [i.]
+		Finding the corresponding wavelength via $c=\lambda f$,
+		\[\lambda = \frac{c}{f}=2.73\cdot 10^{-7} \: \mathrm{m} = 273 \: \mathrm{nm}\]
+		\[\boxed{\text{Ultraviolet}}\]
+
+	\end{enumerate}
+
+	\item [6.3]
+	\begin{enumerate}
+		\item [a.]
+		The $x$-axis is the extraordinary axis of the medium.
+		The $y$ and $z$-axis are the ordinary axes of the medium.
+
+		\item [b.]
+		The $x$-axis is the slow axis of the medium.
+		The $y$ and $z$-axis are the fast axes of the  medium.
+
+		\item [c.]
+		Suppose we orient the figure such that our linearly polarized wave is polarized on the horizontal axis (into and out of page).
+		Let the uniaxial medium be oriented such that its $\hat x$-axis is $45 \degree$ to the left of the vertical axis and $\hat y$-axis is $45\degree$ to the right of the vertical axis.
+		Then, we have the electric field phasor of,
+		\[\left.\vec E(\vec r)\right|_{z=0}=E_0\left(\frac{\hat x - \hat y}{\sqrt{2}}\right)\]
+		Then, the field inside the plate for any given $z$ is then,
+		\[\vec E(z)=\frac{E_0}{\sqrt{2}}\left(\hat x e^{-jk^ez}-\hat ye^{-jk^oz}\right)\]
+		We can find $k^e$ and $k^o$ through the electromagnetic wave propagation equation.
+		Specifically, we can analyze a wave polarized in the $\hat x$-axis and a wave polarized in the $\hat y$-axis, and appropriately superpose the solutions to find $\vec E(z)$.
+		\[\nabla \times \nabla \times \vec E = -\mu_0\overline{\overline{\epsilon}}\frac{\partial^2 \vec E}{\partial t^2}\]
+		Since the wave propagates along the $\hat z$-axis, we can simplify this to,
+		\[\nabla^2\vec E = -\mu_0 \overline{\overline{\epsilon}}\frac{\partial^2\vec E}{\partial t^2}\]
+		Using phasor representations we find that,
+		\[k^2\vec E(\vec r)=\omega^2 \mu_0 \overline{\overline{\epsilon}}\vec E(\vec r)\]
+		For a wave polarized in the $\hat x$-axis,
+		\[(k^e)^2=\omega^2\mu_0\epsilon^e\to k^e =\omega\sqrt{\mu_0\epsilon^e}\]
+		\[k^e=\omega\sqrt{\mu_0\epsilon_0}\sqrt{\frac{\epsilon^e}{\epsilon_0}}=\frac{\omega}{c}\sqrt{\frac{\epsilon^e}{\epsilon_0}}\]
+		Substituting in values, $\omega=2\pi(c/\lambda)=4.189\cdot 10^{15}\:\mathrm{s}^{-1}$,
+		\[k^e = 4.189 \cdot 10^7 \: \mathrm{m}^{-1}\]
+		Similarly, finding $k^o$,
+		\[k^o=2.793 \cdot 10^7 \: \mathrm{m}^{-1}\]
+		Finding the expression for the electric field inside the plate at $L$,
+		\[\vec E(z=L)=\frac{E_0}{\sqrt{2}}(\hat xe^{-jk^eL}-\hat ye^{-jk^oL})\]
+		\[\vec E(z=L)=\frac{E_0}{\sqrt{2}}e^{-jk^eL}(\hat x-\hat ye^{j(k^e-k^o)L})\]
+		We know that when $e^{j(k^e-k^o)L}=- j$, we will have a right-handed circularly polarized wave.
+		Thus,
+		\[(k^e-k^o)L = \frac{\pi}{2}\]
+		Thus,
+		\[L = \frac{\pi}{2(k^e-k^o)}=1.125 \cdot 10^{-7}\:\mathrm{m}\]
+		\[\boxed{L=1.125 \cdot 10^{-7}\:\mathrm{m}}\]
+		Generalizing our previous situation, we want the $\hat x$-axis of the uniaxial medium to be oriented $45\degree$ clockwise around the $\hat z$-axis away from the incident polarization direction and our $\hat y$-axis to be oriented $135\degree$ clockwise around the $\hat z$-axis away from the incident polarization direction in order to achieve the right-hand circularly polarized output wave for the minimum thickness we calculated.
+
+		\item [d.]
+		The electric field phasor for a right-handed circularly polarized wave is given by,
+		\[\left.\vec E(\vec r)\right|_{z=0}=E_0\left(\frac{\hat x - j\hat y}{\sqrt{2}}\right)\]
+		Suppose we orient the principal axes of the uniaxial medium such that we have the above phasor $\vec E(\vec r)$ for $z=0$.
+		Then, the field inside the plate for any given $z$ is then,
+		\[\vec E(z)=\frac{E_0}{\sqrt{2}}(\hat x e^{-jk^ez}-j\hat ye^{-jk^oz})\]
+		Finding the electric field at the end of the plate,
+		\[\vec E(z=L)=\frac{E_0}{\sqrt{2}}e^{-jk^eL}\left(\hat x -j\hat ye^{j(k^e-k^o)L}\right)\]
+		We know that when $e^{j(k^e-k^o)L}=-1$, we will have a left-hand circularly polarized output wave.
+		Thus,
+		\[(k^e-k^o)L = \pi \to L=\frac{\pi}{k^e-k^o}=2.25 \cdot 10^{-7}\:\mathrm{m}\]
+		\[\boxed{L=2.25 \cdot 10^{-7} \: \mathrm{m}}\]
+		Generalizing our previous situation, we trivially find that the angular orientation of the uniaxial medium about the $z$-axis will not change the effects of switching a right-hand circularly polarized wave into a left-hand circularly polarized wave.
+		Intuitively, this can be explained by the fact that the uniaxial medium imparts a $\pi$-shift to the phasor regardless of orientation.
+		% Generalizing our previous situation, we want our principal axes of the medium to be oriented such that the $\hat x$-axis is aligned with the electric field of the incident wave at $z=0$ (the moment the incident wave comes in contact with the uniaxial medium).
+
+	\end{enumerate}
+
+	
+\end{enumerate}
+
+		
+
+\end{document}

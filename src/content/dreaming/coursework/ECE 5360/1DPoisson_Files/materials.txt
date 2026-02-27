@@ -1,0 +1,409 @@
+beta7 
+#  This is the materials file. If you edit this file, be sure you know what you are doing!                                                                                                            
+Graphene   2D-Dirac   Si                                                                                          
+0.000E+00  0.000E+00  0.000E+00  0.000E+00                                                                                          
+dec=0.0
+er=3.0
+d=3
+ed=6.0e-3
+ea=30.0e-3
+edd=0.6
+eda=0.7
+emo=8.5e3
+hmo=4.0e2
+tn=1.0e-10
+tp=1.0e-10
+al=0.0
+end Graphene
+
+MoS2   2D-parabolic   Si                                                                                           
+0.000E+00  0.000E+00  0.000E+00  0.000E+00                                                                                         
+eg=1.59
+dec=0.0
+er=4.26
+d=3
+ed=6.0e-3
+ea=30.0e-3
+edd=0.6
+eda=0.7
+me=0.483
+val=2.0
+mh=0.637
+mlh=0.0
+mhso=0
+eso=0
+emo=1.0e3
+hmo=1.0e3
+tn=1.0e-10
+tp=1.0e-10
+pol=0.0
+al=0.0
+end MoS2
+
+GaAs   binary   GaAs                                                                                          
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=1.519-5.405e-4*Temp^2/(204+Temp)
+dec=0.0
+er=13.1
+ed=6.0e-3
+ea=30.0e-3
+edd=0.6
+eda=0.7
+me=0.067
+val=1.0
+mh=0.48
+mlh=0.082
+mhso=0.15
+eso=0.34
+emo=8.5e3
+hmo=4.0e2
+tn=1.0e-10
+tp=1.0e-10
+pol=0.0
+al=0.0
+end gaas
+
+AlGaAs   ternary   GaAs   Aluminum Galium Arsenide                                                                                         
+0.000E+00  0.000E+00  0.000E+00  0.000E+00                                                                                      
+eg=1.519+1.155*x+0.37*x^2-5.405e-4*Temp^2/(204+Temp) x=0-0.45 eg=1.981+0.124*x+0.144*x^2-4.6e-4*Temp^2/(204+Temp) x=0.45-1.0 
+dec=7.73e-1*x x=0-0.45 dec=0.476-0.349*x+0.143*x^2 x=0.45-1.0
+er=13.1-3.0*x x=0-1
+ed=3.0e-2 x=0-1
+ea=4.0e-2 x=0-1
+edd=6.0e-1 x=0-1
+eda=6.0e-1 x=0-1                                                                                
+me=0.067+8.3e-2*x x=0-0.45 me=8.5e-1+0.125*x-7.0e-2*x^2 x=0.45-1.0 
+val=1.0 x=0-0.45 val=6.0 x=0.45-1.0
+mh=0.48+3.1e-2*x x=0-1
+mlh=8.2e-2+5.3e-3*x x=0-1
+mhso=0.15 x=0-1
+eso=0.34-0.04*x x=0-1
+emo=4.0e3 x=0-1
+hmo=4.0e2 x=0-1
+tn=1.0e-10 x=0-1
+tp=1.0e-10 x=0-1
+pol=0.0 x=0-1
+al=0.0 x=0-1
+end AlGaAs 
+
+SIGaAs   binary   GaAs   Semi-Insulating GaAs, Cr and O doped.                                                                                         
+0.000E+00  0.000E+00  1.000E+16  1.000E+16
+eg=1.519-5.405e-4*Temp^2/(204+Temp)
+dec=0.0
+er=13.1
+ed=6.0e-3
+ea=30.0e-3
+edd=0.6
+eda=0.7
+me=0.67
+val=1.0
+mh=0.48
+mlh=0.082
+mhso=0.15
+eso=0.34
+emo=8.5e3
+hmo=4.0e2
+tn=1.0e-10
+tp=1.0e-10
+pol=0.0
+al=0.0
+end SIGaAs                                                                            
+
+InP   binary   InP   Indium Phosphide                                                                                          
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=1.421-4.9*10e-4*Temp^2/(Temp+327)
+dec=0.0
+er=12.4
+ed=6.0e-3
+ea=2.000E-02
+edd=0.65
+eda=0.65
+me=7.700E-02
+val=1.0
+mh=6.400E-01
+mlh=8.200E-02
+mhso=0.17
+eso=0.11
+emo=4.6e3
+hmo=1.5e2
+tn=1.0e-8
+tp=1.0e-8
+pol=0.0
+al=0.0
+end InP                                                                            
+
+SIInP   binary   InP   Semi-insulating Indium Phosphide                                                                                          
+0.000E+00  0.000E+00  1.000E+16  1.000E+16
+eg=1.421-4.9*10e-4*Temp^2/(Temp+327)
+dec=0.0
+er=12.4
+ed=6.0e-3
+ea=2.000E-02
+edd=0.65
+eda=0.65
+me=7.700E-02
+val=1.0
+mh=6.400E-01
+mlh=8.200E-02
+mhso=0.17
+eso=0.11
+emo=4.6e3
+hmo=1.5e2
+tn=1.0e-8
+tp=1.0e-8
+pol=0.0
+al=0.0
+end SIInP                                                                            
+
+Si   elemental   Si   Silicon                                                                                         
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=1.17-4.73e-4*Temp^2/(Temp+636)
+dec=0.0
+er=11.9
+ed=0.300E-02
+ea=0.100E-01
+edd=0.5
+eda=0.5
+me=3.283E-01
+val=6.0
+mh=0.490E+00
+mlh=0.160E+00
+mhso=0.24
+eso=0.044
+emo=1.5e3
+hmo=4.5e2
+tn=2.5e-5
+tp=2.5e-5
+pol=0.0
+al=0.0
+end Si
+
+Ge   elemental   GaAs   Ge on GaAs                                                                                         
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=0.66
+dec=0.0
+er=16.2
+ed=0.300E-02
+ea=0.100E-01
+edd=0.5
+eda=0.5
+me=2.194E-01
+val=4.0
+mh=0.330E+00
+mlh=0.043E+00
+mhso=0.084
+eso=0.29
+emo=3.786E+03
+hmo=1.776E+03
+tn=2.5e-5
+tp=2.5e-5
+pol=0.0
+al=0.0
+end Ge
+
+SiO2   binary   Si   Silicon dioxide                                                                                         
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=9.0
+dec=2.9
+er=3.9
+ed=0.300E-02
+ea=0.100E-01
+edd=0.5
+eda=0.5
+me=0.39
+val=6.0
+mh=0.33
+mlh=0.33
+mhso=0.33
+eso=0.5
+emo=500
+hmo=500
+tn=2.5e-5
+tp=2.5e-5
+pol=0.0
+al=0.0
+end SiO2
+                                                                                                            
+InAs   binary   GaAs	Indium Arsenide                                                                                          
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=0.415-2.76e-4*Temp^2/(Temp+83)
+dec=-0.649
+er=14.5
+ed=1.0e-3
+ea=0.01
+edd=0.6
+eda=0.7
+me=0.023
+val=1.0
+mh=0.41
+mlh=0.026
+mhso=0.16
+eso=0.041
+emo=4.0e4
+hmo=5.0e2
+tn=1.0e-10
+tp=1.0e-10
+pol=0.0
+al=0.0
+end InAs
+
+InGaAs   ternary   GaAs   Indium(x) Galium(1-x) Arsenide strained on GaAs                                                                                        
+0.000E+00  0.000E+00  0.000E+00  0.000E+00                                                                                      
+eg=1.454-1.102*x+0.02*x^2 x=0-1.0 
+dec=-0.661*x+0.012*x^2 x=0-1.0
+er=13.1-1.42*x x=0-1
+ed=5.0e-3 x=0-1
+ea=4.0e-2 x=0-1
+edd=6.0e-1 x=0-1
+eda=6.0e-1 x=0-1                                                                                
+me=2.3e-2-0.037*x+3.0e-3*x^2 x=0-1.0 
+val=1.0 x=0-1
+mh=0.48+3.1e-2*x x=0-1
+mlh=8.2e-2+5.3e-3*x x=0-1
+mhso=0.15 x=0-1
+eso=0.041 x=0-1
+emo=4.0e3 x=0-1
+hmo=4.0e2 x=0-1
+tn=1.0e-10 x=0-1
+tp=1.0e-10 x=0-1
+pol=0.0 x=0-1
+al=0.0 x=0-1
+end InGaAs
+
+GaN   binary   GaN	Gallium Nitride                                                                                          
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=3.47e0-7.7e-4*Temp^2/(Temp+600)
+dec=0.0
+er=9.5
+ed=1.5e-2
+ea=2.3e-1
+edd=1.5
+eda=1.5
+me=0.2
+val=1.0
+mh=0.75
+mlh=0.75
+mhso=0.6
+eso=0.02
+emo=4.0e2
+hmo=7e0
+tn=1.0e-9
+tp=1.0e-9
+pol=2.0e-6
+al=4.5e5
+end GaN
+
+AlN   binary   GaN	Gallium Nitride                                                                                          
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=6.118e0-1.779e-3*Temp^2/(Temp+1462)
+dec=2.0
+er=8.5
+ed=1.5e-2
+ea=2.3e-1
+edd=1.5
+eda=1.5
+me=0.4
+val=1.0
+mh=5.0
+mlh=0.25
+mhso=3.6
+eso=0.019
+emo=4.0e2
+hmo=7e0
+tn=1.0e-9
+tp=1.0e-9
+pol=1.234e-5
+al=4.5e5
+end AlN
+
+AlGaN   ternary   GaN   Aluminum Galium Nitride on GaN                                                                                         
+0.000E+00  0.000E+00  0.000E+00  0.000E+00                                                                                      
+eg=3.4+2.8*x x=0-1 
+dec=2.24*x x=0-1
+er=9.5-1.0*x x=0-1
+ed=1.5e-2 x=0-1
+ea=2.3e-1 x=0-1
+edd=1.5e0 x=0-1
+eda=1.5e0 x=0-1                                                                                
+me=0.2 x=0-1 
+val=1.0 x=0-1
+mh=0.75 x=0-1
+mlh=.75 x=0-1
+mhso=0.6 x=0-1
+eso=0.02 x=0-1
+emo=4.0e2 x=0-1
+hmo=7.0e0 x=0-1
+tn=1.0e-9 x=0-1
+tp=1.0e-9 x=0-1
+pol=2.0e-6+8.4e-6*x+1.9e-6*x^2 x=0-1
+al=4e-5 x=0-1
+end AlGaN
+
+InGaN   ternary   GaN   Indium Galium Nitride on GaN                                                                                         
+0.000E+00  0.000E+00  0.000E+00  0.000E+00                                                                                      
+eg=3.4-2.6*x x=0-1 
+dec=-1.82*x x=0-1
+er=9.5 x=0-1
+ed=1.5e-2 x=0-1
+ea=2.3e-1 x=0-1
+edd=1.5e0 x=0-1
+eda=1.5e0 x=0-1                                                                                
+me=0.1 x=0-1 
+val=1.0 x=0-1
+mh=0.75 x=0-1
+mlh=.75 x=0-1
+mhso=0.6 x=0-1
+eso=0.02 x=0-1
+emo=4.0e2 x=0-1
+hmo=1.0e1 x=0-1
+tn=1.0e-9 x=0-1
+tp=1.0e-9 x=0-1
+pol=2.0e-6-1.38e-5*x-4.9e-6*x^2 x=0-1
+al=4e-5 x=0-1
+end InGaN                                                                              
+
+Diamond   elemental   Diamond   Diamond                                                                                         
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=5.6
+dec=0.0
+er=5.7
+ed=1.7
+ea=0.37
+edd=0.5
+eda=0.5
+me=0.57
+val=6.0
+mh=2.12
+mlh=0.7
+mhso=1.06
+eso=0.006
+emo=2200
+hmo=1800
+tn=2.5e-5
+tp=2.5e-5
+pol=0.0
+al=0.0
+end Diamond 
+
+Al2O3   binary   GaN	Aluminum oxide on GaN                                                                                          
+0.000E+00  0.000E+00  0.000E+00  0.000E+00
+eg=8.7
+dec=2.0
+er=9.0
+ed=0.0
+ea=0.0
+edd=0.0
+eda=0.0
+me=0.5
+val=1.0
+mh=0.8
+mlh=0.4
+mhso=0.8
+eso=1.0
+emo=0.0
+hmo=0.0
+tn=0.0
+tp=0.0
+pol=0.0
+al=0.0
+end Al2O3

@@ -38,6 +38,56 @@
   .page-title {
     @apply font-light;
   }
+
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4,
+  .markdown-body h5,
+  .markdown-body h6 {
+    @apply text-black font-semibold mt-6 mb-2;
+  }
+
+  .markdown-body h1 {
+    @apply text-xl;
+  }
+
+  .markdown-body h2 {
+    @apply text-lg;
+  }
+
+  .markdown-body p {
+    @apply leading-relaxed my-2;
+  }
+
+  .markdown-body ul,
+  .markdown-body ol {
+    @apply pl-6 my-2 space-y-1;
+  }
+
+  .markdown-body ul {
+    list-style: disc;
+  }
+
+  .markdown-body ol {
+    list-style: decimal;
+  }
+
+  .markdown-body code {
+    @apply bg-neutral-100 px-1 py-0.5 rounded;
+  }
+
+  .markdown-body pre {
+    @apply bg-neutral-100 p-3 rounded overflow-x-auto my-3;
+  }
+
+  .markdown-body pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .markdown-body blockquote {
+    @apply border-l-2 border-neutral-300 pl-3 text-neutral-600 my-2;
+  }
 }
 
 @media (max-width: 580px) {

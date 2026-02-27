@@ -1,0 +1,6 @@
+# Demonstrate the parameter file readsurface	schottky=7.5	v1SiO2		t=220	Eg=15	deltaEc=7.5
+sheetcharge=1e15
+Si	t=5000	Na=1e15
+Si	t=5000	Na=1e15 dy=50
+Si	t=2um	Na=1e15 dy=1000
+substratefullyionized#v1 -3.0 4.0 0.1v1 0.0#CV onlytemp=300Kdy=10read param

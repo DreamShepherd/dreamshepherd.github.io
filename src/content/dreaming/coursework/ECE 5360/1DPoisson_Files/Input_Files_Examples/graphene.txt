@@ -1,0 +1,14 @@
+# test comment
+surface	schottky=3.5	v1
+#SiO2 t=100 dy = 10 no holes no electrons
+SiO2 t=12 dy = 3 no holes no electrons
+graphene
+SiO2 t=12 dy = 3 no holes no electrons
+SiO2 t=1000 dy = 1  no holes no electrons
+Si	t=1000	Na=1e16
+substrate
+
+fullyionized
+v1 0.0
+temp=300K
+dy=10

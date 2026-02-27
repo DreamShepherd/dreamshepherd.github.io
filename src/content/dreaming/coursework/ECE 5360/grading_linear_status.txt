@@ -1,0 +1,21 @@
+Number of iterations to converge = 8
+Final correction to bands =  2.509e-07 eV
+Maximum error in poisson equation=  2.360e-05
+Don't worry, be happy! The convergence is good!
+
+Structure Sheet Resistance =  3.367e+02 Ohms/square
+
+Layer sheet concentrations
+
+surface            
+-----------------------------------------------------------------------------------------
+200.0 Ang	GaN	ns=  6.578e+12 cm-2,	ps=  7.033e-44 cm-2
+-----------------------------------------------------------------------------------------
+400.0 Ang	InGaN	ns=  3.890e+13 cm-2,	ps=  6.143e+12 cm-2
+-----------------------------------------------------------------------------------------
+200.0 Ang	GaN	ns=  2.209e-44 cm-2,	ps=  4.058e+13 cm-2
+-----------------------------------------------------------------------------------------
+substrate            
+
+Temperature = 300.0 K
+
