@@ -28,6 +28,8 @@ export function parseMarkdown(markdown) {
   let inCodeBlock = false;
   let inUl = false;
   let inOl = false;
+  let inBlockquote = false;
+  let blockquoteLines = [];
 
   const closeLists = () => {
     if (inUl) {
@@ -40,10 +42,21 @@ export function parseMarkdown(markdown) {
     }
   };
 
+  const flushBlockquote = () => {
+    if (!inBlockquote) return;
+    const content = blockquoteLines
+      .map((line) => parseInline(line))
+      .join("<br />");
+    html.push(`<blockquote>${content}</blockquote>`);
+    inBlockquote = false;
+    blockquoteLines = [];
+  };
+
   for (const line of lines) {
     const trimmed = line.trim();
 
     if (trimmed.startsWith("```")) {
+      flushBlockquote();
       closeLists();
       if (!inCodeBlock) {
         html.push("<pre><code>");
@@ -60,12 +73,14 @@ export function parseMarkdown(markdown) {
     }
 
     if (!trimmed) {
+      flushBlockquote();
       closeLists();
       continue;
     }
 
     const headingMatch = trimmed.match(/^(#{1,6})\s+(.+)$/);
     if (headingMatch) {
+      flushBlockquote();
       closeLists();
       const level = headingMatch[1].length;
       html.push(`<h${level}>${parseInline(headingMatch[2])}</h${level}>`);
@@ -74,6 +89,7 @@ export function parseMarkdown(markdown) {
 
     const ulMatch = trimmed.match(/^[-*]\s+(.+)$/);
     if (ulMatch) {
+      flushBlockquote();
       if (!inUl) {
         closeLists();
         html.push("<ul>");
@@ -85,6 +101,7 @@ export function parseMarkdown(markdown) {
 
     const olMatch = trimmed.match(/^\d+\.\s+(.+)$/);
     if (olMatch) {
+      flushBlockquote();
       if (!inOl) {
         closeLists();
         html.push("<ol>");
@@ -96,20 +113,24 @@ export function parseMarkdown(markdown) {
 
     if (trimmed.startsWith("> ")) {
       closeLists();
-      html.push(`<blockquote>${parseInline(trimmed.slice(2))}</blockquote>`);
+      inBlockquote = true;
+      blockquoteLines.push(trimmed.slice(2));
       continue;
     }
 
     if (trimmed === "---") {
+      flushBlockquote();
       closeLists();
       html.push("<hr />");
       continue;
     }
 
+    flushBlockquote();
     closeLists();
     html.push(`<p>${parseInline(trimmed)}</p>`);
   }
 
+  flushBlockquote();
   closeLists();
   if (inCodeBlock) html.push("</code></pre>");
 
