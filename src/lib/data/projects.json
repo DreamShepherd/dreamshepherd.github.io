@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "title": "Robotic Grasp Pose Estimation",
+      "summary": "We collected training data using a Franka Emika Panda robot arm and used reinforcement learning to predict  final hand grasp poses for random household objects. We wrote a paper, which you can read on the repo. (above).\n",
+      "date": 1,
+      "link": "https://github.com/dreamShepherd/Robotic-Grasp-Pose-Estimation/"
+    },
+    {
+      "title": "Personal Site",
+      "summary": "The source code for this website. Written in ReactJS and TS and powered by NextJS. Used TailwindCSS to handle css. With plans to expand this website with a personal workstation webapp for use in my physics work, named MatXi.\n",
+      "date": 2,
+      "link": "https://github.com/dreamShepherd/MatXi"
+    },
+    {
+      "title": "CRhythmic",
+      "summary": "Rhythm game controller written in C using microprocessors. Convert microcontroller accelerometer inputs into computer actuation in rhythm games like DDR.  Tilt the controller in each direction and shake to actuate arrow directions and special key inputs.\n",
+      "date": 3,
+      "link": "https://github.com/dreamShepherd/Crhythmic"
+    },
+    {
+      "title": "Pseudolidar-PointRCNN Fusion",
+      "summary": "A key component for Cornell EV team's autonomy stack, which I lead. Convert stereo vision into point clouds using depth estimation and perform object segmentation on the  resultant lidar-esque output. Based off work by Wang et al. and the PointNet++ architecture.\n",
+      "date": 4,
+      "link": "https://github.com/dreamShepherd/Pseudolidar-PointRCNN-Fusion/"
+    },
+    {
+      "title": "Population Dynamics Sim",
+      "summary": "Multi-species population dynamics simulator with visual scripted in OCaml.  Curves plotted in real time and differential equations are solved numerically with Runge-Kutta methods. Population models include Lotka-Volterra, Replicator, and interspecific competiton with shelter models.\n",
+      "date": 5,
+      "link": "https://github.com/dreamShepherd/Multi-Species-Population-Dynamics"
+    },
+    {
+      "title": "RLScratch",
+      "summary": "A collection of reinforcement learning techniques written from scratch for future reference.  Environments taken from OpenAI gym. Includes Q-Learning, transfer learning, Markov Decision Processes, REINFORCE algorithm, Behavior Cloning, among others.\n",
+      "date": 6,
+      "link": "https://github.com/dreamShepherd/Reinforcement-Learning-MDP-From-Scratch"
+    },
+    {
+      "title": "Algorithm Implementations",
+      "summary": "My implementation of famous algorithms, generally collected from coursework or personal use, for demonstrative purpose and potential future application. Mostly for educative purposes and curiosity. Includes Deterministic Quickselect (median of medians), Ford Fulkerson, Gale Shapley, and Zuker Stiegler (RNA Folding).\n",
+      "date": 7,
+      "link": "https://github.com/dreamShepherd/Useful-Algos"
+    }
+  ]
+}

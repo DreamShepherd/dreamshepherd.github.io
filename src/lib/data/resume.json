@@ -1,0 +1,185 @@
+{
+  "jobs": [
+    {
+      "title": "Teacher's Assistant",
+      "desc": "CS 2110 - Data Structures and Algorithms",
+      "date": "Fall 2023 - Present",
+      "notes": [
+        "Teacher's assistant for 600+ students in CS 2110",
+        "Proctored exams and hosted office hours for 20+ students."
+      ]
+    },
+    {
+      "title": "SWE Intern - Stealth Startup",
+      "desc": "Stealth startup working on document parsing APIs.",
+      "date": "Summer 2023",
+      "notes": [
+        "Cannot disclose much since it was a stealth startup.",
+        "Developed front-end for internal tools using using ReactJS.",
+        "Fixed bugs and optimized ML pipeline using Pytorch."
+      ]
+    },
+    {
+      "title": "ML Intern - Invictis",
+      "desc": "New York City-based startup specializing in brain-computer interfaces (BCI).",
+      "date": "Summer 2022",
+      "notes": [
+        "Worked on hand pose estimation from electrical signals (electromyography waveforms).",
+        "Developed autoencoders to compress data for use in XGBoost machine learning models.",
+        "Wrote data preprocessing scripts for video data in Python."
+      ]
+    },
+    {
+      "title": "MyMentor Tutor",
+      "desc": "Tutoring company connecting college students with international students.",
+      "date": "Fall 2021 - Present",
+      "notes": [
+        "Provided tutoring and essay-review services to international students from China and Singapore.",
+        "Prepared 10 students for college life and culture in the United States."
+      ]
+    },
+    {
+      "title": "Volunteer EMT",
+      "desc": "Hometown EMS Station",
+      "date": "2021 - 2022",
+      "notes": [
+        "Certified and nationally registered EMT (646230)",
+        "Provided emergency care and responded to 911 calls."
+      ]
+    }
+  ],
+  "coursework": [
+    {
+      "title": "CS 2110 - Data Structures and Algorithms",
+      "desc": "General Programming in Java. Testing, Graph-based Algorithms, Dijkstra's / A Star, Recursion, Programming Best Practices, Time Complexity Analysis.",
+      "date": "Fall 2021",
+      "notes": [
+        "TA for FA23."
+      ]
+    },
+    {
+      "title": "CS 2800 - Discrete Math",
+      "desc": "Discrete mathematics wrt computer science. Formal Proof Techniques, Induction, Combinatorics, Set Theory, Number Theory, Modular Arithmetic.",
+      "date": "Spring 2022",
+      "notes": null
+    },
+    {
+      "title": "CS 3110 - Functional Programming",
+      "desc": "Functional Programming in Ocaml, Testing, Higher-order Procedures, Evaluation and Compilation, Programming Languages, Red-Black Trees, Hindley-Milner, Formal Verification, Type Systems, Polymorphism, Program Correctness, Memory Heaps, Garbage Collection.",
+      "date": "Fall 2022",
+      "notes": null
+    },
+    {
+      "title": "CS 3420 - Embedded Systems",
+      "desc": "Programming with embedded systems in C and Assembly. Real Time Systems, Scheduling Algorithms, Scheduling Analysis, Low-level Programming, Computer Architecture, Hardware Analysis.",
+      "date": "Spring 2023",
+      "notes": null
+    },
+    {
+      "title": "CS 4820 - Analysis of Algorithmns",
+      "desc": "Formal treatment of algorithmnic analysis. NP Complexity Analysis, Proof Techniques for Program Correctness, Greedy Algorithms, Flow Algorithms, Graph Algorithms, Pairing Algorithms, Divide and Conquer, Integer/Linear Programming, Heuristics.",
+      "date": "Spring 2023",
+      "notes": null
+    },
+    {
+      "title": "CS 4414 - Operating Systems",
+      "desc": "Operating systems design and implementation. OS Structure, Concurrency, Scheduling, Synchronization, Memory Management, Filesystems, Security, Networking.",
+      "date": "Fall 2023",
+      "notes": null
+    },
+    {
+      "title": "CS 4750 - Foundations of Robotics",
+      "desc": "Robotics using ROS and Python. Ziegler-Nichols Heuristic, David-Hartenburg Parameters, MPC/PID Control Systems, Bellman Equation, Kalman Filters, Bayesian Inference, ROS / Numpy, Dubins Pathing, Replanning, Matrix Transforms.",
+      "date": "Fall 2022",
+      "notes": null
+    },
+    {
+      "title": "CS 4756 - Reinforcement Learning and Robotics",
+      "desc": "Application of reinforcement learning techniques and control schemes in modern robotics systems and modern challenges. Cross-Entropy Methods, Monte-Carlo Simulations, Dynamic Programming, DAgger Algorithms, Behavior Cloning, REINFORCE Algorithm, Variance Cascade, Markov Decision Processes, Supervised Machine Learning, Transfer Learning.",
+      "date": "Spring 2023",
+      "notes": null
+    },
+    {
+      "title": "CS 4787 - Large Scale Machine Learning",
+      "desc": "Designing and programming large, scalable machine learning systems in modern systems. Algorithmic and implementation principles to process big data. Parallel/distributed training, online learning, model compression.",
+      "date": "Fall 2023",
+      "notes": null
+    },
+    {
+      "title": "CS 1340 - Ethics of Computing",
+      "desc": "Social effects and ethics of technology. Bayesian inference, networks, statistical modelling, legal studies regarding privacy, differential privacy.",
+      "date": "Spring 2022",
+      "notes": null
+    },
+    {
+      "title": "ECE 2300 - Digital Logic and Boolean Algebra",
+      "desc": "Boolean algebra, karnaugh maps, caching, metastability and time analysis, logic gates, CLA adders, virtual memory.",
+      "date": "Spring 2022",
+      "notes": null
+    }
+  ],
+  "physcoursework": [
+    {
+      "title": "MATH 1920 - Multivariable Calculus",
+      "desc": "Placed Out.",
+      "date": "N/A",
+      "notes": null
+    },
+    {
+      "title": "MATH 2940 - Linear Algebra",
+      "desc": "Standard linear algebra.",
+      "date": "Fall 2021",
+      "notes": null
+    },
+    {
+      "title": "MATH 2930 - Differential Equations and PDEs",
+      "desc": "Standard differential equations. Additionally covers PDEs.",
+      "date": "Spring 2022",
+      "notes": null
+    },
+    {
+      "title": "PHYS 1116-2214 - Honors Introductory Physics Sequence",
+      "desc": "Introductory Physics sequence. Mechanics, Electromagnetism, Waves.",
+      "date": "2021 -2022",
+      "notes": [
+        "Won award for excellence in physics."
+      ]
+    },
+    {
+      "title": "AEP 3200 - Mathematical Physics",
+      "desc": "Tensor Calculus, Complex Analysis, Dirac-Delta Distributions, Fourier and Laplace Transforms, Method of Frobenius, Group Theory, Conformal Maps, Christoffel Symbols, Calculus of Variations",
+      "date": "Spring 2023",
+      "notes": null
+    },
+    {
+      "title": "AEP 4200 - Intermediate Mathematical Physics",
+      "desc": "See Course Page",
+      "date": "Fall 2023",
+      "notes": null
+    },
+    {
+      "title": "AEP 3610  - Intro Quantum Mechanics",
+      "desc": "See Course Page",
+      "date": "Fall 2023",
+      "notes": null
+    },
+    {
+      "title": "AEP 3620  - Intermediate Quantum Mechanics",
+      "desc": "See Course Page",
+      "date": "Spring 2024",
+      "notes": null
+    },
+    {
+      "title": "AEP 3330  - Classical Dynamics of Particles",
+      "desc": "See Course Page",
+      "date": "Fall 2023",
+      "notes": null
+    },
+    {
+      "title": "AEP 4230  - Statistical Thermodynamics",
+      "desc": "See Course Page",
+      "date": "Fall 2024",
+      "notes": null
+    }
+  ]
+}
