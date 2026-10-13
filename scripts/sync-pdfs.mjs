@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// Copies the PDFs referenced by the dreaming index into the static assets dir.
-// Markdown is rendered to HTML at build time, so only PDFs need to ship.
+// Copies the PDFs and HTML pages referenced by the dreaming index into the
+// static assets dir. Markdown is rendered to HTML at build time, so only PDFs
+// and standalone .html pages need to ship.
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -19,7 +20,8 @@ function walk(dir) {
       walk(from);
       continue;
     }
-    if (path.extname(entry.name).toLowerCase() !== '.pdf') continue;
+    const ext = path.extname(entry.name).toLowerCase();
+    if (ext !== '.pdf' && ext !== '.html') continue;
     const to = path.join(DEST, path.relative(SRC, from));
     fs.mkdirSync(path.dirname(to), { recursive: true });
     fs.copyFileSync(from, to);

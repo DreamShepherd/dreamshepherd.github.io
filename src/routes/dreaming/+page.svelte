@@ -49,8 +49,8 @@
             <ul class="space-y-2">
               {#each group.notes as entry (entry.href)}
                 <li>
-                  <a class="link" href={entry.href} rel={entry.kind === 'pdf' ? 'external' : undefined}>{entry.title}</a>
-                  {#if entry.kind === 'pdf'}<span class="text-xs text-neutral-500"> (pdf)</span>{/if}
+                  <a class="link" href={entry.href} rel={entry.kind === 'markdown' ? undefined : 'external'}>{entry.title}</a>
+                  {#if entry.kind !== 'markdown'}<span class="text-xs text-neutral-500"> ({entry.kind})</span>{/if}
                 </li>
               {/each}
             </ul>
@@ -66,8 +66,8 @@
                   <ul class="space-y-2">
                     {#each group.notes as entry (entry.href)}
                       <li>
-                        <a class="link" href={entry.href} rel={entry.kind === 'pdf' ? 'external' : undefined}>{entry.title}</a>
-                        {#if entry.kind === 'pdf'}<span class="text-xs text-neutral-500"> (pdf)</span>{/if}
+                        <a class="link" href={entry.href} rel={entry.kind === 'markdown' ? undefined : 'external'}>{entry.title}</a>
+                        {#if entry.kind !== 'markdown'}<span class="text-xs text-neutral-500"> ({entry.kind})</span>{/if}
                       </li>
                     {/each}
                   </ul>

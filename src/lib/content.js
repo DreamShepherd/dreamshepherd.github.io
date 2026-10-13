@@ -18,15 +18,25 @@ function getContentFiles(dir) {
       continue;
     }
     const ext = path.extname(entry.name).toLowerCase();
-    if (entry.isFile() && (ext === ".md" || ext === ".pdf")) {
+    if (entry.isFile() && (ext === ".md" || ext === ".pdf" || ext === ".html")) {
       files.push(fullPath);
     }
   }
   return files;
 }
 
+function getHtmlTitle(html, fallback) {
+  const m = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+  return m ? m[1].trim() : fallback;
+}
+
 export function getDreamEntries() {
   return getContentFiles(CONTENT_DIR)
+    // CONTRIBUTING.md-style docs at the content root are instructions, not entries.
+    .filter((fullPath) => {
+      const rel = path.relative(CONTENT_DIR, fullPath).replaceAll(path.sep, "/");
+      return rel !== "README.md";
+    })
     .map((fullPath) => {
       const relPath = path
         .relative(CONTENT_DIR, fullPath)
@@ -37,13 +47,16 @@ export function getDreamEntries() {
       const stat = fs.statSync(fullPath);
       const fallbackTitle = slug.split("/").at(-1) ?? slug;
       const isMarkdown = ext === ".md";
+      const isHtml = ext === ".html";
       return {
         slug,
         folder: folder === "." ? "root" : folder,
-        kind: isMarkdown ? "markdown" : "pdf",
+        kind: isMarkdown ? "markdown" : ext.slice(1),
         title: isMarkdown
           ? getTitle(fs.readFileSync(fullPath, "utf8"), fallbackTitle)
-          : fallbackTitle,
+          : isHtml
+            ? getHtmlTitle(fs.readFileSync(fullPath, "utf8"), fallbackTitle)
+            : fallbackTitle,
         href: isMarkdown
           ? `/dreaming/${encodePath(slug)}`
           : `/content/dreaming/${encodePath(slug)}${ext}`,
