@@ -47,7 +47,7 @@
         <h1 class="heading"><span class="text-teal-600">#</span> Fun Facts </h1>
         <ul class="text-sm grid gap-1 grid-cols-2 text-neutral-700">
           <li>- From New Jersey xd</li>
-          <li>- Lewis Carroll enjoyer. (love red queen's race references).</li>
+          <li>- Lewis Carroll enjoyer.</li>
           <li>- Was an EMT during COVID <a class="link" href="/random#emt">*</a></li>
           <li>- Hit a 1590/1600 SAT (first try while sick with covid xd)</li>
           <li>- Have hit 1800 elo in chess</li>
