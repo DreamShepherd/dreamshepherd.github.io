@@ -26,7 +26,7 @@
       <p>
         My academic interests involve topology, reinforcement learning, the math/physics of the season,
         functional programming, and robotics. I'm also a casual enjoyer of chess, tennis, working out,
-        running, piano, set, ancient civilizations, poetry, and music.
+        running, piano, set, reading about ancient civilizations, poetry, and music.
       </p>
     </section>
     <section class="text-sm space-y-4">
@@ -47,7 +47,7 @@
         <h1 class="heading"><span class="text-teal-600">#</span> Fun Facts </h1>
         <ul class="text-sm grid gap-1 grid-cols-2 text-neutral-700">
           <li>- From New Jersey xd</li>
-          <li>- Lewis Carroll enjoyer.</li>
+          <li>- Enjoyer of red queens' race references.</li>
           <li>- Was an EMT during COVID <a class="link" href="/random#emt">*</a></li>
           <li>- Hit a 1590/1600 SAT (first try while sick with covid xd)</li>
           <li>- Have hit 1800 elo in chess</li>
