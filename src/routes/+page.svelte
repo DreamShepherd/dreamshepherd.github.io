@@ -16,8 +16,8 @@
         Hello hello! I try to sound like a clever little fox <a class="link" href="/dreaming">here</a>. 🐪
       </p>
       <p>
-        This website was spawned from boredom and will be maintained in boredom.
-        Currently, I.. develop stuff at <span class="text-blue-500">Hudson River Trading</span>.
+        This website was spawned from and will be maintained in boredom.
+        Currently, I... develop stuff at <span class="text-blue-500">Hudson River Trading</span>.
         I graduated summa cum laude with a B.S. <span class="text-blue-500">engineering physics</span> and
         <span class="text-blue-500"> computer science</span> from
         <b>Cornell University</b>.
