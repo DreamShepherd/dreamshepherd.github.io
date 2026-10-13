@@ -50,7 +50,7 @@
           <li>- Pretty big puzzle fan!</li>
           <li>- New Jersey xd</li>
           <li>- I like rhythm games like osu and vocaloid songs.</li>
-          <li>- Lewis Carroll fan. I love red queens race references.</li>
+          <li>- Lewis Carroll enjoyer. (i love referencing red queen's race).</li>
           <li>- Was an EMT during COVID <a class="link" href="/random#emt">*</a></li>
           <li>- Hit a 1590/1600 SAT (first try while sick with covid xd hehe)</li>
           <li>- Have hit 1800 elo in chess</li>
