@@ -24,7 +24,7 @@
         <span class="whisper"> (Psst, there is a secret on this page :)</span>
       </p>
       <p>
-        My academic interests involve topology, reinforcement learning, various physics topics,
+        My academic interests involve topology, reinforcement learning, the math/physics of the season,
         functional programming, and robotics. I'm also a casual enjoyer of chess, tennis, working out,
         running, piano, set, ancient civilizations, poetry, and music.
       </p>
