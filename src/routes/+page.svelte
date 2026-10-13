@@ -38,32 +38,28 @@
       </p>
       <p class="leading-relaxed text-sm">
         <span class="font-semibold">Languages:</span> Python · Java · C/C++ · OCaml · Javascript ·
-        Wolfram Language · LaTeX <br />
+        Verilog · LaTeX <br />
         <span class="font-semibold">Frameworks:</span> gRPC · Zephyr RTOS · ROS · Tensorflow/PyTorchNextJS · React · gRPC 
         <br />
-        <span class="font-semibold">Tools/Services:</span> VSCode · MongoDB · Heroku · Git/Github ·
-        Vowpal Wabbit
+        <span class="font-semibold">Tools/Services:</span> VSCode · MongoDB · Firebase · Snowflake · Vowpal Wabbit
       </p>
       <section>
         <h1 class="heading"><span class="text-teal-600">#</span> Fun Facts </h1>
         <ul class="text-sm grid gap-1 grid-cols-2 text-neutral-700">
-          <li>- Pretty big puzzle fan!</li>
-          <li>- New Jersey xd</li>
-          <li>- I like rhythm games like osu and vocaloid songs.</li>
-          <li>- Lewis Carroll enjoyer. (i love referencing red queen's race).</li>
+          <li>- From New Jersey xd</li>
+          <li>- Lewis Carroll enjoyer. (love red queen's race references).</li>
           <li>- Was an EMT during COVID <a class="link" href="/random#emt">*</a></li>
-          <li>- Hit a 1590/1600 SAT (first try while sick with covid xd hehe)</li>
+          <li>- Hit a 1590/1600 SAT (first try while sick with covid xd)</li>
           <li>- Have hit 1800 elo in chess</li>
           <li>- 16.1s PB solving the 3x3 Rubiks Cube</li>
-          <li>- Formerly could solve cubes blindfolded</li>
           <li>- Can recite six poems</li>
+          <li>- I like rhythm games like osu and vocaloid songs.</li>
           <li>- Recited 400 digits of pi in middle school</li>
-          <li>- I do the monthly Jane Street puzzle if not bashy.<a class="link" href="/random#jspuzzle">*</a></li>
+          <li>- I do the monthly js puzzle if not bashy.<a class="link" href="/random#jspuzzle">*</a></li>
+          <li>- Took a spanish class in Spanish<a class="link" href="https://www.setwithfriends.com">*</a></li>
           <li>- Hit masters in Starcraft II<a class="link" href="/random#emt">*</a></li>
           <li>- Hit legend in Hearthstone</li>
           <li>- Hit a 1:22 in <a class="link" href="https://www.setwithfriends.com">SET</a></li>
-          <li>- I actually think Verilog is pretty neat...</li>
-          <li>- Took Spanish lit in Spanish<a class="link" href="https://www.setwithfriends.com">*</a></li>
         </ul>
       </section>
     </section>
