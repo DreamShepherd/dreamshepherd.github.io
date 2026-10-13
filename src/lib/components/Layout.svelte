@@ -1,22 +1,11 @@
 <script>
   import Header from './Header.svelte';
-  import { page } from '$app/state';
 
   let { children } = $props();
-  let path = $derived(page.url.pathname);
-  let isDreaming = $derived(path.startsWith('/dreaming'));
 </script>
 
-<div class={isDreaming ? 'pt-6 pb-12 sm:pb-24 md:pb-32' : 'margin'} id="top">
-  {#if isDreaming}
-    <div class="layout sticky top-0 z-20 bg-white/90 backdrop-blur-sm pb-4">
-      <h1 class="text-black text-2xl md:text-3xl font-semibold my-1 pt-2">
-        <a href="/dreaming">Dreaming</a>
-      </h1>
-    </div>
-  {:else}
-    <Header />
-  {/if}
+<div class="margin" id="top">
+  <Header />
 
   {@render children()}
 
