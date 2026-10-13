@@ -25,8 +25,8 @@
       </p>
       <p>
         My academic interests involve topology, reinforcement learning, various physics topics,
-        functional programming, and robotics. I'm also a casual enjoyer chess, tennis, working out,
-        running, playing piano, Ancient civilizations, poetry, and listening to music.
+        functional programming, and robotics. I'm also a casual enjoyer of chess, tennis, working out,
+        running, piano, set, ancient civilizations, poetry, and music.
       </p>
     </section>
     <section class="text-sm space-y-4">
