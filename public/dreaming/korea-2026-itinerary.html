@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seoul — Nov 10–16, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf6f0;
+    --card: #ffffff;
+    --ink: #23262e;
+    --muted: #7a7568;
+    --line: #e8e0d3;
+    --accent: #d95b2e;
+    --accent-soft: #f9e4d8;
+    --jade: #2c7a62;
+    --jade-soft: #dceee6;
+    --gold: #b98a2f;
+    --gold-soft: #f5ead2;
+    --shadow: 0 1px 2px rgba(60,45,25,.06), 0 8px 24px rgba(60,45,25,.07);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px/1.55 Inter, -apple-system, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* ---- hero ---- */
+  header { padding: 56px 0 8px; }
+  .kicker {
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  h1 {
+    font-family: Fraunces, Georgia, serif; font-weight: 600;
+    font-size: clamp(30px, 6vw, 44px); line-height: 1.12;
+    margin: 10px 0 6px; letter-spacing: -.01em;
+  }
+  .sub { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+
+  .facts {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px; margin: 18px 0 6px;
+  }
+  .fact {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 14px; box-shadow: var(--shadow);
+  }
+  .fact .lbl { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .fact .val { font-size: 13.5px; margin-top: 3px; line-height: 1.45; }
+  .fact .val b { font-weight: 600; }
+
+  /* ---- sticky nav ---- */
+  nav {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(250,246,240,.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    margin: 26px -20px 0; padding: 10px 20px;
+  }
+  .chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto; font-size: 12.5px; font-weight: 500; color: var(--muted);
+    border: 1px solid var(--line); background: var(--card);
+    padding: 5px 11px; border-radius: 999px; cursor: pointer; text-decoration: none;
+    transition: all .15s ease;
+  }
+  .chip:hover { border-color: var(--accent); color: var(--accent); }
+  .chip.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .navrow { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 8px; }
+  .progress { flex: 1; height: 5px; border-radius: 99px; background: var(--line); overflow: hidden; }
+  .progress > i { display: block; height: 100%; width: 0; background: var(--jade); transition: width .3s ease; }
+  .progress-lbl { font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+
+  /* ---- sections / cards ---- */
+  section { margin-top: 34px; }
+  h2 {
+    font-family: Fraunces, Georgia, serif; font-size: 21px; font-weight: 600;
+    margin: 0 0 4px; letter-spacing: -.01em;
+  }
+  .h2-note { color: var(--muted); font-size: 13px; margin: 0 0 14px; }
+
+  .day {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 20px 22px; margin-bottom: 14px; box-shadow: var(--shadow);
+    transition: opacity .2s ease;
+  }
+  .day.dim { display: none; }
+  .day-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .day-no {
+    font-family: Fraunces, serif; font-size: 13px; font-weight: 600; color: var(--accent);
+    background: var(--accent-soft); padding: 2px 9px; border-radius: 99px;
+  }
+  .day-date { font-size: 13px; color: var(--muted); font-weight: 500; }
+  .day h3 {
+    font-family: Fraunces, serif; font-size: 19px; font-weight: 600;
+    margin: 6px 0 2px; letter-spacing: -.01em;
+  }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0 4px; }
+  .tag {
+    font-size: 11px; font-weight: 600; padding: 2px 9px; border-radius: 99px;
+    letter-spacing: .02em;
+  }
+  .tag.run   { background: var(--jade-soft);  color: var(--jade); }
+  .tag.hike  { background: var(--gold-soft);  color: var(--gold); }
+  .tag.sport { background: var(--accent-soft); color: var(--accent); }
+  .tag.free  { background: #eee9df; color: var(--muted); }
+
+  .blocks { margin: 12px 0 0; padding: 0; list-style: none; }
+  .blocks li {
+    display: grid; grid-template-columns: 84px 1fr; gap: 12px;
+    padding: 9px 0; border-top: 1px dashed var(--line);
+  }
+  .blocks li:first-child { border-top: 0; }
+  .when { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 2px; }
+  .what a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  .what a:hover { border-bottom-color: var(--accent); }
+  .what .muted { color: var(--muted); }
+
+  /* ---- checkboxes ---- */
+  .todo { margin-top: 4px; }
+  .todo label {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 10px 12px; border: 1px solid var(--line); border-radius: 11px;
+    margin-bottom: 8px; cursor: pointer; background: var(--card); transition: border-color .15s;
+  }
+  .todo label:hover { border-color: var(--jade); }
+  .todo input { margin-top: 3px; accent-color: var(--jade); width: 15px; height: 15px; flex: 0 0 auto; }
+  .todo input:checked + .t-text { text-decoration: line-through; color: var(--muted); }
+  .t-text { font-size: 14px; }
+  .t-text a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+
+  /* ---- links + details ---- */
+  .links { padding: 0; margin: 0; list-style: none; }
+  .links li { padding: 8px 0; border-top: 1px dashed var(--line); font-size: 14px; }
+  .links li:first-child { border-top: 0; }
+  .links a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  .links .why { color: var(--muted); font-size: 12.5px; }
+
+  details { margin-top: 10px; border: 1px solid var(--line); border-radius: 11px; background: var(--card); }
+  summary {
+    cursor: pointer; padding: 10px 14px; font-size: 13px; font-weight: 500;
+    color: var(--muted); list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "＋ "; color: var(--accent); }
+  details[open] summary::before { content: "− "; }
+  .details-body { padding: 2px 14px 12px; font-size: 13.5px; color: var(--ink); }
+
+  footer {
+    margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 12.5px; line-height: 1.7;
+  }
+  @media (max-width: 520px) {
+    .blocks li { grid-template-columns: 1fr; gap: 2px; }
+    .when { padding-top: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Dreaming · travel</div>
+  <h1>Seoul, sporty week</h1>
+  <p class="sub">Nov 10–16, 2026 · based in Gwanak-gu (near SNU) · runs, hikes, tennis, archery — with lots of blank space.</p>
+
+  <div class="facts">
+    <div class="fact">
+      <div class="lbl">Outbound</div>
+      <div class="val"><b>TW 162</b> · Mon Nov 9, 23:00 SGT → ICN ~06:35 KST Tue</div>
+    </div>
+    <div class="fact">
+      <div class="lbl">Return</div>
+      <div class="val"><b>7C 2623</b> · Mon Nov 16, 18:10 KST → SIN 00:10 Tue</div>
+    </div>
+    <div class="fact">
+      <div class="lbl">Hotel</div>
+      <div class="val">The Designers SNU · 1876 Nambusunhwan-ro, Gwanak-gu · Nov 10–17</div>
+    </div>
+    <div class="fact">
+      <div class="lbl">November in Seoul</div>
+      <div class="val">3–13 °C, dry, peak fall color. Layers + trail shoes.</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="chips" id="dayChips">
+    <a class="chip on" href="#top">All</a>
+    <a class="chip" href="#day1">Tue 10</a>
+    <a class="chip" href="#day2">Wed 11</a>
+    <a class="chip" href="#day3">Thu 12</a>
+    <a class="chip" href="#day4">Fri 13</a>
+    <a class="chip" href="#day5">Sat 14</a>
+    <a class="chip" href="#day6">Sun 15</a>
+    <a class="chip" href="#day7">Mon 16</a>
+    <a class="chip" href="#book">Book</a>
+    <a class="chip" href="#links">Links</a>
+    <button class="chip" id="filterSport" type="button">⚡ sport only</button>
+  </div>
+  <div class="navrow">
+    <div class="progress"><i id="bar"></i></div>
+    <div class="progress-lbl" id="barLbl">0 / 0 booked</div>
+  </div>
+</nav>
+
+<span id="top"></span>
+
+<section id="days">
+  <h2>Day by day</h2>
+  <p class="h2-note">Each day: one anchor, then open space. Checkboxes save in your browser.</p>
+
+  <!-- DAY 1 -->
+  <article class="day" id="day1" data-sport="1">
+    <div class="day-top"><span class="day-no">Day 1</span><span class="day-date">Tue, Nov 10 · Gwanak-gu</span></div>
+    <h3>Land, settle in, shake it out</h3>
+    <div class="tags"><span class="tag run">run</span><span class="tag free">free afternoon</span><span class="tag free">free evening</span></div>
+    <ul class="blocks">
+      <li><span class="when">Morning</span><div class="what">ICN → <a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX</a> to Seoul Stn → Line 2 to SNU. Drop bags at the hotel (check-in 15:00).</div></li>
+      <li><span class="when">Anchor</span><div class="what">Shakeout run: SNU campus loop + Gwanaksan foothill path, <b>5–8 km</b>. <span class="muted">Flat, pretty, zero planning.</span></div></li>
+      <li><span class="when">Evening</span><div class="what">Free. Sillim / SNU backstreet food — walk it off.</div></li>
+    </ul>
+  </article>
+
+  <!-- DAY 2 -->
+  <article class="day" id="day2" data-sport="1">
+    <div class="day-top"><span class="day-no">Day 2</span><span class="day-date">Wed, Nov 11 · Gwanaksan</span></div>
+    <h3>Gwanaksan — the mountain behind the hotel</h3>
+    <div class="tags"><span class="tag hike">hike</span><span class="tag free">free afternoon</span><span class="tag free">free evening</span></div>
+    <ul class="blocks">
+      <li><span class="when">Anchor</span><div class="what"><a href="https://www.google.com/maps/search/?api=1&query=Gwanaksan+Sadeokgol+Trailhead" target="_blank" rel="noopener">Sadeokgol trail</a> (minutes from the hotel) → Yeongbong peak 629 m → down via SNU. ~3 h round trip. Fall color week.</div></li>
+      <li><span class="when">Afternoon</span><div class="what">Free. Option: Korean <b>jjimjilbang</b> (bathhouse) in Sillim for legs.</div></li>
+      <li><span class="when">Evening</span><div class="what">Free.</div></li>
+    </ul>
+  </article>
+
+  <!-- DAY 3 -->
+  <article class="day" id="day3" data-sport="1">
+    <div class="day-top"><span class="day-no">Day 3</span><span class="day-date">Thu, Nov 12 · Yeouido + Sinchon</span></div>
+    <h3>Han River run, then archery</h3>
+    <div class="tags"><span class="tag run">run</span><span class="tag sport">archery</span><span class="tag free">free afternoon</span></div>
+    <ul class="blocks">
+      <li><span class="when">Morning</span><div class="what">Han River run, Yeouido loop (<a href="https://www.google.com/maps/search/?api=1&query=Yeouido+Hangang+Park" target="_blank" rel="noopener">Yeouido Hangang Park</a>, ~25 min via Line 2/9). <b>6–12 km</b> on the river path.</div></li>
+      <li><span class="when">Afternoon</span><div class="what">Free — Hongdae next door.</div></li>
+      <li><span class="when">Evening</span><div class="what"><b>Archery</b>: walk-in at <a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery</a> (Sinchon, 15 min from hotel), or <a href="https://www.koreatraveleasy.com/product/indoor-archery-experience-in-seoul/" target="_blank" rel="noopener">book the English-instruction session</a> in Gangnam.</div></li>
+    </ul>
+  </article>
+
+  <!-- DAY 4 -->
+  <article class="day" id="day4" data-sport="1">
+    <div class="day-top"><span class="day-no">Day 4</span><span class="day-date">Fri, Nov 13 · Bukhansan</span></div>
+    <h3>Bukhansan big hike day</h3>
+    <div class="tags"><span class="tag hike">hike</span><span class="tag free">easy evening</span></div>
+    <ul class="blocks">
+      <li><span class="when">Anchor</span><div class="what">Bukhansanseong trail → Baegundae 836 m, ~4–5 h round trip. Start by 8 — go north early. <span class="muted">Stout granite, Seoul below. No booking needed.</span></div></li>
+      <li><span class="when">Evening</span><div class="what">Easy. Jjimjilbang recovery, early night.</div></li>
+    </ul>
+  </article>
+
+  <!-- DAY 5 -->
+  <article class="day" id="day5" data-sport="1">
+    <div class="day-top"><span class="day-no">Day 5</span><span class="day-date">Sat, Nov 14 · courts + alleys</span></div>
+    <h3>Tennis day</h3>
+    <div class="tags"><span class="tag sport">tennis</span><span class="tag free">free afternoon</span><span class="tag free">free evening</span></div>
+    <ul class="blocks">
+      <li><span class="when">Anchor</span><div class="what">Tennis: book a public court on <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">Seoul yeyak</a> (see <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a> for nearby courts), or an indoor club near Sillim.</div></li>
+      <li><span class="when">Afternoon</span><div class="what">Free — Ikseondong / Insadong alley cafés.</div></li>
+      <li><span class="when">Evening</span><div class="what">Free. Optional: batting cages or noraebang.</div></li>
+    </ul>
+  </article>
+
+  <!-- DAY 6 -->
+  <article class="day" id="day6" data-sport="1">
+    <div class="day-top"><span class="day-no">Day 6</span><span class="day-date">Sun, Nov 15 · east side</span></div>
+    <h3>Long run at Seoul Forest</h3>
+    <div class="tags"><span class="tag run">run</span><span class="tag sport">archery (opt.)</span><span class="tag free">free afternoon</span></div>
+    <ul class="blocks">
+      <li><span class="when">Anchor</span><div class="what">Long run: <a href="https://www.google.com/maps/search/?api=1&query=Seoul+Forest" target="_blank" rel="noopener">Seoul Forest</a> → Ttukseom Han River park and back, <b>10–15 km</b> (~35 min via Line 2).</div></li>
+      <li><span class="when">Afternoon</span><div class="what">Free.</div></li>
+      <li><span class="when">Evening</span><div class="what">Optional: <a href="https://world.nol.com/en/content/pois/84a3a4f9-cb97-4a18-bfbb-7e141daa15cd" target="_blank" rel="noopener">Real Shot</a> archery/shooting zone in Hongdae — or start packing.</div></li>
+    </ul>
+  </article>
+
+  <!-- DAY 7 -->
+  <article class="day" id="day7" data-sport="1">
+    <div class="day-top"><span class="day-no">Day 7</span><span class="day-date">Mon, Nov 16 · fly home</span></div>
+    <h3>Easy morning, then ICN</h3>
+    <div class="tags"><span class="tag run">run</span><span class="tag free">slow morning</span></div>
+    <ul class="blocks">
+      <li><span class="when">Morning</span><div class="what">Easy 5 km on the <a href="https://www.google.com/maps/search/?api=1&query=Anyangcheon+Stream+Trail+Gwanak" target="_blank" rel="noopener">Anyangcheon stream path</a> near the hotel. Pack.</div></li>
+      <li><span class="when">Afternoon</span><div class="what">AREX to ICN by ~15:00. <b>7C 2623</b> departs 18:10 KST → SIN 00:10.</div></li>
+    </ul>
+  </article>
+</section>
+
+<section id="book">
+  <h2>Book these</h2>
+  <p class="h2-note">Two things only. Hikes are free and unbooked; everything else is walk-in or free time.</p>
+  <div class="todo" id="todo">
+    <label><input type="checkbox" data-key="tennis"><span class="t-text"><b>Tennis court</b> — <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">yeyak.seoul.go.kr</a> · slots open a few days ahead; book for Sat Nov 14. Court finder: <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a></span></label>
+    <label><input type="checkbox" data-key="archery"><span class="t-text"><b>Archery session</b> (if you want instruction) — <a href="https://www.koreatraveleasy.com/product/indoor-archery-experience-in-seoul/" target="_blank" rel="noopener">Indoor Archery Experience, Gangnam</a> · English coaching, ~1–2 h. Or skip booking and walk into <a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery</a> in Sinchon.</span></label>
+    <label><input type="checkbox" data-key="tmoney"><span class="t-text"><b>T-money card</b> — grab one at ICN arrivals (or use Wowpass). Needed for metro/bus/AREX.</span></label>
+    <label><input type="checkbox" data-key="weather"><span class="t-text"><b>Check the forecast</b> for Nov 13 — swap Bukhansan with Gwanaksan or the tennis day if it rains.</span></label>
+  </div>
+</section>
+
+<section id="links">
+  <h2>Links</h2>
+  <p class="h2-note">Everything worth clicking, in one place.</p>
+  <ul class="links">
+    <li><a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX airport express</a> — ICN ↔ Seoul Stn, ~43 min express.</li>
+    <li><a href="https://yeyak.seoul.go.kr/" target="_blank" rel="noopener">Seoul Public Service Reservation (yeyak)</a> — <span class="why">tennis, pools, public sports facilities. Chrome auto-translates fine.</span></li>
+    <li><a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a> — <span class="why">find public courts by district + links to official booking.</span></li>
+    <li><a href="https://www.koreatraveleasy.com/product/indoor-archery-experience-in-seoul/" target="_blank" rel="noopener">Indoor Archery Experience (Gangnam)</a> — <span class="why">bookable in English, coaching included.</span></li>
+    <li><a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery (Sinchon)</a> — <span class="why">walk-in archery cafe, close to the hotel side of town.</span></li>
+    <li><a href="https://www.gofarther.blog/blog/archery-cafes-in-seoul-koreas-most-unique-recreation-trend" target="_blank" rel="noopener">Archery cafes in Seoul — overview</a> — <span class="why">costs, how booking works, neighborhoods.</span></li>
+    <li><a href="https://world.nol.com/en/content/pois/6ccd8893-e8bb-4fcc-bdc8-5fff09c3ae5e" target="_blank" rel="noopener">Robinhood Gangnam shooting/archery range</a> — <span class="why">the bigger indoor range option.</span></li>
+    <li><a href="https://english.visitseoul.net/" target="_blank" rel="noopener">Visit Seoul (English)</a> — <span class="why">hike trailheads, events, transit tips.</span></li>
+  </ul>
+
+  <details>
+    <summary>Default open blocks — how the free time works</summary>
+    <div class="details-body">
+      Mornings carry the anchor; afternoons and evenings are deliberately blank. If you want a filler: Sillim has a big cluster of cheap food, batting cages, and jjimjilbangs within walking distance of the hotel; Line 2 from SNU reaches Hongdae / Sinchon / Gangnam in 15–30 min. Gwanaksan can also be re-run in reverse (SNU side up, Sadeokgol down) as a tempo effort.
+    </div>
+  </details>
+</section>
+
+<footer>
+  Seoul · Nov 10–16, 2026 · built for a week of moving and a week of open space.<br>
+  Times in KST unless marked SGT. Checkboxes persist locally in this browser.
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var KEY = 'seoul-nov2026';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#todo input[type=checkbox]'));
+  var bar = document.getElementById('bar');
+  var barLbl = document.getElementById('barLbl');
+
+  function refresh() {
+    var done = boxes.filter(function (b) { return b.checked; }).length;
+    var pct = boxes.length ? (done / boxes.length) * 100 : 0;
+    bar.style.width = pct + '%';
+    barLbl.textContent = done + ' / ' + boxes.length + ' booked';
+  }
+
+  boxes.forEach(function (box) {
+    box.checked = !!state[box.dataset.key];
+    box.addEventListener('change', function () {
+      state[box.dataset.key] = box.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+      refresh();
+    });
+  });
+  refresh();
+
+  // sport-only filter
+  var fBtn = document.getElementById('filterSport');
+  var days = Array.prototype.slice.call(document.querySelectorAll('.day'));
+  fBtn.addEventListener('click', function () {
+    var on = fBtn.classList.toggle('on');
+    days.forEach(function (d) { d.classList.toggle('dim', on); });
+    fBtn.textContent = on ? 'show all days' : '⚡ sport only';
+    if (!on) { days.forEach(function (d) { d.classList.remove('dim'); }); }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // day chip highlight on scroll
+  var chips = Array.prototype.slice.call(document.querySelectorAll('#dayChips a'));
+  var targets = chips.map(function (c) {
+    return { chip: c, el: document.querySelector(c.getAttribute('href')) };
+  }).filter(function (t) { return t.el; });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        chips.forEach(function (c) { c.classList.remove('on'); });
+        var hit = targets.filter(function (t) { return t.el === en.target; })[0];
+        if (hit) hit.chip.classList.add('on');
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    targets.forEach(function (t) { io.observe(t.el); });
+  }
+})();
+</script>
+</body>
+</html>
