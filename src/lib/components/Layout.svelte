@@ -11,14 +11,8 @@
   {#if isDreaming}
     <div class="layout sticky top-0 z-20 bg-white/90 backdrop-blur-sm pb-4">
       <h1 class="text-black text-2xl md:text-3xl font-semibold my-1 pt-2">
-        <a href="/dreaming">Dreaming ↔ Butterflies</a>
+        <a href="/dreaming">Dreaming</a>
       </h1>
-      <p
-        class="whitespace-nowrap overflow-hidden text-xl leading-none opacity-40 select-none pt-2"
-        aria-hidden="true"
-      >
-        oh, 🐫, oh 🐫, oh, 🐫, oh 🐫, oh, 🐫, oh 🐫, oh, 🐫, oh 🐫, oh, 🐫, oh 🐫
-      </p>
     </div>
   {:else}
     <Header />
