@@ -33,14 +33,13 @@
       <h1 class="heading"><span class="text-teal-600">#</span> Interests</h1>
       <p>
         I'm interested in <span class="font-semibold">puzzles</span>,
-        <span class="font-semibold">hardware</span>, and
+        <span class="font-semibold">hardware architecture</span>, and
         <span class="font-semibold">user design</span>. Check meowt!
       </p>
       <p class="leading-relaxed text-sm">
         <span class="font-semibold">Languages:</span> Python · Java · C/C++ · OCaml · Javascript ·
         Wolfram Language · LaTeX <br />
-        <span class="font-semibold">Frameworks:</span> NextJS · ReactJS · Tailwind · Yaml · ROS ·
-        Tensorflow/Keras · PyTorch
+        <span class="font-semibold">Frameworks:</span> gRPC · Zephyr RTOS · ROS · Tensorflow/PyTorchNextJS · React · gRPC 
         <br />
         <span class="font-semibold">Tools/Services:</span> VSCode · MongoDB · Heroku · Git/Github ·
         Vowpal Wabbit
