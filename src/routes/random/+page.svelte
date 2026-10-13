@@ -8,14 +8,12 @@
   </section>
 
   <section id="spanish">
-    Class was in Spanish. Read Don Quixote, learnt about spanish poetry, etc. <br /> e.g. learnt
-    about Spanish literary techniques. Read romances. My favorite poem was this romance: Romance de
-    la pérdida de Alhama.
+    Read Don Quixote, learnt about spanish poetry, etc. <br /> e.g. learnt
+    about Spanish literary techniques; I distinctly remember Romance de
+    la pérdida de Alhama for some reason hmm...
   </section>
 
   <section id="jspuzzle">
-    Class was in Spanish. Read Don Quixote, learnt about spanish poetry, etc. <br /> e.g. learnt
-    about Spanish literary techniques. Read romances. My favorite poem was this romance: Romance de
-    la pérdida de Alhama.
+    One Arthur Bright introduced me to these. Try to find me on the more interesting months heh -- though work has gotten the better of my time recently :(
   </section>
 </section>
