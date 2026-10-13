@@ -17,7 +17,7 @@
       </p>
       <p>
         This website was spawned from boredom and will be maintained in boredom.
-        Currently, I develop stuff at <span class="text-blue-500">Hudson River Trading</span>.
+        Currently, I.. develop stuff at <span class="text-blue-500">Hudson River Trading</span>.
         I have a B.S. <span class="text-blue-500">engineering physics</span> and
         <span class="text-blue-500"> computer science</span> from
         <b>Cornell University</b>.
