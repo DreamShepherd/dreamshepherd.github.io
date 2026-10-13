@@ -74,7 +74,7 @@
           <div class="mb-6">
             <h2 class="font-medium text-black mb-2">{group.folder}</h2>
             <ul class="space-y-2">
-              {#each group.notes as entry (entry.slug)}
+              {#each group.notes as entry (entry.href)}
                 <li>
                   <a class="link" href={entry.href} rel={entry.kind === 'pdf' ? 'external' : undefined}>{entry.title}</a>
                   {#if entry.kind === 'pdf'}<span class="text-xs text-neutral-500"> (pdf)</span>{/if}
@@ -96,7 +96,7 @@
                 <details>
                   <summary class="text-sm text-neutral-600 mb-1 cursor-pointer">{group.folder}</summary>
                   <ul class="space-y-2">
-                    {#each group.notes as entry (entry.slug)}
+                    {#each group.notes as entry (entry.href)}
                       <li>
                         <a class="link" href={entry.href} rel={entry.kind === 'pdf' ? 'external' : undefined}>{entry.title}</a>
                         {#if entry.kind === 'pdf'}<span class="text-xs text-neutral-500"> (pdf)</span>{/if}

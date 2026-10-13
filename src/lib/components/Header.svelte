@@ -3,8 +3,7 @@
 
   const links = [
     { name: 'dreaming', href: '/dreaming' },
-    { name: 'resume', href: '/resume' },
-    { name: 'projects', href: '/doge_intentional_404_for_the_nosy' }
+    { name: 'resume', href: '/resume' }
   ];
 
   let path = $derived(page.url.pathname);
