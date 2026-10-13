@@ -52,7 +52,7 @@
           <li>- I like rhythm games like osu and vocaloid songs.</li>
           <li>- Lewis Carroll fan. I love red queens race references.</li>
           <li>- Was an EMT during COVID <a class="link" href="/random#emt">*</a></li>
-          <li>- 1590/1600 SAT first try (sick with covid lol)</li>
+          <li>- Hit a 1590/1600 SAT (first try while sick with covid xd hehe)</li>
           <li>- Have hit 1800 elo in chess</li>
           <li>- 16.1s PB solving the 3x3 Rubiks Cube</li>
           <li>- Formerly could solve cubes blindfolded</li>
@@ -61,7 +61,7 @@
           <li>- I do the monthly Jane Street puzzle if not bashy.<a class="link" href="/random#jspuzzle">*</a></li>
           <li>- Hit masters in Starcraft II<a class="link" href="/random#emt">*</a></li>
           <li>- Hit legend in Hearthstone</li>
-          <li>- Hit a 1:27 in <a class="link" href="https://www.setwithfriends.com">SET</a></li>
+          <li>- Hit a 1:22 in <a class="link" href="https://www.setwithfriends.com">SET</a></li>
           <li>- I actually think Verilog is pretty neat...</li>
           <li>- Took Spanish lit in Spanish<a class="link" href="https://www.setwithfriends.com">*</a></li>
         </ul>
