@@ -28,4 +28,9 @@
       {/each}
     </div>
   </section>
+
+  <section class="pt-8 flex flex-col items-center text-center">
+    <img src="/static/doge.gif" alt="doge gif" class="max-w-full h-auto mx-auto" />
+    <p class="text-center">how unexpected...</p>
+  </section>
 </div>

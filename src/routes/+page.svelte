@@ -47,7 +47,7 @@
         <h1 class="heading"><span class="text-teal-600">#</span> Fun Facts </h1>
         <ul class="text-sm grid gap-1 grid-cols-2 text-neutral-700">
           <li>- From New Jersey xd</li>
-          <li>- Doge will live on forever <3</li>
+          <li>- Doge will live on forever &lt;3</li>
           <li>- Enjoyer of red queens' race references.</li>
           <li>- Was an EMT during COVID <a class="link" href="/random#emt">*</a></li>
           <li>- Hit a 1590/1600 SAT (first try while sick with covid xd)</li>
