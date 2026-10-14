@@ -71,7 +71,7 @@
       {:else}
         {#each blogGroups as group (group.folder)}
           <div class="mb-6">
-            <h2 class="font-medium text-black mb-2">{group.folder}{#if group.emoji} <span aria-hidden="true">{group.emoji}</span>{/if}</h2>
+            <h2 class="font-medium text-black mb-2">{group.folder}{#if group.emoji}<span aria-hidden="true" style="margin-left:0.45em">{group.emoji}</span>{/if}</h2>
             <ul class="space-y-2">
               {#each group.notes as entry (entry.href)}
                 <li>

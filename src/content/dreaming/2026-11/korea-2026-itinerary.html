@@ -20,10 +20,12 @@
     --jade-soft: #dceee6;
     --gold: #b98a2f;
     --gold-soft: #f5ead2;
+    --purple: #7c4dbe;
+    --purple-soft: #ece2f8;
     --shadow: 0 1px 2px rgba(60,45,25,.06), 0 8px 24px rgba(60,45,25,.07);
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 92px; }
   body {
     margin: 0;
     background: var(--bg);
@@ -31,9 +33,8 @@
     font: 15px/1.55 Inter, -apple-system, "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 780px; margin: 0 auto; padding: 0 20px 80px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px 80px; }
 
-  /* ---- hero ---- */
   header { padding: 56px 0 8px; }
   .kicker {
     font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
@@ -58,6 +59,19 @@
   .fact .val { font-size: 13.5px; margin-top: 3px; line-height: 1.45; }
   .fact .val b { font-weight: 600; }
 
+  /* ---- booking legend ---- */
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 18px 0 4px; }
+  .legend > div { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--muted); }
+
+  .bk {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 10.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    padding: 2px 9px; border-radius: 99px; white-space: nowrap; vertical-align: middle;
+  }
+  .bk.adv  { background: var(--purple-soft); color: var(--purple); }
+  .bk.dod  { background: var(--jade-soft);  color: var(--jade); }
+  .bk.free { background: #eee9df;           color: var(--muted); }
+
   /* ---- sticky nav ---- */
   nav {
     position: sticky; top: 0; z-index: 20;
@@ -70,7 +84,7 @@
   .chip {
     flex: 0 0 auto; font-size: 12.5px; font-weight: 500; color: var(--muted);
     border: 1px solid var(--line); background: var(--card);
-    padding: 5px 11px; border-radius: 999px; cursor: pointer; text-decoration: none;
+    padding: 5px 11px; border-radius: 99px; cursor: pointer; text-decoration: none;
     transition: all .15s ease;
   }
   .chip:hover { border-color: var(--accent); color: var(--accent); }
@@ -80,7 +94,6 @@
   .progress > i { display: block; height: 100%; width: 0; background: var(--jade); transition: width .3s ease; }
   .progress-lbl { font-size: 11.5px; color: var(--muted); white-space: nowrap; }
 
-  /* ---- sections / cards ---- */
   section { margin-top: 34px; }
   h2 {
     font-family: Fraunces, Georgia, serif; font-size: 21px; font-weight: 600;
@@ -91,7 +104,6 @@
   .day {
     background: var(--card); border: 1px solid var(--line); border-radius: 16px;
     padding: 20px 22px; margin-bottom: 14px; box-shadow: var(--shadow);
-    transition: opacity .2s ease;
   }
   .day.dim { display: none; }
   .day-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
@@ -109,27 +121,32 @@
     font-size: 11px; font-weight: 600; padding: 2px 9px; border-radius: 99px;
     letter-spacing: .02em;
   }
-  .tag.run   { background: var(--jade-soft);  color: var(--jade); }
-  .tag.hike  { background: var(--gold-soft);  color: var(--gold); }
+  .tag.run   { background: var(--jade-soft);   color: var(--jade); }
+  .tag.hike  { background: var(--gold-soft);   color: var(--gold); }
   .tag.sport { background: var(--accent-soft); color: var(--accent); }
-  .tag.free  { background: #eee9df; color: var(--muted); }
+  .tag.cult  { background: var(--purple-soft); color: var(--purple); }
+  .tag.free  { background: #eee9df;            color: var(--muted); }
 
   .blocks { margin: 12px 0 0; padding: 0; list-style: none; }
   .blocks li {
-    display: grid; grid-template-columns: 84px 1fr; gap: 12px;
-    padding: 9px 0; border-top: 1px dashed var(--line);
+    display: grid; grid-template-columns: 108px 1fr; gap: 12px;
+    padding: 10px 0; border-top: 1px dashed var(--line);
   }
   .blocks li:first-child { border-top: 0; }
-  .when { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 2px; }
+  .when {
+    font-size: 11px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--muted); padding-top: 2px;
+  }
+  .when .t { display: block; color: var(--ink); font-size: 11.5px; letter-spacing: .03em; }
   .what a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
   .what a:hover { border-bottom-color: var(--accent); }
   .what .muted { color: var(--muted); }
+  .what .ln { display: block; margin-top: 3px; }
 
   /* ---- checkboxes ---- */
-  .todo { margin-top: 4px; }
   .todo label {
     display: flex; gap: 10px; align-items: flex-start;
-    padding: 10px 12px; border: 1px solid var(--line); border-radius: 11px;
+    padding: 12px 14px; border: 1px solid var(--line); border-radius: 11px;
     margin-bottom: 8px; cursor: pointer; background: var(--card); transition: border-color .15s;
   }
   .todo label:hover { border-color: var(--jade); }
@@ -137,8 +154,12 @@
   .todo input:checked + .t-text { text-decoration: line-through; color: var(--muted); }
   .t-text { font-size: 14px; }
   .t-text a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  .deadline {
+    display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .03em;
+    background: var(--purple-soft); color: var(--purple);
+    padding: 1px 8px; border-radius: 99px; margin-left: 6px; vertical-align: middle;
+  }
 
-  /* ---- links + details ---- */
   .links { padding: 0; margin: 0; list-style: none; }
   .links li { padding: 8px 0; border-top: 1px dashed var(--line); font-size: 14px; }
   .links li:first-child { border-top: 0; }
@@ -154,6 +175,8 @@
   summary::before { content: "＋ "; color: var(--accent); }
   details[open] summary::before { content: "− "; }
   .details-body { padding: 2px 14px 12px; font-size: 13.5px; color: var(--ink); }
+  .details-body ul { padding-left: 18px; margin: 6px 0; list-style: disc; }
+  .details-body li { margin: 4px 0; }
 
   footer {
     margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line);
@@ -161,7 +184,8 @@
   }
   @media (max-width: 520px) {
     .blocks li { grid-template-columns: 1fr; gap: 2px; }
-    .when { padding-top: 0; }
+    .when { padding-top: 0; display: flex; gap: 8px; align-items: baseline; }
+    .when .t { display: inline; }
   }
 </style>
 </head>
@@ -170,8 +194,8 @@
 
 <header>
   <div class="kicker">Dreaming · travel</div>
-  <h1>Seoul, sporty week</h1>
-  <p class="sub">Nov 10–16, 2026 · based in Gwanak-gu (near SNU) · runs, hikes, tennis, archery — with lots of blank space.</p>
+  <h1>Seoul, a good week</h1>
+  <p class="sub">Nov 10–16, 2026 · based in Gwanak-gu (near SNU) · two hikes, two sport sessions, a DMZ day, palaces, a show — and plenty of blank space to do whatever.</p>
 
   <div class="facts">
     <div class="fact">
@@ -190,6 +214,12 @@
       <div class="lbl">November in Seoul</div>
       <div class="val">3–13 °C, dry, peak fall color. Layers + trail shoes.</div>
     </div>
+  </div>
+
+  <div class="legend">
+    <div><span class="bk adv">🔒 advance</span> book before the trip — sells out</div>
+    <div><span class="bk dod">🎟 day-of</span> walk in / book same day</div>
+    <div><span class="bk free">free</span> no ticket at all</div>
   </div>
 </header>
 
@@ -217,126 +247,147 @@
 
 <section id="days">
   <h2>Day by day</h2>
-  <p class="h2-note">Each day: one anchor, then open space. Checkboxes save in your browser.</p>
+  <p class="h2-note">Every day has one anchor event and real slack around it. Each block is tagged with how it books. Checkboxes save in your browser.</p>
 
   <!-- DAY 1 -->
   <article class="day" id="day1" data-sport="1">
     <div class="day-top"><span class="day-no">Day 1</span><span class="day-date">Tue, Nov 10 · Gwanak-gu</span></div>
-    <h3>Land, settle in, shake it out</h3>
-    <div class="tags"><span class="tag run">run</span><span class="tag free">free afternoon</span><span class="tag free">free evening</span></div>
+    <h3>Land, settle, steam the flight out</h3>
+    <div class="tags"><span class="tag cult">jjimjilbang</span><span class="tag run">optional shakeout</span><span class="tag free">free afternoon</span></div>
     <ul class="blocks">
-      <li><span class="when">Morning</span><div class="what">ICN → <a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX</a> to Seoul Stn → Line 2 to SNU. Drop bags at the hotel (check-in 15:00).</div></li>
-      <li><span class="when">Anchor</span><div class="what">Shakeout run: SNU campus loop + Gwanaksan foothill path, <b>5–8 km</b>. <span class="muted">Flat, pretty, zero planning.</span></div></li>
-      <li><span class="when">Evening</span><div class="what">Free. Sillim / SNU backstreet food — walk it off.</div></li>
+      <li><span class="when"><span class="t">07:15</span>morning</span><div class="what"><span class="bk free">free</span> ICN → <a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX</a> to Seoul Stn → Line 2 to Sillim/SNU. Store bags at the hotel (check-in 15:00).<span class="ln muted">Get a T-money card at the airport station before you tap in.</span></div></li>
+      <li><span class="when"><span class="t">09:30</span>brunch</span><div class="what"><span class="bk free">free</span> First real meal near SNU — <span class="muted">kalguksu (knife-cut noodles) or gimbap; everything's cheap and open early around the university.</span></div></li>
+      <li><span class="when"><span class="t">11:00</span>nap</span><div class="what"><span class="muted">Seriously. Red-eye + 2 nights of no sleep ruins the rest of the trip. Nothing is scheduled until the evening.</span></div></li>
+      <li><span class="when"><span class="t">16:30</span>shakeout</span><div class="what"><span class="bk free">free</span> Optional 4 km jog on the <a href="https://www.google.com/maps/search/?api=1&query=Anyangcheon+Stream+Trail+Gwanak" target="_blank" rel="noopener">Anyangcheon stream path</a> behind the hotel — flat, lit, zero thinking. Skip it guilt-free.</div></li>
+      <li><span class="when"><span class="t">19:00</span>evening</span><div class="what"><span class="bk dod">🎟 day-of</span> <b>Sillim jjimjilbang</b> (Korean bathhouse) — hot rooms, cold plunge, iced sikhye on a heated floor. 2–3 h. <span class="muted">This is the single best jet-lag cure there is. Just pick the highest-rated 찜질방 near Sillim Station on Naver Map and walk in.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 2 -->
   <article class="day" id="day2" data-sport="1">
-    <div class="day-top"><span class="day-no">Day 2</span><span class="day-date">Wed, Nov 11 · Gwanaksan</span></div>
-    <h3>Gwanaksan — the mountain behind the hotel</h3>
-    <div class="tags"><span class="tag hike">hike</span><span class="tag free">free afternoon</span><span class="tag free">free evening</span></div>
+    <div class="day-top"><span class="day-no">Day 2</span><span class="day-date">Wed, Nov 11 · Gwanaksan + Sinchon</span></div>
+    <h3>The mountain behind the hotel</h3>
+    <div class="tags"><span class="tag hike">hike</span><span class="tag sport">archery</span><span class="tag free">free afternoon</span></div>
     <ul class="blocks">
-      <li><span class="when">Anchor</span><div class="what"><a href="https://www.google.com/maps/search/?api=1&query=Gwanaksan+Sadeokgol+Trailhead" target="_blank" rel="noopener">Sadeokgol trail</a> (minutes from the hotel) → Yeongbong peak 629 m → down via SNU. ~3 h round trip. Fall color week.</div></li>
-      <li><span class="when">Afternoon</span><div class="what">Free. Option: Korean <b>jjimjilbang</b> (bathhouse) in Sillim for legs.</div></li>
-      <li><span class="when">Evening</span><div class="what">Free.</div></li>
+      <li><span class="when"><span class="t">08:00</span>anchor</span><div class="what"><span class="bk free">free</span> <b>Gwanaksan, Sadeokgol trail</b> → Yeongbong peak (629 m) → down the SNU side. ~3 h round trip, trailhead 10 min from the hotel. Peak fall color week. <span class="muted">Take the 300 won "Sadeokgol bus" up the valley road if your legs say no.</span></div></li>
+      <li><span class="when"><span class="t">12:30</span>lunch</span><div class="what"><span class="bk free">free</span> Hearty lunch at the SNU back gate — <span class="muted">student-priced Korean comfort food. Then rest; you earned it.</span></div></li>
+      <li><span class="when"><span class="t">16:30</span>afternoon</span><div class="what"><span class="muted">Free. Wander Sinchon / Ewha if you want people-watching; stay in if you don't.</span></div></li>
+      <li><span class="when"><span class="t">19:00</span>evening</span><div class="what"><span class="bk dod">🎟 day-of</span> <b>Archery</b> at <a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery</a>, Sinchon — 15 min from the hotel. Walk-in, ~₩15–20k/hour, staff show you the form in 2 minutes. <span class="muted">Korea is the Olympic archery superpower; the cafe gear is genuinely nice. Go after dinner — lanes open late.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 3 -->
   <article class="day" id="day3" data-sport="1">
-    <div class="day-top"><span class="day-no">Day 3</span><span class="day-date">Thu, Nov 12 · Yeouido + Sinchon</span></div>
-    <h3>Han River run, then archery</h3>
-    <div class="tags"><span class="tag run">run</span><span class="tag sport">archery</span><span class="tag free">free afternoon</span></div>
+    <div class="day-top"><span class="day-no">Day 3</span><span class="day-date">Thu, Nov 12 · Jongno</span></div>
+    <h3>Palace day — Secret Garden + old city</h3>
+    <div class="tags"><span class="tag cult">palaces</span><span class="tag cult">market food</span><span class="tag free">free evening</span></div>
     <ul class="blocks">
-      <li><span class="when">Morning</span><div class="what">Han River run, Yeouido loop (<a href="https://www.google.com/maps/search/?api=1&query=Yeouido+Hangang+Park" target="_blank" rel="noopener">Yeouido Hangang Park</a>, ~25 min via Line 2/9). <b>6–12 km</b> on the river path.</div></li>
-      <li><span class="when">Afternoon</span><div class="what">Free — Hongdae next door.</div></li>
-      <li><span class="when">Evening</span><div class="what"><b>Archery</b>: walk-in at <a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery</a> (Sinchon, 15 min from hotel), or <a href="https://www.koreatraveleasy.com/product/indoor-archery-experience-in-seoul/" target="_blank" rel="noopener">book the English-instruction session</a> in Gangnam.</div></li>
+      <li><span class="when"><span class="t">09:30</span>anchor</span><div class="what"><span class="bk adv">🔒 advance</span> <b>Changdeokgung Palace + Huwon (Secret Garden)</b> timed guided tour — autumn foliage at its absolute peak inside the garden. <a href="https://kculture.com/how-to-book-changdeokgung-secret-garden-jongmyo-online-2026/" target="_blank" rel="noopener">Booking guide (the 10:00 / 6-day rule)</a>. <span class="ln muted">Tickets go live 6 days before at 10:00 KST and the online allotment sells out in minutes. Set an alarm for <b>Thu Nov 6, 09:55 KST</b>. Backup: 50 same-day tickets sell at the gate — arrive before opening.</span></div></li>
+      <li><span class="when"><span class="t">12:30</span>lunch</span><div class="what"><span class="bk dod">🎟 day-of</span> <a href="https://www.google.com/maps/search/?api=1&query=Gwangjang+Market" target="_blank" rel="noopener">Gwangjang Market</a>, 10 min walk — bindaetteok (mung-bean pancakes) + yukhoe (Korean beef tartare) at the food alleys. Point at whatever has the longest line.</div></li>
+      <li><span class="when"><span class="t">14:30</span>afternoon</span><div class="what"><span class="bk dod">🎟 day-of</span> Walk off lunch: <a href="https://www.google.com/maps/search/?api=1&query=Bukchon+Hanok+Village" target="_blank" rel="noopener">Bukchon Hanok Village</a> rooftops → <a href="https://www.google.com/maps/search/?api=1&query=Ikseondong+Hanok+Alley" target="_blank" rel="noopener">Ikseon-dong</a> alley cafés. Optional detour: rent a <b>hanbok</b> (walk-in, ₩15–25k/2h) — it also gets you free palace entry.</div></li>
+      <li><span class="when"><span class="t">18:30</span>evening</span><div class="what"><span class="muted">Free. Insadong tea houses, or metro home early — tomorrow is an early call.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 4 -->
-  <article class="day" id="day4" data-sport="1">
-    <div class="day-top"><span class="day-no">Day 4</span><span class="day-date">Fri, Nov 13 · Bukhansan</span></div>
-    <h3>Bukhansan big hike day</h3>
-    <div class="tags"><span class="tag hike">hike</span><span class="tag free">easy evening</span></div>
+  <article class="day" id="day4" data-sport="0">
+    <div class="day-top"><span class="day-no">Day 4</span><span class="day-date">Fri, Nov 13 · DMZ (Paju)</span></div>
+    <h3>DMZ day — the strangest border on earth</h3>
+    <div class="tags"><span class="tag cult">DMZ/JSA</span><span class="tag free">easy evening</span></div>
     <ul class="blocks">
-      <li><span class="when">Anchor</span><div class="what">Bukhansanseong trail → Baegundae 836 m, ~4–5 h round trip. Start by 8 — go north early. <span class="muted">Stout granite, Seoul below. No booking needed.</span></div></li>
-      <li><span class="when">Evening</span><div class="what">Easy. Jjimjilbang recovery, early night.</div></li>
+      <li><span class="when"><span class="t">07:00</span>anchor</span><div class="what"><span class="bk adv">🔒 advance</span> <b>Full-day DMZ tour</b> (Third Tunnel → Dora Observatory → Dorasan Station; JSA/Panmunjom add-on if you want the blue huts). Hotel pickup, back ~15:00–16:00. <a href="https://www.koreavisitguide.com/en/activities/how-to-book-dmz-tour-jsa-vs-standard" target="_blank" rel="noopener">How to book, JSA vs standard</a> · operators: <a href="http://www.koridoor.co.kr/home/goods_view/index.asp?ts=main&strApart=A" target="_blank" rel="noopener">Koridoor</a>, Klook. <span class="ln muted">Government clearance is required — you can't just show up. Book at least 3–4 days ahead (ASAP is better; JSA slots sell first) and bring your <b>passport</b>. Dress code: no ripped jeans/sandals for JSA.</span></div></li>
+      <li><span class="when"><span class="t">16:30</span>afternoon</span><div class="what"><span class="muted">Back in town, mellow. The tour day is longer than it sounds.</span></div></li>
+      <li><span class="when"><span class="t">19:00</span>evening</span><div class="what"><span class="bk dod">🎟 day-of</span> Comfort dinner in Euljiro / <a href="https://www.google.com/maps/search/?api=1&query=Sewoon+Sangga+Cheonggyecheon" target="_blank" rel="noopener">Sewoon Sangga</a> — old-electronics district that turns into a rooftop-bar zone at night. Or just jjimjilbang round two.</div></li>
     </ul>
   </article>
 
   <!-- DAY 5 -->
   <article class="day" id="day5" data-sport="1">
-    <div class="day-top"><span class="day-no">Day 5</span><span class="day-date">Sat, Nov 14 · courts + alleys</span></div>
-    <h3>Tennis day</h3>
-    <div class="tags"><span class="tag sport">tennis</span><span class="tag free">free afternoon</span><span class="tag free">free evening</span></div>
+    <div class="day-top"><span class="day-no">Day 5</span><span class="day-date">Sat, Nov 14 · courts + skyline</span></div>
+    <h3>Tennis, then the whole city from above</h3>
+    <div class="tags"><span class="tag sport">tennis</span><span class="tag cult">observatory</span><span class="tag cult">show</span></div>
     <ul class="blocks">
-      <li><span class="when">Anchor</span><div class="what">Tennis: book a public court on <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">Seoul yeyak</a> (see <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a> for nearby courts), or an indoor club near Sillim.</div></li>
-      <li><span class="when">Afternoon</span><div class="what">Free — Ikseondong / Insadong alley cafés.</div></li>
-      <li><span class="when">Evening</span><div class="what">Free. Optional: batting cages or noraebang.</div></li>
+      <li><span class="when"><span class="t">09:00</span>anchor</span><div class="what"><span class="bk adv">🔒 advance</span> <b>Tennis</b> on a public court — book via <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">Seoul yeyak</a> (court finder: <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a>). ~₩10–20k/hour, floodlit public courts are common. <span class="ln muted">Weekend morning slots vanish fast — grab one the moment they open (a few days ahead; the page shows the exact window). Bad weather? Move this to Sun and take the indoor club option near Sillim.</span></div></li>
+      <li><span class="when"><span class="t">12:30</span>lunch</span><div class="what"><span class="muted">Free. Jamsil side if you're near the courts.</span></div></li>
+      <li><span class="when"><span class="t">15:30</span>afternoon</span><div class="what"><span class="bk dod">🎟 day-of</span> <a href="https://seoulsky.lotteworld.com/intro" target="_blank" rel="noopener">Seoul Sky</a> at Lotte World Tower (555 m) — time it so you go up in daylight and come down in the dark. Glass-floored Sky Deck included. <span class="muted">Timed tickets, easy to buy same-day online or at the door on a Friday. ₩29k-ish.</span></div></li>
+      <li><span class="when"><span class="t">20:00</span>evening</span><div class="what"><span class="bk adv">🔒 advance</span> <b>NANTA</b> at the Myeongdong theatre — 90 min of knife-and-drum kitchen comedy, zero words, still hilarious. <a href="https://www.nanta.co.kr/en/" target="_blank" rel="noopener">Official tickets</a>. <span class="ln muted">Online sale opens ~20 days out (so ~Oct 26). Weekend evening shows sell; a weekday seat is easier. 5 min walk from Myeongdong station exit 6.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 6 -->
   <article class="day" id="day6" data-sport="1">
-    <div class="day-top"><span class="day-no">Day 6</span><span class="day-date">Sun, Nov 15 · east side</span></div>
-    <h3>Long run at Seoul Forest</h3>
-    <div class="tags"><span class="tag run">run</span><span class="tag sport">archery (opt.)</span><span class="tag free">free afternoon</span></div>
+    <div class="day-top"><span class="day-no">Day 6</span><span class="day-date">Sun, Nov 15 · Han River + Hongdae</span></div>
+    <h3>Long run on the river, then whatever you want</h3>
+    <div class="tags"><span class="tag run">run</span><span class="tag sport">cycling (opt.)</span><span class="tag free">free afternoon</span></div>
     <ul class="blocks">
-      <li><span class="when">Anchor</span><div class="what">Long run: <a href="https://www.google.com/maps/search/?api=1&query=Seoul+Forest" target="_blank" rel="noopener">Seoul Forest</a> → Ttukseom Han River park and back, <b>10–15 km</b> (~35 min via Line 2).</div></li>
-      <li><span class="when">Afternoon</span><div class="what">Free.</div></li>
-      <li><span class="when">Evening</span><div class="what">Optional: <a href="https://world.nol.com/en/content/pois/84a3a4f9-cb97-4a18-bfbb-7e141daa15cd" target="_blank" rel="noopener">Real Shot</a> archery/shooting zone in Hongdae — or start packing.</div></li>
+      <li><span class="when"><span class="t">08:30</span>anchor</span><div class="what"><span class="bk free">free</span> <b>Long run: Yeouido Hangang Park → Ttukseom and back</b>, 10–12 km on the river path. The single best running route in Seoul and a Sunday-morning ritual for the city. <a href="https://www.google.com/maps/search/?api=1&query=Yeouido+Hangang+Park" target="_blank" rel="noopener">Start here</a> (Line 2/9, ~25 min).</div></li>
+      <li><span class="when"><span class="t">11:00</span>option</span><div class="what"><span class="bk dod">🎟 day-of</span> Swap the run for a <b>Han River bike ride</b>: <a href="https://www.google.com/maps/search/?api=1&query=Ttukseom+Hangang+Park+bike+rental" target="_blank" rel="noopener">Ttukseom rentals</a> (₩3–5k/h). It's a "slower legs" weekend — your call.</div></li>
+      <li><span class="when"><span class="t">13:00</span>afternoon</span><div class="what"><span class="muted">Free. Lazy lunch in Hongdae (15 min metro), or flop at the hotel. Both good.</span></div></li>
+      <li><span class="when"><span class="t">18:00</span>evening</span><div class="what"><span class="bk dod">🎟 day-of</span> Flex evening. Options that all take walk-ins: Hongdae street food + live buskers · <b>PC bang</b> (Korean esports PC café — ₩1–2k/h, absurd hardware) · <a href="https://world.nol.com/en/content/pois/84a3a4f9-cb97-4a18-bfbb-7e141daa15cd" target="_blank" rel="noopener">Real Shot</a> archery/shooting zone · noraebang (private karaoke, ₩15k/h). Or start packing.</div></li>
     </ul>
   </article>
 
   <!-- DAY 7 -->
   <article class="day" id="day7" data-sport="1">
     <div class="day-top"><span class="day-no">Day 7</span><span class="day-date">Mon, Nov 16 · fly home</span></div>
-    <h3>Easy morning, then ICN</h3>
-    <div class="tags"><span class="tag run">run</span><span class="tag free">slow morning</span></div>
+    <h3>Slow morning, then ICN</h3>
+    <div class="tags"><span class="tag hike">easy walk</span><span class="tag cult">last bites</span></div>
     <ul class="blocks">
-      <li><span class="when">Morning</span><div class="what">Easy 5 km on the <a href="https://www.google.com/maps/search/?api=1&query=Anyangcheon+Stream+Trail+Gwanak" target="_blank" rel="noopener">Anyangcheon stream path</a> near the hotel. Pack.</div></li>
-      <li><span class="when">Afternoon</span><div class="what">AREX to ICN by ~15:00. <b>7C 2623</b> departs 18:10 KST → SIN 00:10.</div></li>
+      <li><span class="when"><span class="t">08:30</span>morning</span><div class="what"><span class="bk free">free</span> Easy walk — SNU campus or a short foothill loop on Gwanaksan's low paths. Last look at the mountain. Pack.</div></li>
+      <li><span class="when"><span class="t">11:30</span>brunch</span><div class="what"><span class="bk dod">🎟 day-of</span> Final meal + coffee run near the hotel. Grab <b>Paris Baguette / Tous les Jours</b> pastries for the flight.</div></li>
+      <li><span class="when"><span class="t">13:00</span>travel</span><div class="what">AREX to ICN by ~15:00. <b>7C 2623</b> departs 18:10 KST → SIN 00:10 Tue. <span class="muted">Jeju Air = no free meal; eat at the airport or smuggle those pastries.</span></div></li>
     </ul>
   </article>
 </section>
 
 <section id="book">
-  <h2>Book these</h2>
-  <p class="h2-note">Two things only. Hikes are free and unbooked; everything else is walk-in or free time.</p>
+  <h2>Booking board</h2>
+  <p class="h2-note">Four things need locking in before the trip. Everything else in this plan is walk-in or free. Deadlines in purple.</p>
   <div class="todo" id="todo">
-    <label><input type="checkbox" data-key="tennis"><span class="t-text"><b>Tennis court</b> — <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">yeyak.seoul.go.kr</a> · slots open a few days ahead; book for Sat Nov 14. Court finder: <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a></span></label>
-    <label><input type="checkbox" data-key="archery"><span class="t-text"><b>Archery session</b> (if you want instruction) — <a href="https://www.koreatraveleasy.com/product/indoor-archery-experience-in-seoul/" target="_blank" rel="noopener">Indoor Archery Experience, Gangnam</a> · English coaching, ~1–2 h. Or skip booking and walk into <a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery</a> in Sinchon.</span></label>
-    <label><input type="checkbox" data-key="tmoney"><span class="t-text"><b>T-money card</b> — grab one at ICN arrivals (or use Wowpass). Needed for metro/bus/AREX.</span></label>
-    <label><input type="checkbox" data-key="weather"><span class="t-text"><b>Check the forecast</b> for Nov 13 — swap Bukhansan with Gwanaksan or the tennis day if it rains.</span></label>
+    <label><input type="checkbox" data-key="dmz"><span class="t-text"><b>DMZ tour</b> — <a href="https://www.koreavisitguide.com/en/activities/how-to-book-dmz-tour-jsa-vs-standard" target="_blank" rel="noopener">booking guide</a> / <a href="http://www.koridoor.co.kr/home/goods_view/index.asp?ts=main&strApart=A" target="_blank" rel="noopener">Koridoor</a> / Klook. For <b>Fri Nov 13</b>, full day, JSA add-on if available. Needs passport details. <span class="deadline">now — sells out + needs clearance</span></span></label>
+    <label><input type="checkbox" data-key="nanta"><span class="t-text"><b>NANTA</b> Sat Nov 14, 20:00, Myeongdong — <a href="https://www.nanta.co.kr/en/" target="_blank" rel="noopener">nanta.co.kr</a>. <span class="deadline">on sale ~Oct 26</span></span></label>
+    <label><input type="checkbox" data-key="garden"><span class="t-text"><b>Changdeokgung Secret Garden</b> Thu Nov 12 morning slot — <a href="https://kculture.com/how-to-book-changdeokgung-secret-garden-jongmyo-online-2026/" target="_blank" rel="noopener">the 10:00 / 6-day rule</a>. <span class="deadline">Thu Nov 6, 10:00 KST sharp</span></span></label>
+    <label><input type="checkbox" data-key="tennis"><span class="t-text"><b>Tennis court</b> Sat Nov 14, ~09:00 — <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">yeyak</a>, find courts at <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a>. <span class="deadline">when slots open (weekends go fast)</span></span></label>
+    <label><input type="checkbox" data-key="tmoney"><span class="t-text"><b>T-money card</b> — ICN arrivals. Metro, bus, AREX, convenience stores.</span></label>
+    <label><input type="checkbox" data-key="weather"><span class="t-text"><b>Weather check</b> Thu night for Fri/Sat — rain on a hike day? Swap with tennis/NANTA day. Clear Saturday? Move Bukhansan (see swaps) in.</span></label>
   </div>
 </section>
 
 <section id="links">
   <h2>Links</h2>
-  <p class="h2-note">Everything worth clicking, in one place.</p>
   <ul class="links">
-    <li><a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX airport express</a> — ICN ↔ Seoul Stn, ~43 min express.</li>
-    <li><a href="https://yeyak.seoul.go.kr/" target="_blank" rel="noopener">Seoul Public Service Reservation (yeyak)</a> — <span class="why">tennis, pools, public sports facilities. Chrome auto-translates fine.</span></li>
-    <li><a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a> — <span class="why">find public courts by district + links to official booking.</span></li>
-    <li><a href="https://www.koreatraveleasy.com/product/indoor-archery-experience-in-seoul/" target="_blank" rel="noopener">Indoor Archery Experience (Gangnam)</a> — <span class="why">bookable in English, coaching included.</span></li>
-    <li><a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery (Sinchon)</a> — <span class="why">walk-in archery cafe, close to the hotel side of town.</span></li>
-    <li><a href="https://www.gofarther.blog/blog/archery-cafes-in-seoul-koreas-most-unique-recreation-trend" target="_blank" rel="noopener">Archery cafes in Seoul — overview</a> — <span class="why">costs, how booking works, neighborhoods.</span></li>
-    <li><a href="https://world.nol.com/en/content/pois/6ccd8893-e8bb-4fcc-bdc8-5fff09c3ae5e" target="_blank" rel="noopener">Robinhood Gangnam shooting/archery range</a> — <span class="why">the bigger indoor range option.</span></li>
-    <li><a href="https://english.visitseoul.net/" target="_blank" rel="noopener">Visit Seoul (English)</a> — <span class="why">hike trailheads, events, transit tips.</span></li>
+    <li><span class="bk adv">🔒 advance</span> <a href="https://kculture.com/how-to-book-changdeokgung-secret-garden-jongmyo-online-2026/" target="_blank" rel="noopener">Secret Garden booking guide</a> — <span class="why">the 10:00 KST / 6-days-out rule, with the official portal.</span></li>
+    <li><span class="bk adv">🔒 advance</span> <a href="https://www.koreavisitguide.com/en/activities/how-to-book-dmz-tour-jsa-vs-standard" target="_blank" rel="noopener">DMZ/JSA: how to book</a> · <a href="http://www.koridoor.co.kr/home/goods_view/index.asp?ts=main&strApart=A" target="_blank" rel="noopener">Koridoor</a> — <span class="why">passport required, clearance, JSA vs standard.</span></li>
+    <li><span class="bk adv">🔒 advance</span> <a href="https://www.nanta.co.kr/en/" target="_blank" rel="noopener">NANTA official</a> — <span class="why">Myeongdong / Hongdae theatres; online 20 days out.</span></li>
+    <li><span class="bk adv">🔒 advance</span> <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">Seoul yeyak (sports courts)</a> · <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a> — <span class="why">public tennis, pools, more.</span></li>
+    <li><span class="bk dod">🎟 day-of</span> <a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery (Sinchon)</a> · <a href="https://www.koreatraveleasy.com/product/indoor-archery-experience-in-seoul/" target="_blank" rel="noopener">coached archery (Gangnam)</a> — <span class="why">walk-in vs English-instruction session.</span></li>
+    <li><span class="bk dod">🎟 day-of</span> <a href="https://seoulsky.lotteworld.com/intro" target="_blank" rel="noopener">Seoul Sky</a> · <a href="https://world.nol.com/en/content/pois/84a3a4f9-cb97-4a18-bfbb-7e141daa15cd" target="_blank" rel="noopener">Real Shot (Hongdae)</a> — <span class="why">555 m observatory; indoor archery/shooting.</span></li>
+    <li><span class="bk free">free</span> <a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX airport express</a> · <a href="https://english.visitseoul.net/" target="_blank" rel="noopener">Visit Seoul</a> — <span class="why">transit + trailheads + events.</span></li>
   </ul>
 
   <details>
-    <summary>Default open blocks — how the free time works</summary>
+    <summary>Swaps &amp; flex slots — the "maybe" pile</summary>
     <div class="details-body">
-      Mornings carry the anchor; afternoons and evenings are deliberately blank. If you want a filler: Sillim has a big cluster of cheap food, batting cages, and jjimjilbangs within walking distance of the hotel; Line 2 from SNU reaches Hongdae / Sinchon / Gangnam in 15–30 min. Gwanaksan can also be re-run in reverse (SNU side up, Sadeokgol down) as a tempo effort.
+      <ul>
+        <li><b>Bukhansan, Baegundae (836 m)</b> — the big one, ~4–5 h from Bukhansanseong trailhead. Slot it in place of the Sun run or the Sat afternoon if the forecast is perfect. Free, unbooked. Start by 8.</li>
+        <li><b>K-pop dance class</b> (Hongdae studios, ~₩30k, book same-week) — a genuinely fun 90 min even if you can't dance.</li>
+        <li><b>Gwangjang Market cooking class</b> — book ~1 week out if the idea grabs you; otherwise the market eating is the main event anyway.</li>
+        <li><b>Gyeongbokgung night viewing</b> — runs in limited windows and needs advance tickets; check <a href="https://english.visitseoul.net/" target="_blank" rel="noopener">Visit Seoul</a> for Nov dates. If it's on, it beats any bar in the city.</li>
+        <li><b>Batting cages</b> — round-the-clock chains everywhere; 3 min of chaos for ₩2k.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>Why this shape</summary>
+    <div class="details-body">
+      Only two real "sport" anchors (tennis + the river run) and two hikes — the rest of the week is events, food, and deliberate blank space. Jjimjilbang on arrival night fixes jet lag better than any activity. The two advance bookings (Secret Garden, DMZ) are the two things in Seoul that genuinely can't be improvised. Archery, observatory, shows, markets, PC bangs: all walk-in. Days start early-ish (Korea is a morning country) and the afternoons are intentionally empty — that's when the good wandering happens.
     </div>
   </details>
 </section>
 
 <footer>
-  Seoul · Nov 10–16, 2026 · built for a week of moving and a week of open space.<br>
+  Seoul · Nov 10–16, 2026 · built for two great anchor days and a week of open space.<br>
   Times in KST unless marked SGT. Checkboxes persist locally in this browser.
 </footer>
 
@@ -344,7 +395,7 @@
 
 <script>
 (function () {
-  var KEY = 'seoul-nov2026';
+  var KEY = '***';
   var state = {};
   try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
 
@@ -369,18 +420,15 @@
   });
   refresh();
 
-  // sport-only filter
   var fBtn = document.getElementById('filterSport');
   var days = Array.prototype.slice.call(document.querySelectorAll('.day'));
   fBtn.addEventListener('click', function () {
     var on = fBtn.classList.toggle('on');
-    days.forEach(function (d) { d.classList.toggle('dim', on); });
+    days.forEach(function (d) { d.classList.toggle('dim', on && d.dataset.sport !== '1'); });
     fBtn.textContent = on ? 'show all days' : '⚡ sport only';
-    if (!on) { days.forEach(function (d) { d.classList.remove('dim'); }); }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // day chip highlight on scroll
   var chips = Array.prototype.slice.call(document.querySelectorAll('#dayChips a'));
   var targets = chips.map(function (c) {
     return { chip: c, el: document.querySelector(c.getAttribute('href')) };
