@@ -216,7 +216,7 @@
     <p class="kicker">Reference</p>
     <h1>Core — the 5×2 set</h1>
     <p class="sub">
-      Five rounds of <b>2 minutes</b>: one minute on, one minute off. Ten minutes of work, ten of rest.
+      Five rounds of <b>2 minutes</b>: one minute on, one minute off — about ten minutes end to end.
       Default exercise is the hollow body hold — hit <b>Refresh</b> to roll a different five for the day.
     </p>
 
@@ -242,7 +242,7 @@
         <button class="ghost" id="stop" type="button">Reset</button>
       </div>
 
-      <p class="note">Work 60s → rest 60s → next round. Total 10:00 including rest. Set persists for the day; Refresh rerolls it.</p>
+      <p class="note">Work 60s → rest 60s → next round, five times (last round has no trailing rest). Set persists for the day; Refresh rerolls it.</p>
     </section>
 
     <h2 id="library"><span class="h2n">02</span>Exercise library</h2>
@@ -510,7 +510,7 @@
   function labelDay() {
     dayEl.innerHTML = new Date().toLocaleDateString(undefined, {
       weekday: 'long', month: 'short', day: 'numeric'
-    }) + ' <span>· 5 rounds · 10:00 total</span>';
+    }) + ' <span>· 5 rounds · 1:00 on / 1:00 off</span>';
   }
 
   function render() {
@@ -598,9 +598,9 @@
     paint();
   }
   function advance() {
-    if (phase === 'work') { phase = 'rest'; left = REST; }
-    else if (round + 1 >= ROUNDS) {
-      done = true; left = 0; stopTimer(); paint(); return false;
+    if (phase === 'work') {
+      if (round + 1 >= ROUNDS) { done = true; left = 0; stopTimer(); paint(); return false; }
+      phase = 'rest'; left = REST;
     }
     else { phase = 'work'; left = WORK; round++; }
     paint();
