@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seoul — Nov 10–16, 2026</title>
+<title>Seoul — Nov 10–16, 2026 (toe-friendly)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -126,6 +126,11 @@
   .tag.sport { background: var(--accent-soft); color: var(--accent); }
   .tag.cult  { background: var(--purple-soft); color: var(--purple); }
   .tag.free  { background: #eee9df;            color: var(--muted); }
+  .tag.spa   { background: var(--jade-soft);   color: var(--jade); }
+  .tag.skin  { background: var(--accent-soft); color: var(--accent); }
+  .tag.med   { background: var(--purple-soft); color: var(--purple); }
+  .tag.walk  { background: var(--gold-soft);   color: var(--gold); }
+  .tag.rest  { background: #eee9df;            color: var(--muted); }
 
   .blocks { margin: 12px 0 0; padding: 0; list-style: none; }
   .blocks li {
@@ -178,6 +183,45 @@
   .details-body ul { padding-left: 18px; margin: 6px 0; list-style: disc; }
   .details-body li { margin: 4px 0; }
 
+  /* ---- comparison table ---- */
+  .table-wrap {
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--line); border-radius: 12px;
+    background: var(--card); box-shadow: var(--shadow);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 680px; }
+  th, td { padding: 9px 11px; text-align: left; border-top: 1px solid var(--line); vertical-align: top; }
+  th {
+    background: #f6f1e8; font-size: 10.5px; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--muted); font-weight: 600;
+  }
+  td:first-child { font-weight: 600; white-space: nowrap; }
+  .yes { color: var(--jade); font-weight: 600; }
+  .no  { color: var(--accent); font-weight: 600; }
+  .maybe { color: var(--gold); font-weight: 600; }
+
+  /* ---- venue cards ---- */
+  .venue {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 13px 15px; margin-bottom: 9px; box-shadow: var(--shadow);
+  }
+  .venue h4 {
+    margin: 0 0 2px; font-family: Fraunces, serif; font-size: 16px; font-weight: 600;
+  }
+  .venue .meta { color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+  .venue .price { color: var(--jade); font-weight: 600; }
+  .venue a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+
+  .callout {
+    background: var(--jade-soft); border: 1px solid #c6e2d6; border-radius: 12px;
+    padding: 14px 16px; font-size: 13.5px; margin: 14px 0;
+  }
+  .callout b { color: var(--jade); }
+  .callout.red { background: var(--accent-soft); border-color: #f0c9b6; }
+  .callout.red b { color: var(--accent); }
+  .callout.gold { background: var(--gold-soft); border-color: #e8d9b8; }
+  .callout.gold b { color: var(--gold); }
+
   footer {
     margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line);
     color: var(--muted); font-size: 12.5px; line-height: 1.7;
@@ -193,9 +237,9 @@
 <div class="wrap">
 
 <header>
-  <div class="kicker">Dreaming · travel</div>
-  <h1>Seoul, a good week</h1>
-  <p class="sub">Nov 10–16, 2026 · based in Gwanak-gu (near SNU) · two hikes, two sport sessions, a DMZ day, palaces, a show — and plenty of blank space to do whatever.</p>
+  <div class="kicker">Dreaming · travel · revised</div>
+  <h1>Seoul, a gentler week</h1>
+  <p class="sub">Nov 10–16, 2026 · based in Gwanak-gu (near SNU) · rebuilt for a toe injury and no rental car: one spa day, one skin day, palaces by taxi, and the only real walk saved for the last full day.</p>
 
   <div class="facts">
     <div class="fact">
@@ -208,11 +252,15 @@
     </div>
     <div class="fact">
       <div class="lbl">Hotel</div>
-      <div class="val">The Designers SNU · 1876 Nambusunhwan-ro, Gwanak-gu · Nov 10–17</div>
+      <div class="val">The Designers SNU · 1876 Nambusunhwan-ro, Gwanak-gu · Nov 10–16 · <b>6 nights</b> <span class="muted">(if the booking shows a 7th night, cancel it — you fly home on the 16th)</span></div>
     </div>
     <div class="fact">
-      <div class="lbl">November in Seoul</div>
-      <div class="val">3–13 °C, dry, peak fall color. Layers + trail shoes.</div>
+      <div class="lbl">Getting around</div>
+      <div class="val">T-money for the metro + <b>Kakao T taxis</b> for anything over a 10–15 min walk. No rental car.</div>
+    </div>
+    <div class="fact">
+      <div class="lbl">Toe rules</div>
+      <div class="val">Short days, sit every 30–40 min, ice + elevate at the hotel. <b>No hiking, tennis, running, or long palace loops.</b></div>
     </div>
   </div>
 
@@ -233,9 +281,9 @@
     <a class="chip" href="#day5">Sat 14</a>
     <a class="chip" href="#day6">Sun 15</a>
     <a class="chip" href="#day7">Mon 16</a>
+    <a class="chip" href="#wellness">Spa / skin</a>
     <a class="chip" href="#book">Book</a>
     <a class="chip" href="#links">Links</a>
-    <button class="chip" id="filterSport" type="button">⚡ sport only</button>
   </div>
   <div class="navrow">
     <div class="progress"><i id="bar"></i></div>
@@ -245,157 +293,338 @@
 
 <span id="top"></span>
 
+<div class="callout red">
+  <b>The one-line change:</b> the mountain, the tennis court, the Han River run and the DMZ tunnel are out. The trip is now built around sitting, soaking, eating, and one optional flat walk at the very end. If the toe is worse than expected, cut Day 3 and Day 6 and you still have a good trip.
+</div>
+
 <section id="days">
   <h2>Day by day</h2>
-  <p class="h2-note">Every day has one anchor event and real slack around it. Each block is tagged with how it books. Checkboxes save in your browser.</p>
+  <p class="h2-note">Every day has one anchor and a lot of slack. Taxis are part of the plan, not a failure. Checkboxes save in your browser.</p>
 
   <!-- DAY 1 -->
-  <article class="day" id="day1" data-sport="1">
+  <article class="day" id="day1" data-sport="0">
     <div class="day-top"><span class="day-no">Day 1</span><span class="day-date">Tue, Nov 10 · Gwanak-gu</span></div>
-    <h3>Land, settle, steam the flight out</h3>
-    <div class="tags"><span class="tag cult">jjimjilbang</span><span class="tag run">optional shakeout</span><span class="tag free">free afternoon</span></div>
+    <h3>Land, sleep, soak</h3>
+    <div class="tags"><span class="tag rest">zero sightseeing</span><span class="tag spa">jjimjilbang</span><span class="tag free">free afternoon</span></div>
     <ul class="blocks">
-      <li><span class="when"><span class="t">07:15</span>morning</span><div class="what"><span class="bk free">free</span> ICN → <a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX</a> to Seoul Stn → Line 2 to Sillim/SNU. Store bags at the hotel (check-in 15:00).<span class="ln muted">Get a T-money card at the airport station before you tap in.</span></div></li>
-      <li><span class="when"><span class="t">09:30</span>brunch</span><div class="what"><span class="bk free">free</span> First real meal near SNU — <span class="muted">kalguksu (knife-cut noodles) or gimbap; everything's cheap and open early around the university.</span></div></li>
-      <li><span class="when"><span class="t">11:00</span>nap</span><div class="what"><span class="muted">Seriously. Red-eye + 2 nights of no sleep ruins the rest of the trip. Nothing is scheduled until the evening.</span></div></li>
-      <li><span class="when"><span class="t">16:30</span>shakeout</span><div class="what"><span class="bk free">free</span> Optional 4 km jog on the <a href="https://www.google.com/maps/search/?api=1&query=Anyangcheon+Stream+Trail+Gwanak" target="_blank" rel="noopener">Anyangcheon stream path</a> behind the hotel — flat, lit, zero thinking. Skip it guilt-free.</div></li>
-      <li><span class="when"><span class="t">19:00</span>evening</span><div class="what"><span class="bk dod">🎟 day-of</span> <b>Sillim jjimjilbang</b> (Korean bathhouse) — hot rooms, cold plunge, iced sikhye on a heated floor. 2–3 h. <span class="muted">This is the single best jet-lag cure there is. Just pick the highest-rated 찜질방 near Sillim Station on Naver Map and walk in.</span></div></li>
+      <li><span class="when"><span class="t">07:15</span>morning</span><div class="what"><span class="bk free">free</span> ICN → <a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX</a> to Seoul Station, then a <b>taxi to the hotel</b> (roughly ₩20,000–25,000) instead of dragging bags through the Line 2 transfer. Store bags; check-in is 15:00.<span class="ln muted">Get a T-money card at the airport station before you tap in. Ask the hotel to hold the bags, not the lobby floor.</span></div></li>
+      <li><span class="when"><span class="t">09:30</span>brunch</span><div class="what"><span class="bk free">free</span> First real meal near SNU — <span class="muted">kalguksu (knife-cut noodles) or gimbap; everything is cheap and open early around the university.</span></div></li>
+      <li><span class="when"><span class="t">11:00</span>nap</span><div class="what"><span class="muted">Seriously. Red-eye + no sleep ruins the rest of the trip. Nothing is scheduled until late afternoon. Ice the toe for 15 min and keep it elevated.</span></div></li>
+      <li><span class="when"><span class="t">16:30</span>soak</span><div class="what"><span class="bk dod">🎟 day-of</span> <b>Gwanak 24h Bulgama Sauna</b> — the closest real bathhouse, 5–8 min by taxi from the hotel near SNU Station Exit 7. Sauna ₩11,000 / jjimjilbang ₩12,000. Hot rooms, baths, iced sikhye, no appointment.<span class="ln muted">Only if the skin is intact — no open cut, no stitches, no weeping. Wear slides, keep the toe out of the cold plunge, and sit on a towel rather than the bare wet floor.</span></div></li>
+      <li><span class="when"><span class="t">19:00</span>evening</span><div class="what"><span class="muted">Dinner within 5 min of the hotel. Elevate the toe. No shakeout jog — that block is gone.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 2 -->
-  <article class="day" id="day2" data-sport="1">
-    <div class="day-top"><span class="day-no">Day 2</span><span class="day-date">Wed, Nov 11 · Gwanaksan + Sinchon</span></div>
-    <h3>The mountain behind the hotel</h3>
-    <div class="tags"><span class="tag hike">hike</span><span class="tag sport">archery</span><span class="tag free">free afternoon</span></div>
+  <article class="day" id="day2" data-sport="0">
+    <div class="day-top"><span class="day-no">Day 2</span><span class="day-date">Wed, Nov 11 · Yongsan / Jamsil</span></div>
+    <h3>Seoul from a seat — museum + skyline</h3>
+    <div class="tags"><span class="tag cult">museum</span><span class="tag cult">observatory</span><span class="tag rest">under 1.5 km walking</span></div>
     <ul class="blocks">
-      <li><span class="when"><span class="t">08:00</span>anchor</span><div class="what"><span class="bk free">free</span> <b>Gwanaksan, Sadeokgol trail</b> → Yeongbong peak (629 m) → down the SNU side. ~3 h round trip, trailhead 10 min from the hotel. Peak fall color week. <span class="muted">Take the 300 won "Sadeokgol bus" up the valley road if your legs say no.</span></div></li>
-      <li><span class="when"><span class="t">12:30</span>lunch</span><div class="what"><span class="bk free">free</span> Hearty lunch at the SNU back gate — <span class="muted">student-priced Korean comfort food. Then rest; you earned it.</span></div></li>
-      <li><span class="when"><span class="t">16:30</span>afternoon</span><div class="what"><span class="muted">Free. Wander Sinchon / Ewha if you want people-watching; stay in if you don't.</span></div></li>
-      <li><span class="when"><span class="t">19:00</span>evening</span><div class="what"><span class="bk dod">🎟 day-of</span> <b>Archery</b> at <a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery</a>, Sinchon — 15 min from the hotel. Walk-in, ~₩15–20k/hour, staff show you the form in 2 minutes. <span class="muted">Korea is the Olympic archery superpower; the cafe gear is genuinely nice. Go after dinner — lanes open late.</span></div></li>
+      <li><span class="when"><span class="t">10:00</span>anchor</span><div class="what"><span class="bk free">free</span> <b>National Museum of Korea</b>, Yongsan — free, indoor, lifts, benches, cafes, and enough to fill two hours without a single stair. Taxi to the door.<span class="ln muted">If you only do one room: the celadon and gold-crown galleries. Wheelchairs are available at the desk if the toe really complains.</span></div></li>
+      <li><span class="when"><span class="t">12:30</span>lunch</span><div class="what"><span class="bk dod">🎟 day-of</span> Lunch in Yongsan — <span class="muted">the museum food hall is fine and has seats; or taxi 5 min to a proper restaurant. Don't walk to Itaewon for it.</span></div></li>
+      <li><span class="when"><span class="t">15:30</span>afternoon</span><div class="what"><span class="bk dod">🎟 day-of</span> <a href="https://seoulsky.lotteworld.com/intro" target="_blank" rel="noopener">Seoul Sky</a> at Lotte World Tower (555 m) — timed ticket, ~₩29,000, lift to the top, benches and glass floor optional. Go up in daylight, come down in the dark.<span class="ln muted">Same-day online or at the door is easy on a Wednesday. The whole visit is standing/walking for maybe 30 min, then you can sit in the cafe.</span></div></li>
+      <li><span class="when"><span class="t">18:30</span>evening</span><div class="what"><span class="muted">Taxi home or dinner in Jamsil. No second stop. The point of today is that the toe never gets 5,000 steps.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 3 -->
   <article class="day" id="day3" data-sport="1">
     <div class="day-top"><span class="day-no">Day 3</span><span class="day-date">Thu, Nov 12 · Jongno</span></div>
-    <h3>Palace day — Secret Garden + old city</h3>
-    <div class="tags"><span class="tag cult">palaces</span><span class="tag cult">market food</span><span class="tag free">free evening</span></div>
+    <h3>Palaces, slowly — the one culture day</h3>
+    <div class="tags"><span class="tag cult">palace</span><span class="tag cult">market food</span><span class="tag walk">2–3 km total</span></div>
     <ul class="blocks">
-      <li><span class="when"><span class="t">09:30</span>anchor</span><div class="what"><span class="bk adv">🔒 advance</span> <b>Changdeokgung Palace + Huwon (Secret Garden)</b> timed guided tour — autumn foliage at its absolute peak inside the garden. <a href="https://kculture.com/how-to-book-changdeokgung-secret-garden-jongmyo-online-2026/" target="_blank" rel="noopener">Booking guide (the 10:00 / 6-day rule)</a>. <span class="ln muted">Tickets go live 6 days before at 10:00 KST and the online allotment sells out in minutes. Set an alarm for <b>Thu Nov 6, 09:55 KST</b>. Backup: 50 same-day tickets sell at the gate — arrive before opening.</span></div></li>
-      <li><span class="when"><span class="t">12:30</span>lunch</span><div class="what"><span class="bk dod">🎟 day-of</span> <a href="https://www.google.com/maps/search/?api=1&query=Gwangjang+Market" target="_blank" rel="noopener">Gwangjang Market</a>, 10 min walk — bindaetteok (mung-bean pancakes) + yukhoe (Korean beef tartare) at the food alleys. Point at whatever has the longest line.</div></li>
-      <li><span class="when"><span class="t">14:30</span>afternoon</span><div class="what"><span class="bk dod">🎟 day-of</span> Walk off lunch: <a href="https://www.google.com/maps/search/?api=1&query=Bukchon+Hanok+Village" target="_blank" rel="noopener">Bukchon Hanok Village</a> rooftops → <a href="https://www.google.com/maps/search/?api=1&query=Ikseondong+Hanok+Alley" target="_blank" rel="noopener">Ikseon-dong</a> alley cafés. Optional detour: rent a <b>hanbok</b> (walk-in, ₩15–25k/2h) — it also gets you free palace entry.</div></li>
-      <li><span class="when"><span class="t">18:30</span>evening</span><div class="what"><span class="muted">Free. Insadong tea houses, or metro home early — tomorrow is an early call.</span></div></li>
+      <li><span class="when"><span class="t">09:30</span>anchor</span><div class="what"><span class="bk adv">🔒 advance</span> <b>Changdeokgung Palace + Huwon (Secret Garden)</b> timed guided tour — the autumn garden is the reason to come, but the path is uneven and the tour is ~90 min on your feet. Go slow, sit on the stone walls when the group stops, and skip it without guilt if the toe is angry.<span class="ln muted">Tickets go live 6 days before at 10:00 KST and sell in minutes. Set an alarm for <b>Fri Nov 6, 09:55 KST</b>. Backup: 50 same-day tickets at the gate before opening. Palace + garden is about ₩8,000.</span></div></li>
+      <li><span class="when"><span class="t">12:30</span>lunch</span><div class="what"><span class="bk dod">🎟 day-of</span> Taxi 10 min to <a href="https://www.google.com/maps/search/?api=1&query=Gwangjang+Market" target="_blank" rel="noopener">Gwangjang Market</a> — bindaetteok and yukhoe at the food alleys. Sit-down stalls, not a standing-only crawl. Point at whatever has the longest line.</div></li>
+      <li><span class="when"><span class="t">14:30</span>afternoon</span><div class="what"><span class="bk dod">🎟 day-of</span> One cafe in <a href="https://www.google.com/maps/search/?api=1&query=Ikseondong+Hanok+Alley" target="_blank" rel="noopener">Ikseon-dong</a>. No Bukchon rooftop loop, no hanbok rental — both add an hour of standing and stairs for a photo you can live without this trip.</div></li>
+      <li><span class="when"><span class="t">18:00</span>evening</span><div class="what"><span class="muted">Early dinner, taxi home, ice. This is the most walking you'll do all week. If the toe is worse on the morning of, swap this whole day with Day 6.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 4 -->
   <article class="day" id="day4" data-sport="0">
-    <div class="day-top"><span class="day-no">Day 4</span><span class="day-date">Fri, Nov 13 · DMZ (Paju)</span></div>
-    <h3>DMZ day — the strangest border on earth</h3>
-    <div class="tags"><span class="tag cult">DMZ/JSA</span><span class="tag free">easy evening</span></div>
+    <div class="day-top"><span class="day-no">Day 4</span><span class="day-date">Fri, Nov 13 · Myeongdong / Gangnam</span></div>
+    <h3>Skin day — walk in, no appointment</h3>
+    <div class="tags"><span class="tag skin">facial / laser</span><span class="tag med">optional birthmark consult</span><span class="tag cult">NANTA</span></div>
     <ul class="blocks">
-      <li><span class="when"><span class="t">07:00</span>anchor</span><div class="what"><span class="bk adv">🔒 advance</span> <b>Full-day DMZ tour</b> (Third Tunnel → Dora Observatory → Dorasan Station; JSA/Panmunjom add-on if you want the blue huts). Hotel pickup, back ~15:00–16:00. <a href="https://www.koreavisitguide.com/en/activities/how-to-book-dmz-tour-jsa-vs-standard" target="_blank" rel="noopener">How to book, JSA vs standard</a> · operators: <a href="http://www.koridoor.co.kr/home/goods_view/index.asp?ts=main&strApart=A" target="_blank" rel="noopener">Koridoor</a>, Klook. <span class="ln muted">Government clearance is required — you can't just show up. Book at least 3–4 days ahead (ASAP is better; JSA slots sell first) and bring your <b>passport</b>. Dress code: no ripped jeans/sandals for JSA.</span></div></li>
-      <li><span class="when"><span class="t">16:30</span>afternoon</span><div class="what"><span class="muted">Back in town, mellow. The tour day is longer than it sounds.</span></div></li>
-      <li><span class="when"><span class="t">19:00</span>evening</span><div class="what"><span class="bk dod">🎟 day-of</span> Comfort dinner in Euljiro / <a href="https://www.google.com/maps/search/?api=1&query=Sewoon+Sangga+Cheonggyecheon" target="_blank" rel="noopener">Sewoon Sangga</a> — old-electronics district that turns into a rooftop-bar zone at night. Or just jjimjilbang round two.</div></li>
+      <li><span class="when"><span class="t">11:00</span>anchor</span><div class="what"><span class="bk dod">🎟 day-of</span> <b>RE:BERRY Myeongdong</b> — genuinely walk-in, 365 days, 2 min from Myeongdong Station Exit 8. English/Spanish/Chinese/Japanese support. November promo: <b>PicoSure toning ₩159,000</b> (regular ₩290,000), or the <b>Aqua Peel + Potenza + Juvelook package ₩490,000</b>. Add 10% VAT. 60–90 min, no downtime.<span class="ln muted">This is the no-appointment option. If you'd rather see a dermatologist for the birthmark, book MIN Clinic instead (below) — don't try to do both in one morning.</span></div></li>
+      <li><span class="when"><span class="t">13:30</span>lunch</span><div class="what"><span class="bk dod">🎟 day-of</span> Sit-down lunch in Myeongdong. <span class="muted">Avoid the street-food crawl; standing at stalls for an hour is exactly what the toe doesn't need.</span></div></li>
+      <li><span class="when"><span class="t">15:00</span>option</span><div class="what"><span class="bk adv">🔒 appointment</span> <b>MIN Clinic</b>, Cheongdam — dermatologist-led birthmark assessment. WhatsApp a photo ahead, get a real plan and a quote. <b>Consult only. Do not excise today.</b> Pico laser is ₩100,000–250,000/session; a proper excision is a separate, later decision.<span class="ln muted">Why not today: see the “scalpel” section below. A sutured excision needs 5–14 days before suture removal and no baths/swimming while it heals.</span></div></li>
+      <li><span class="when"><span class="t">20:00</span>evening</span><div class="what"><span class="bk adv">🔒 advance</span> <b>NANTA</b> at the Myeongdong theatre — 90 min of knife-and-drum kitchen comedy, all seated, zero language needed. <a href="https://www.nanta.co.kr/en/" target="_blank" rel="noopener">Official tickets</a>, roughly ₩37,500–50,000 (VIP seats more). A Friday show is easier than Saturday.<span class="ln muted">No sauna or hot bath for 24–48 h after a laser or peel. Tonight is dinner and a show, not a soak.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 5 -->
-  <article class="day" id="day5" data-sport="1">
-    <div class="day-top"><span class="day-no">Day 5</span><span class="day-date">Sat, Nov 14 · courts + skyline</span></div>
-    <h3>Tennis, then the whole city from above</h3>
-    <div class="tags"><span class="tag sport">tennis</span><span class="tag cult">observatory</span><span class="tag cult">show</span></div>
+  <article class="day" id="day5" data-sport="0">
+    <div class="day-top"><span class="day-no">Day 5</span><span class="day-date">Sat, Nov 14 · Goyang</span></div>
+    <h3>Hot spa day — the actual rest day</h3>
+    <div class="tags"><span class="tag spa">Aquafield</span><span class="tag rest">no sightseeing</span><span class="tag free">walk-in</span></div>
     <ul class="blocks">
-      <li><span class="when"><span class="t">09:00</span>anchor</span><div class="what"><span class="bk adv">🔒 advance</span> <b>Tennis</b> on a public court — book via <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">Seoul yeyak</a> (court finder: <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a>). ~₩10–20k/hour, floodlit public courts are common. <span class="ln muted">Weekend morning slots vanish fast — grab one the moment they open (a few days ahead; the page shows the exact window). Bad weather? Move this to Sun and take the indoor club option near Sillim.</span></div></li>
-      <li><span class="when"><span class="t">12:30</span>lunch</span><div class="what"><span class="muted">Free. Jamsil side if you're near the courts.</span></div></li>
-      <li><span class="when"><span class="t">15:30</span>afternoon</span><div class="what"><span class="bk dod">🎟 day-of</span> <a href="https://seoulsky.lotteworld.com/intro" target="_blank" rel="noopener">Seoul Sky</a> at Lotte World Tower (555 m) — time it so you go up in daylight and come down in the dark. Glass-floored Sky Deck included. <span class="muted">Timed tickets, easy to buy same-day online or at the door on a Friday. ₩29k-ish.</span></div></li>
-      <li><span class="when"><span class="t">20:00</span>evening</span><div class="what"><span class="bk adv">🔒 advance</span> <b>NANTA</b> at the Myeongdong theatre — 90 min of knife-and-drum kitchen comedy, zero words, still hilarious. <a href="https://www.nanta.co.kr/en/" target="_blank" rel="noopener">Official tickets</a>. <span class="ln muted">Online sale opens ~20 days out (so ~Oct 26). Weekend evening shows sell; a weekday seat is easier. 5 min walk from Myeongdong station exit 6.</span></div></li>
+      <li><span class="when"><span class="t">10:00</span>anchor</span><div class="what"><span class="bk dod">🎟 day-of</span> <b>Aquafield Goyang</b> — Starfield Mall, 4F. Line 3 to Samsong Station Exit 3, then a flat 500 m walk (or a taxi to the door). <b>₩21,000 adult weekday / ₩23,000 weekend, 6 hours.</b> Rooftop pool, jjimjil rooms, hot and cold baths, sauna, restaurant.<span class="ln muted">This is the easiest “real” hot spa from Seoul: one subway line, no hiking, no appointment. Bring swimwear for the rooftop pool; rental costs extra. Keep the toe out of the cold plunge and dry it thoroughly after.</span></div></li>
+      <li><span class="when"><span class="t">13:00</span>lunch</span><div class="what"><span class="bk dod">🎟 day-of</span> Eat inside Aquafield or at Starfield. <span class="muted">No need to leave the building.</span></div></li>
+      <li><span class="when"><span class="t">16:00</span>afternoon</span><div class="what"><span class="muted">Back to the hotel, nap, elevate. If the idea of a 50-min subway each way is too much, do the local Gwanak Bulgama again for ₩12,000 — same benefits, 8 min from bed.</span></div></li>
+      <li><span class="when"><span class="t">19:00</span>evening</span><div class="what"><span class="bk dod">🎟 day-of</span> Light dinner near the hotel. <span class="muted">Alternative splurge: Cimer at Paradise City, Incheon — ₩40,000 jjimjil spa (4 h) or ₩60,000 aqua spa (6 h; ₩70,000 in winter peak). It's an hour each way, so only if you want the resort version.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 6 -->
   <article class="day" id="day6" data-sport="1">
-    <div class="day-top"><span class="day-no">Day 6</span><span class="day-date">Sun, Nov 15 · Han River + Hongdae</span></div>
-    <h3>Long run on the river, then whatever you want</h3>
-    <div class="tags"><span class="tag run">run</span><span class="tag sport">cycling (opt.)</span><span class="tag free">free afternoon</span></div>
+    <div class="day-top"><span class="day-no">Day 6</span><span class="day-date">Sun, Nov 15 · Seongsu / Seoul Forest</span></div>
+    <h3>The one walk — deliberately last</h3>
+    <div class="tags"><span class="tag walk">optional 30–45 min flat</span><span class="tag free">cafe</span><span class="tag rest">cuttable</span></div>
     <ul class="blocks">
-      <li><span class="when"><span class="t">08:30</span>anchor</span><div class="what"><span class="bk free">free</span> <b>Long run: Yeouido Hangang Park → Ttukseom and back</b>, 10–12 km on the river path. The single best running route in Seoul and a Sunday-morning ritual for the city. <a href="https://www.google.com/maps/search/?api=1&query=Yeouido+Hangang+Park" target="_blank" rel="noopener">Start here</a> (Line 2/9, ~25 min).</div></li>
-      <li><span class="when"><span class="t">11:00</span>option</span><div class="what"><span class="bk dod">🎟 day-of</span> Swap the run for a <b>Han River bike ride</b>: <a href="https://www.google.com/maps/search/?api=1&query=Ttukseom+Hangang+Park+bike+rental" target="_blank" rel="noopener">Ttukseom rentals</a> (₩3–5k/h). It's a "slower legs" weekend — your call.</div></li>
-      <li><span class="when"><span class="t">13:00</span>afternoon</span><div class="what"><span class="muted">Free. Lazy lunch in Hongdae (15 min metro), or flop at the hotel. Both good.</span></div></li>
-      <li><span class="when"><span class="t">18:00</span>evening</span><div class="what"><span class="bk dod">🎟 day-of</span> Flex evening. Options that all take walk-ins: Hongdae street food + live buskers · <b>PC bang</b> (Korean esports PC café — ₩1–2k/h, absurd hardware) · <a href="https://world.nol.com/en/content/pois/84a3a4f9-cb97-4a18-bfbb-7e141daa15cd" target="_blank" rel="noopener">Real Shot</a> archery/shooting zone · noraebang (private karaoke, ₩15k/h). Or start packing.</div></li>
+      <li><span class="when"><span class="t">10:00</span>anchor</span><div class="what"><span class="bk free">free</span> <b>Seoul Forest</b> — taxi to the gate, then a flat 30–45 min loop with benches every few minutes. This is the only physical activity left in the trip, and it's on the second-to-last day on purpose.<span class="ln muted">Stop the moment it stops being comfortable. There is no summit, no loop to finish, no Strava. If the toe is sore, skip the park and take the cafe instead.</span></div></li>
+      <li><span class="when"><span class="t">13:00</span>lunch</span><div class="what"><span class="bk dod">🎟 day-of</span> Lunch in Seongsu — <span class="muted">the old shoe-factory cafes and barbecue places. Taxi between the park and the restaurant.</span></div></li>
+      <li><span class="when"><span class="t">15:00</span>afternoon</span><div class="what"><span class="bk dod">🎟 day-of</span> Cafe, pack, last souvenir run if you must. <span class="muted">PC bang (₩1–2k/h) or a noraebang room are both seated and both better than another palace.</span></div></li>
+      <li><span class="when"><span class="t">18:00</span>evening</span><div class="what"><span class="muted">Early dinner, final ice, bags by the door. Tomorrow is a travel day, not a sightseeing day.</span></div></li>
     </ul>
   </article>
 
   <!-- DAY 7 -->
-  <article class="day" id="day7" data-sport="1">
+  <article class="day" id="day7" data-sport="0">
     <div class="day-top"><span class="day-no">Day 7</span><span class="day-date">Mon, Nov 16 · fly home</span></div>
     <h3>Slow morning, then ICN</h3>
-    <div class="tags"><span class="tag hike">easy walk</span><span class="tag cult">last bites</span></div>
+    <div class="tags"><span class="tag rest">no walk</span><span class="tag cult">last bites</span></div>
     <ul class="blocks">
-      <li><span class="when"><span class="t">08:30</span>morning</span><div class="what"><span class="bk free">free</span> Easy walk — SNU campus or a short foothill loop on Gwanaksan's low paths. Last look at the mountain. Pack.</div></li>
-      <li><span class="when"><span class="t">11:30</span>brunch</span><div class="what"><span class="bk dod">🎟 day-of</span> Final meal + coffee run near the hotel. Grab <b>Paris Baguette / Tous les Jours</b> pastries for the flight.</div></li>
-      <li><span class="when"><span class="t">13:00</span>travel</span><div class="what">AREX to ICN by ~15:00. <b>7C 2623</b> departs 18:10 KST → SIN 00:10 Tue. <span class="muted">Jeju Air = no free meal; eat at the airport or smuggle those pastries.</span></div></li>
+      <li><span class="when"><span class="t">09:00</span>morning</span><div class="what"><span class="bk free">free</span> Breakfast, pack, sit. <b>No SNU campus walk, no foothill loop.</b> The toe gets a boring morning.</span></div></li>
+      <li><span class="when"><span class="t">11:30</span>brunch</span><div class="what"><span class="bk dod">🎟 day-of</span> Final meal + coffee near the hotel. Grab <b>Paris Baguette / Tous les Jours</b> pastries for the flight.</div></li>
+      <li><span class="when"><span class="t">13:00</span>travel</span><div class="what">Taxi to Seoul Station then AREX, or a direct taxi to ICN (roughly ₩70,000–80,000, 60–75 min). Aim to be at the airport by 15:00 for <b>7C 2623</b>, 18:10 KST → SIN 00:10 Tue.<span class="ln muted">Jeju Air = no free meal; eat at the airport. Leave the extra 20 min for the toe: terminals are long.</span></div></li>
     </ul>
   </article>
 </section>
 
+<section id="wellness">
+  <h2>Spa, skin, or scalpel?</h2>
+  <p class="h2-note">Real Seoul venues and current prices. The short version: do the spa, do a light facial if you want, and do <b>not</b> get a birthmark excised on a six-day trip.</p>
+
+  <div class="callout">
+    <b>My call:</b> jjimjilbang on arrival night, a proper hot-spa day mid-trip, a no-downtime facial on Day 4, and a <b>consultation only</b> for the birthmark. An excision is a minor surgery with a 1–3 week healing window and a pathology result — it doesn't belong between a red-eye and a return flight.
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th>Best real venue</th>
+          <th>Price</th>
+          <th>Appointment?</th>
+          <th>Downtime</th>
+          <th>Fit for this trip</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Local jjimjilbang</td>
+          <td>Gwanak 24h Bulgama · Sammo Sporex</td>
+          <td>₩11,000–16,000</td>
+          <td class="yes">No — walk in</td>
+          <td>None</td>
+          <td class="yes">Best. Cheap, close, no booking.</td>
+        </tr>
+        <tr>
+          <td>Hot spa day</td>
+          <td>Aquafield Goyang · Cimer</td>
+          <td>₩21,000–70,000</td>
+          <td class="yes">No — walk in</td>
+          <td>None</td>
+          <td class="yes">Excellent. Sit, soak, eat, repeat.</td>
+        </tr>
+        <tr>
+          <td>Light facial / laser toning</td>
+          <td>RE:BERRY Myeongdong · Lienjang</td>
+          <td>₩80,000–490,000 + VAT</td>
+          <td class="maybe">RE:BERRY yes; Lienjang book</td>
+          <td>0–2 days of redness</td>
+          <td class="yes">Good. Do it mid-trip, not the night before flying.</td>
+        </tr>
+        <tr>
+          <td>Birthmark laser (flat, pigmented)</td>
+          <td>MIN Clinic · Lienjang</td>
+          <td>₩70,000–400,000/session · 2–6 sessions</td>
+          <td class="maybe">Yes</td>
+          <td>Hours to a few days</td>
+          <td class="maybe">Possible, but not a one-visit fix.</td>
+        </tr>
+        <tr>
+          <td>Birthmark excision</td>
+          <td>MIN Clinic · Lienjang · SNUH</td>
+          <td>₩500,000–1,130,000</td>
+          <td class="no">Yes</td>
+          <td>1–3 weeks; sutures 5–14 days</td>
+          <td class="no">No. Wrong trip for it.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout red">
+    <b>Why not excise a flat birthmark here?</b> A truly flat, evenly coloured birthmark (café-au-lait, a flat congenital nevus) is usually a pigment problem, not a lump. The first-line treatment is laser over multiple sessions — not a knife. Excision removes full thickness, leaves a linear scar, and is the right move when a lesion is raised, changing, asymmetric, multi-coloured, bleeding, or needs pathology. That's a dermatologist's decision, not a walk-in beauty treatment. If it <em>is</em> excised, you can't soak in a bath or hot spring while it heals, and you may need suture removal 5–14 days later — i.e. after you're home.
+  </div>
+
+  <h3 style="font-family:Fraunces,serif;font-size:17px;margin:22px 0 8px;">Jjimjilbang &amp; sauna — no appointment</h3>
+
+  <div class="venue">
+    <h4>Gwanak 24h Bulgama Sauna <span style="font-weight:400;color:var(--muted);font-size:12px;">· closest</span></h4>
+    <div class="meta">Bongcheon-dong, Gwanak-gu · near SNU Station Exit 7; 5–8 min taxi from the hotel, or a short walk from the station · 24 h<br>
+    <span class="price">₩11,000 sauna · ₩12,000 jjimjilbang</span> · pay at the desk, no booking · <a href="https://www.google.com/maps/search/?api=1&query=Gwanak+24h+Bulgama+Sauna+Seoul" target="_blank" rel="noopener">map</a></div>
+  </div>
+
+  <div class="venue">
+    <h4>Sammo Sporex <span style="font-weight:400;color:var(--muted);font-size:12px;">· Sillim</span></h4>
+    <div class="meta">23 Sillim-ro 59-gil, B1, Gwanak-gu · Sillim Station · 24 h<br>
+    <span class="price">₩13,000 sauna (day) · ₩16,000 jjimjilbang (day)</span>; night +₩3,000 · pool/gym/bowling in the same building · <a href="https://www.sammo.co.kr/info/spa_info.php" target="_blank" rel="noopener">official prices</a></div>
+  </div>
+
+  <div class="venue">
+    <h4>Ssukgogae Sauna <span style="font-weight:400;color:var(--muted);font-size:12px;">· Sillim, basic</span></h4>
+    <div class="meta">Sillim-dong, Gwanak-gu · 24 h · <span class="price">~₩9,000–10,000</span> · no-frills neighbourhood bath; the cheapest option near the hotel · <a href="https://www.google.com/maps/search/?api=1&query=Ssukgogae+Sauna+Sillim" target="_blank" rel="noopener">map</a></div>
+  </div>
+
+  <div class="venue">
+    <h4>Siloam Sauna <span style="font-weight:400;color:var(--muted);font-size:12px;">· Seoul Station</span></h4>
+    <div class="meta">49 Jungnim-ro, Jung-gu · Seoul Station · 24 h · <span class="price">~₩10,000 bath + sauna (day) · ~₩13,000 after 20:00</span> · baths rather than a full jjimjilbang; good if you're already at Seoul Station · <a href="https://www.google.com/maps/search/?api=1&query=Siloam+Sauna+Seoul+Station" target="_blank" rel="noopener">map</a></div>
+  </div>
+
+  <div class="venue">
+    <h4>SPAREX Dongdaemun <span style="font-weight:400;color:var(--muted);font-size:12px;">· 24 h</span></h4>
+    <div class="meta">Good Morning City B3, 247 Jangchungdan-ro, Jung-gu · Dongdaemun History &amp; Culture Park · 24 h<br>
+    <span class="price">₩14,000 day · ₩15,900 night</span> · clothes + towel included · <a href="https://www.seoultravelpass.com/en/products/1496-seoul-dongdaemun-sparex-jjimjilbang-sauna-admission-ticket" target="_blank" rel="noopener">ticket details</a></div>
+  </div>
+
+  <div class="venue">
+    <h4>Club K <span style="font-weight:400;color:var(--muted);font-size:12px;">· Gangnam, tidier</span></h4>
+    <div class="meta">Sinsa Station Exit 5 · 24 h · <span class="price">₩22,000 for up to 8 h</span> · cleaner and quieter than the average neighbourhood bath; private rooms extra · <a href="https://www.google.com/maps/search/?api=1&query=Club+K+Jjimjilbang+Sinsa+Seoul" target="_blank" rel="noopener">map</a></div>
+  </div>
+
+  <h3 style="font-family:Fraunces,serif;font-size:17px;margin:22px 0 8px;">Hot spa / oncheon — no appointment</h3>
+
+  <div class="venue">
+    <h4>Aquafield Goyang <span style="font-weight:400;color:var(--muted);font-size:12px;">· easiest from Seoul</span></h4>
+    <div class="meta">Starfield Goyang, 4F · 1955 Goyang-daero, Deogyang-gu, Goyang · Line 3 Samsong Station Exit 3, 500 m flat walk<br>
+    <span class="price">₩21,000 adult weekday · ₩23,000 weekend · 6 hours</span> · jjimjil spa 10:00–19:00, rooftop pool 10:00–18:00 · <a href="https://english.visitkorea.or.kr/svc/contents/infoHtmlView.do?vcontsId=137292" target="_blank" rel="noopener">official info</a></div>
+  </div>
+
+  <div class="venue">
+    <h4>Cimer, Paradise City <span style="font-weight:400;color:var(--muted);font-size:12px;">· resort splurge</span></h4>
+    <div class="meta">186 Yeongjonghaeannam-ro 321beon-gil, Jung-gu, Incheon · ~1 h from Seoul · 10:00–21:00<br>
+    <span class="price">₩40,000 jjimjil spa (4 h) · ₩60,000 aqua spa (6 h) · ₩70,000 winter peak</span> · reservations recommended, walk-in usually possible · <a href="https://www.p-city.com/front/cimer/operation" target="_blank" rel="noopener">official prices</a></div>
+  </div>
+
+  <h3 style="font-family:Fraunces,serif;font-size:17px;margin:22px 0 8px;">Skincare — walk-in or one booking</h3>
+
+  <div class="venue">
+    <h4>RE:BERRY Myeongdong <span style="font-weight:400;color:var(--muted);font-size:12px;">· the no-appointment pick</span></h4>
+    <div class="meta">58 Myeongdong 10-gil, Jung-gu · Myeongdong Station Exit 8, 2 min · open 365 days<br>
+    <span class="price">PicoSure toning ₩159,000 promo (regular ₩290,000) · Aqua Peel + Potenza + Juvelook ₩490,000</span> · +10% VAT · 60–90 min, no downtime · <a href="https://myeongdongskinclinicreberry.com/same-day-dermatology-korea" target="_blank" rel="noopener">walk-in details</a></div>
+  </div>
+
+  <div class="venue">
+    <h4>Lienjang <span style="font-weight:400;color:var(--muted);font-size:12px;">· transparent price list</span></h4>
+    <div class="meta">Hongdae / Myeongdong / Gangnam · book ahead, English support<br>
+    <span class="price">Aqua Peel + blackhead ₩120,000 · GA Peel ₩80,000 · Pink Peel ₩120,000 · LDM facial ₩80,000 · Pico Toning ₩200,000–480,000 · CO2 mole/lesion ₩40,000–160,000 each</span> · <a href="https://enlienjang.com/price-list" target="_blank" rel="noopener">full price list</a></div>
+  </div>
+
+  <div class="venue">
+    <h4>MIN Clinic <span style="font-weight:400;color:var(--muted);font-size:12px;">· birthmark assessment</span></h4>
+    <div class="meta">326 Dosan-daero, Gangnam-gu · English-speaking dermatologist · WhatsApp photo triage<br>
+    <span class="price">Pico laser ₩100,000–250,000/session · fractional toning ₩70,000–150,000 · combination birthmark programme ₩300,000–700,000</span> · <a href="https://www.apgujeongdermatology.com/skin-concerns/birthmark" target="_blank" rel="noopener">birthmark page</a></div>
+  </div>
+
+  <div class="venue">
+    <h4>Delphic Clinic <span style="font-weight:400;color:var(--muted);font-size:12px;">· English-friendly, book</span></h4>
+    <div class="meta">476 Gangnam-daero, Urban Hive 2F, Gangnam-gu · Mon–Fri 10:30–21:00, Sat 10:30–17:00, closed Sun · interpreters on site<br>
+    <span class="price">Quote at consultation; same price as locals</span> · <a href="https://www.delphicclinic.com/en" target="_blank" rel="noopener">clinic site</a></div>
+  </div>
+
+  <div class="callout gold">
+    <b>If you do want the birthmark looked at properly:</b> book a dermatologist, not an aesthetic “mole removal” counter. Ask three questions: (1) Is this lesion suitable for laser, or does it need a biopsy/excision? (2) Will the tissue go to pathology, and how do I get the English report? (3) What is the wound-care and suture-removal plan if I fly home? If the answer to (1) is “excision,” the answer to “should I do it on this trip?” is no.
+  </div>
+
+  <h3 style="font-family:Fraunces,serif;font-size:17px;margin:22px 0 8px;">If the toe needs a real doctor</h3>
+  <ul class="links">
+    <li><b>Seoul National University Hospital</b> — 101 Daehak-ro, Jongno-gu · International Healthcare Center · <a href="https://www.snuh.org/english/" target="_blank" rel="noopener">snuh.org/english</a> — <span class="why">closest big hospital to Gwanak-gu; good for an infected or badly swollen toe.</span></li>
+    <li><b>Severance Hospital</b> — 50-1 Yonsei-ro, Seodaemun-gu · International Health Care Center — <span class="why">central, English support, emergency department.</span></li>
+    <li><b>Samsung Medical Center</b> — 81 Irwon-ro, Gangnam-gu · International Clinic — <span class="why">another English-friendly tertiary option.</span></li>
+  </ul>
+  <p class="h2-note" style="margin-top:8px;">Go same-day if the toe is hot, red, spreading, weeping, or you have a fever. Don't soak an open wound, and don't let a spa visit be the reason you ignore it.</p>
+</section>
+
 <section id="book">
   <h2>Booking board</h2>
-  <p class="h2-note">Four things need locking in before the trip. Everything else in this plan is walk-in or free. Deadlines in purple.</p>
+  <p class="h2-note">Only two things genuinely need locking in. Everything else is walk-in. Deadlines in purple.</p>
   <div class="todo" id="todo">
-    <label><input type="checkbox" data-key="dmz"><span class="t-text"><b>DMZ tour</b> — <a href="https://www.koreavisitguide.com/en/activities/how-to-book-dmz-tour-jsa-vs-standard" target="_blank" rel="noopener">booking guide</a> / <a href="http://www.koridoor.co.kr/home/goods_view/index.asp?ts=main&strApart=A" target="_blank" rel="noopener">Koridoor</a> / Klook. For <b>Fri Nov 13</b>, full day, JSA add-on if available. Needs passport details. <span class="deadline">now — sells out + needs clearance</span></span></label>
-    <label><input type="checkbox" data-key="nanta"><span class="t-text"><b>NANTA</b> Sat Nov 14, 20:00, Myeongdong — <a href="https://www.nanta.co.kr/en/" target="_blank" rel="noopener">nanta.co.kr</a>. <span class="deadline">on sale ~Oct 26</span></span></label>
-    <label><input type="checkbox" data-key="garden"><span class="t-text"><b>Changdeokgung Secret Garden</b> Thu Nov 12 morning slot — <a href="https://kculture.com/how-to-book-changdeokgung-secret-garden-jongmyo-online-2026/" target="_blank" rel="noopener">the 10:00 / 6-day rule</a>. <span class="deadline">Thu Nov 6, 10:00 KST sharp</span></span></label>
-    <label><input type="checkbox" data-key="tennis"><span class="t-text"><b>Tennis court</b> Sat Nov 14, ~09:00 — <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">yeyak</a>, find courts at <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a>. <span class="deadline">when slots open (weekends go fast)</span></span></label>
+    <label><input type="checkbox" data-key="garden"><span class="t-text"><b>Changdeokgung Secret Garden</b> Thu Nov 12 morning slot — <a href="https://kculture.com/how-to-book-changdeokgung-secret-garden-jongmyo-online-2026/" target="_blank" rel="noopener">the 10:00 / 6-day rule</a>. <span class="deadline">Fri Nov 6, 10:00 KST sharp</span></span></label>
+    <label><input type="checkbox" data-key="nanta"><span class="t-text"><b>NANTA</b> Fri Nov 13, 20:00, Myeongdong — <a href="https://www.nanta.co.kr/en/" target="_blank" rel="noopener">nanta.co.kr</a>. Seated, 90 min. <span class="deadline">book now — Friday sells</span></span></label>
+    <label><input type="checkbox" data-key="skin"><span class="t-text"><b>Skincare</b> — RE:BERRY is walk-in, no booking. If you switch to Lienjang or MIN Clinic, book by WhatsApp 2–3 days ahead.</span></label>
+    <label><input type="checkbox" data-key="birthmark"><span class="t-text"><b>Birthmark consult</b> (optional) — MIN Clinic WhatsApp, send a clear photo and ask for laser-vs-excision advice. Consultation only.</span></label>
+    <label><input type="checkbox" data-key="spa"><span class="t-text"><b>Aquafield Goyang</b> — no booking; pay at the desk. Bring swimwear for the rooftop pool.</span></label>
     <label><input type="checkbox" data-key="tmoney"><span class="t-text"><b>T-money card</b> — ICN arrivals. Metro, bus, AREX, convenience stores.</span></label>
-    <label><input type="checkbox" data-key="weather"><span class="t-text"><b>Weather check</b> Thu night for Fri/Sat — rain on a hike day? Swap with tennis/NANTA day. Clear Saturday? Move Bukhansan (see swaps) in.</span></label>
+    <label><input type="checkbox" data-key="cancel"><span class="t-text"><b>Cancel / release</b> — tennis court, DMZ tour, any hike meet-up. Don't leave a Saturday court booking hanging.</span></label>
+    <label><input type="checkbox" data-key="toe"><span class="t-text"><b>Toe check</b> — nightly: swelling, redness, warmth, discharge. Ice 15 min, elevate, keep it dry. If it's getting worse, swap Day 3 for a clinic day.</span></label>
   </div>
 </section>
 
 <section id="links">
   <h2>Links</h2>
   <ul class="links">
-    <li><span class="bk adv">🔒 advance</span> <a href="https://kculture.com/how-to-book-changdeokgung-secret-garden-jongmyo-online-2026/" target="_blank" rel="noopener">Secret Garden booking guide</a> — <span class="why">the 10:00 KST / 6-days-out rule, with the official portal.</span></li>
-    <li><span class="bk adv">🔒 advance</span> <a href="https://www.koreavisitguide.com/en/activities/how-to-book-dmz-tour-jsa-vs-standard" target="_blank" rel="noopener">DMZ/JSA: how to book</a> · <a href="http://www.koridoor.co.kr/home/goods_view/index.asp?ts=main&strApart=A" target="_blank" rel="noopener">Koridoor</a> — <span class="why">passport required, clearance, JSA vs standard.</span></li>
-    <li><span class="bk adv">🔒 advance</span> <a href="https://www.nanta.co.kr/en/" target="_blank" rel="noopener">NANTA official</a> — <span class="why">Myeongdong / Hongdae theatres; online 20 days out.</span></li>
-    <li><span class="bk adv">🔒 advance</span> <a href="https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241121165106420249&reSvc=Y" target="_blank" rel="noopener">Seoul yeyak (sports courts)</a> · <a href="https://seoultennis.co.kr/" target="_blank" rel="noopener">seoultennis.co.kr</a> — <span class="why">public tennis, pools, more.</span></li>
-    <li><span class="bk dod">🎟 day-of</span> <a href="https://10mag.com/directory/entertainment/entertainment/seoul/robin-hood-archery-cafe/" target="_blank" rel="noopener">Robin Hood Archery (Sinchon)</a> · <a href="https://www.koreatraveleasy.com/product/indoor-archery-experience-in-seoul/" target="_blank" rel="noopener">coached archery (Gangnam)</a> — <span class="why">walk-in vs English-instruction session.</span></li>
-    <li><span class="bk dod">🎟 day-of</span> <a href="https://seoulsky.lotteworld.com/intro" target="_blank" rel="noopener">Seoul Sky</a> · <a href="https://world.nol.com/en/content/pois/84a3a4f9-cb97-4a18-bfbb-7e141daa15cd" target="_blank" rel="noopener">Real Shot (Hongdae)</a> — <span class="why">555 m observatory; indoor archery/shooting.</span></li>
-    <li><span class="bk free">free</span> <a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX airport express</a> · <a href="https://english.visitseoul.net/" target="_blank" rel="noopener">Visit Seoul</a> — <span class="why">transit + trailheads + events.</span></li>
+    <li><span class="bk dod">🎟 day-of</span> <a href="https://www.google.com/maps/search/?api=1&query=Gwanak+24h+Bulgama+Sauna+Seoul" target="_blank" rel="noopener">Gwanak 24h Bulgama Sauna</a> · <a href="https://www.sammo.co.kr/info/spa_info.php" target="_blank" rel="noopener">Sammo Sporex prices</a> — <span class="why">the two closest bathhouses; ₩11,000–16,000.</span></li>
+    <li><span class="bk dod">🎟 day-of</span> <a href="https://english.visitkorea.or.kr/svc/contents/infoHtmlView.do?vcontsId=137292" target="_blank" rel="noopener">Aquafield Goyang</a> · <a href="https://www.p-city.com/front/cimer/operation" target="_blank" rel="noopener">Cimer prices</a> — <span class="why">hot spa day, no appointment.</span></li>
+    <li><span class="bk dod">🎟 day-of</span> <a href="https://myeongdongskinclinicreberry.com/same-day-dermatology-korea" target="_blank" rel="noopener">RE:BERRY Myeongdong</a> — <span class="why">genuine walk-in skincare, 365 days, English support.</span></li>
+    <li><span class="bk adv">🔒 book</span> <a href="https://enlienjang.com/price-list" target="_blank" rel="noopener">Lienjang price list</a> · <a href="https://www.apgujeongdermatology.com/skin-concerns/birthmark" target="_blank" rel="noopener">MIN Clinic birthmark</a> — <span class="why">transparent facial and lesion prices; medical consult.</span></li>
+    <li><span class="bk adv">🔒 advance</span> <a href="https://kculture.com/how-to-book-changdeokgung-secret-garden-jongmyo-online-2026/" target="_blank" rel="noopener">Secret Garden booking guide</a> — <span class="why">the 10:00 KST / 6-days-out rule.</span></li>
+    <li><span class="bk adv">🔒 advance</span> <a href="https://www.nanta.co.kr/en/" target="_blank" rel="noopener">NANTA official</a> — <span class="why">Myeongdong theatre; 90 min, seated.</span></li>
+    <li><span class="bk dod">🎟 day-of</span> <a href="https://seoulsky.lotteworld.com/intro" target="_blank" rel="noopener">Seoul Sky</a> — <span class="why">555 m observatory; lift, benches, no climb.</span></li>
+    <li><span class="bk free">free</span> <a href="https://www.arex.or.kr/main.do" target="_blank" rel="noopener">AREX airport express</a> · <a href="https://english.visitseoul.net/" target="_blank" rel="noopener">Visit Seoul</a> — <span class="why">transit + what's on.</span></li>
   </ul>
 
   <details>
-    <summary>Swaps &amp; flex slots — the "maybe" pile</summary>
+    <summary>What changed, and why</summary>
     <div class="details-body">
       <ul>
-        <li><b>Bukhansan, Baegundae (836 m)</b> — the big one, ~4–5 h from Bukhansanseong trailhead. Slot it in place of the Sun run or the Sat afternoon if the forecast is perfect. Free, unbooked. Start by 8.</li>
-        <li><b>K-pop dance class</b> (Hongdae studios, ~₩30k, book same-week) — a genuinely fun 90 min even if you can't dance.</li>
-        <li><b>Gwangjang Market cooking class</b> — book ~1 week out if the idea grabs you; otherwise the market eating is the main event anyway.</li>
-        <li><b>Gyeongbokgung night viewing</b> — runs in limited windows and needs advance tickets; check <a href="https://english.visitseoul.net/" target="_blank" rel="noopener">Visit Seoul</a> for Nov dates. If it's on, it beats any bar in the city.</li>
-        <li><b>Batting cages</b> — round-the-clock chains everywhere; 3 min of chaos for ₩2k.</li>
+        <li><b>Gwanaksan hike — cut.</b> 3 h of steep, uneven trail on an injured toe is the single worst thing in the original plan. The mountain will still be there.</li>
+        <li><b>Tennis — cut.</b> Lateral movement and pivoting are exactly what a toe can't do. Released the court booking.</li>
+        <li><b>Han River 10–12 km run — cut.</b> Replaced with a seated cafe and, on Day 6 only, an optional 30–45 min flat park loop.</li>
+        <li><b>DMZ — cut.</b> The coach day is mostly sitting, but the Third Tunnel is a steep 350 m descent and the day runs 8+ hours. Not worth it while healing.</li>
+        <li><b>Bukchon / hanbok loop — cut.</b> Hills, stairs and an hour of standing for a photo. One Ikseon-dong cafe instead.</li>
+        <li><b>Added:</b> a local jjimjilbang on arrival night, a museum + observatory day, a no-appointment skin day, a full hot-spa day, and a single back-loaded walk.</li>
       </ul>
     </div>
   </details>
 
   <details>
-    <summary>Why this shape</summary>
+    <summary>If the toe is better than expected</summary>
     <div class="details-body">
-      Only two real "sport" anchors (tennis + the river run) and two hikes — the rest of the week is events, food, and deliberate blank space. Jjimjilbang on arrival night fixes jet lag better than any activity. The two advance bookings (Secret Garden, DMZ) are the two things in Seoul that genuinely can't be improvised. Archery, observatory, shows, markets, PC bangs: all walk-in. Days start early-ish (Korea is a morning country) and the afternoons are intentionally empty — that's when the good wandering happens.
+      <ul>
+        <li>Add a flat 30 min walk along the Anyangcheon stream behind the hotel — paved, lit, no hills.</li>
+        <li>Swap the Seoul Forest loop for a longer flat Han River path at Yeouido, but keep it under an hour and stop at the first twinge.</li>
+        <li>Do <b>not</b> add Gwanaksan, Bukhansan, tennis, or a run. "Better" is not "healed."</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>If the toe is worse than expected</summary>
+    <div class="details-body">
+      <ul>
+        <li>Cut Day 3 (palace) and Day 6 (park). Keep Day 2 (museum + observatory) and Day 5 (spa) — both are sit-down days.</li>
+        <li>Taxi everywhere, including the 8-min walk to the bathhouse.</li>
+        <li>Skip the baths entirely if there's an open wound, and see a doctor same-day if it's hot, red, spreading, or weeping.</li>
+      </ul>
     </div>
   </details>
 </section>
 
 <footer>
-  Seoul · Nov 10–16, 2026 · built for two great anchor days and a week of open space.<br>
-  Times in KST unless marked SGT. Checkboxes persist locally in this browser.
+  Seoul · Nov 10–16, 2026 · revised for a toe injury and no rental car.<br>
+  Times in KST unless marked SGT. Prices are current 2026 references and can change — confirm at the desk. Checkboxes persist locally in this browser.
 </footer>
 
 </div>
 
 <script>
 (function () {
-  var KEY = '***';
+  var KEY = 'seoul-2026-11-toe-friendly-v1';
   var state = {};
   try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
 
@@ -419,15 +648,6 @@
     });
   });
   refresh();
-
-  var fBtn = document.getElementById('filterSport');
-  var days = Array.prototype.slice.call(document.querySelectorAll('.day'));
-  fBtn.addEventListener('click', function () {
-    var on = fBtn.classList.toggle('on');
-    days.forEach(function (d) { d.classList.toggle('dim', on && d.dataset.sport !== '1'); });
-    fBtn.textContent = on ? 'show all days' : '⚡ sport only';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
 
   var chips = Array.prototype.slice.call(document.querySelectorAll('#dayChips a'));
   var targets = chips.map(function (c) {
